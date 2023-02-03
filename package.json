@@ -8,7 +8,8 @@
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "publish-pages": "npm run build && npx wrangler pages publish dist"
   },
   "dependencies": {
     "astro": "^2.0.6",
