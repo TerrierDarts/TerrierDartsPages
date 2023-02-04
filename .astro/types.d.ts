@@ -103,6 +103,22 @@ declare module 'astro:content' {
   data: InferEntrySchema<"blog">
 },
 },
+"builds": {
+"followageresponses.md": {
+  id: "followageresponses.md",
+  slug: "followageresponses",
+  body: string,
+  collection: "builds",
+  data: any
+},
+"welcomeusers.md": {
+  id: "welcomeusers.md",
+  slug: "welcomeusers",
+  body: string,
+  collection: "builds",
+  data: any
+},
+},
 
 	};
 
