@@ -74,8 +74,8 @@ declare module 'astro:content' {
   collection: "blog",
   data: InferEntrySchema<"blog">
 },
-"markdown-style-guide.md": {
-  id: "markdown-style-guide.md",
+"markdown-style-guide.mdx": {
+  id: "markdown-style-guide.mdx",
   slug: "markdown-style-guide",
   body: string,
   collection: "blog",
@@ -104,15 +104,15 @@ declare module 'astro:content' {
 },
 },
 "builds": {
-"followageresponses.md": {
-  id: "followageresponses.md",
+"followageresponses.mdx": {
+  id: "followageresponses.mdx",
   slug: "followageresponses",
   body: string,
   collection: "builds",
   data: any
 },
-"welcomeusers.md": {
-  id: "welcomeusers.md",
+"welcomeusers.mdx": {
+  id: "welcomeusers.mdx",
   slug: "welcomeusers",
   body: string,
   collection: "builds",
