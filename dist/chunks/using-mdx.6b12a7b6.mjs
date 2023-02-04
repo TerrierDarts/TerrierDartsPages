@@ -2,7 +2,7 @@ import { _ as __astro_tag_component__ } from './astro.4bd90412.mjs';
 import 'html-escaper';
 
 async function getMod() {
-  return import('./using-mdx.b5d5c108.mjs');
+  return import('./using-mdx.dff40141.mjs');
 }
 const collectedLinks = ["_astro/HeaderLink.astro_astro_type_style_index_0_lang.c3840210.css"];
 const collectedStyles = "@@ASTRO-STYLES@@";

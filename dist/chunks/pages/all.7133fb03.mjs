@@ -60,7 +60,7 @@ const $$Header = createComponent(async ($$result, $$props, $$slots) => {
 	</h2>
 	<nav class="astro-3EF6KSR2">
 		${renderComponent($$result, "HeaderLink", $$HeaderLink, { "href": "/", "class": "astro-3EF6KSR2" }, { "default": () => renderTemplate`Home` })}
-		${renderComponent($$result, "HeaderLink", $$HeaderLink, { "href": "/about", "class": "astro-3EF6KSR2" }, { "default": () => renderTemplate`Builds` })}
+		${renderComponent($$result, "HeaderLink", $$HeaderLink, { "href": "/builds", "class": "astro-3EF6KSR2" }, { "default": () => renderTemplate`Builds` })}
 		${renderComponent($$result, "HeaderLink", $$HeaderLink, { "href": "/podcasts", "class": "astro-3EF6KSR2" }, { "default": () => renderTemplate`Podcasts` })}
 		${renderComponent($$result, "HeaderLink", $$HeaderLink, { "href": "https://twitter.com/TerrierDarts", "target": "_blank", "class": "astro-3EF6KSR2" }, { "default": () => renderTemplate`Twitter` })}
 		${renderComponent($$result, "HeaderLink", $$HeaderLink, { "href": "https://Youtube.com/@TerrierDarts", "target": "_blank", "class": "astro-3EF6KSR2" }, { "default": () => renderTemplate`YouTube` })}
@@ -203,7 +203,7 @@ const collectionToEntryMap = createCollectionToGlobResultMap({
 	contentDir,
 });
 
-const renderEntryGlob = /* #__PURE__ */ Object.assign({"/src/content/blog/first-post.md": () => import('../first-post.3a7a88d6.mjs'),"/src/content/blog/markdown-style-guide.md": () => import('../markdown-style-guide.ed1591a7.mjs'),"/src/content/blog/second-post.md": () => import('../second-post.e1220670.mjs'),"/src/content/blog/third-post.md": () => import('../third-post.3e7a2ae9.mjs'),"/src/content/blog/using-mdx.mdx": () => import('../using-mdx.3fff59c3.mjs'),"/src/content/builds/followageresponses.md": () => import('../followageresponses.55bcfa9d.mjs'),"/src/content/builds/welcomeusers.md": () => import('../welcomeusers.31f39c63.mjs')
+const renderEntryGlob = /* #__PURE__ */ Object.assign({"/src/content/blog/first-post.md": () => import('../first-post.3a7a88d6.mjs'),"/src/content/blog/markdown-style-guide.md": () => import('../markdown-style-guide.ed1591a7.mjs'),"/src/content/blog/second-post.md": () => import('../second-post.e1220670.mjs'),"/src/content/blog/third-post.md": () => import('../third-post.3e7a2ae9.mjs'),"/src/content/blog/using-mdx.mdx": () => import('../using-mdx.6b12a7b6.mjs'),"/src/content/builds/followageresponses.md": () => import('../followageresponses.55bcfa9d.mjs'),"/src/content/builds/welcomeusers.md": () => import('../welcomeusers.31f39c63.mjs')
 
 });
 const collectionToRenderEntryMap = createCollectionToGlobResultMap({
