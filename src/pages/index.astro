@@ -1,32 +1,5 @@
----
-import BaseHead from '../components/BaseHead.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
-
-import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
----
-
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-	</head>
-	<body>
-		<Header title={SITE_TITLE} />
-		<main>
-		
-			<h1><b>Welcome To My Site</b></h1>
-			<p>
-				My Name is TerrierDarts, but most people call me TD. I am Twitch Streamer and YouTube Content Creator who like to learn coding and other nerdy stuff so if you enjoy that kind of stuff be sure to drop me a follow on Twitch and a sub on YouTube! 
-			</p>
-			<p>
-				In my spare time and occasionally on stream I will play with <a href="https://streamer.bot">Streamer.bot</a> , a free tool to help you take your streams to the next level and adding a whole new meaning to Interactive!
-				Streamer.bot is also the basis for many of my YouTube Videos where I will share the projects I make.
-			</p>
-			<p>
-			I also plan to start a blog where I will talk about new releases and updates for streamer.bot so be sure to check that out!
-			</p>
-		</main>
-		<Footer />
-	</body>
-</html>
+<script is:inline>
+	// Redirect your homepage to the first page of documentation.
+	// If you have a landing page, remove this script and add it here!
+	window.location.pathname = `/en/introduction`;
+</script>

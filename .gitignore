@@ -1,8 +1,10 @@
 # build output
+dist/
 # generated types
-node_modules
-# dependencies
+.astro/
 
+# dependencies
+node_modules/
 
 # logs
 npm-debug.log*
@@ -17,5 +19,3 @@ pnpm-debug.log*
 
 # macOS-specific files
 .DS_Store
-.gitignore
-.gitignore

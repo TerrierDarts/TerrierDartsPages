@@ -66,44 +66,7 @@ declare module 'astro:content' {
 	};
 
 	const entryMap: {
-		"blog": {
-"first-post.md": {
-  id: "first-post.md",
-  slug: "first-post",
-  body: string,
-  collection: "blog",
-  data: InferEntrySchema<"blog">
-},
-"markdown-style-guide.mdx": {
-  id: "markdown-style-guide.mdx",
-  slug: "markdown-style-guide",
-  body: string,
-  collection: "blog",
-  data: InferEntrySchema<"blog">
-},
-"second-post.md": {
-  id: "second-post.md",
-  slug: "second-post",
-  body: string,
-  collection: "blog",
-  data: InferEntrySchema<"blog">
-},
-"third-post.md": {
-  id: "third-post.md",
-  slug: "third-post",
-  body: string,
-  collection: "blog",
-  data: InferEntrySchema<"blog">
-},
-"using-mdx.mdx": {
-  id: "using-mdx.mdx",
-  slug: "using-mdx",
-  body: string,
-  collection: "blog",
-  data: InferEntrySchema<"blog">
-},
-},
-"builds": {
+		"builds": {
 "followageresponses.mdx": {
   id: "followageresponses.mdx",
   slug: "followageresponses",
@@ -117,6 +80,36 @@ declare module 'astro:content' {
   body: string,
   collection: "builds",
   data: any
+},
+},
+"docs": {
+"en/introduction.md": {
+  id: "en/introduction.md",
+  slug: "en/introduction",
+  body: string,
+  collection: "docs",
+  data: InferEntrySchema<"docs">
+},
+"en/page-2.md": {
+  id: "en/page-2.md",
+  slug: "en/page-2",
+  body: string,
+  collection: "docs",
+  data: InferEntrySchema<"docs">
+},
+"en/page-3.md": {
+  id: "en/page-3.md",
+  slug: "en/page-3",
+  body: string,
+  collection: "docs",
+  data: InferEntrySchema<"docs">
+},
+"en/page-4.md": {
+  id: "en/page-4.md",
+  slug: "en/page-4",
+  body: string,
+  collection: "docs",
+  data: InferEntrySchema<"docs">
 },
 },
 
