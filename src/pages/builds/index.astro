@@ -40,13 +40,6 @@ const posts = (await getCollection('builds')).sort(
 					{
 						posts.map((post) => (
 							<li>
-								<time datetime={post.data.pubDate.toISOString()}>
-									{post.data.pubDate.toLocaleDateString('en-us', {
-										year: 'numeric',
-										month: 'short',
-										day: 'numeric',
-									})}
-								</time>
 								<a href={`/builds/${post.slug}/`}>{post.data.title}</a>
 							</li>
 						))
