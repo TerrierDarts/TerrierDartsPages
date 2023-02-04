@@ -15,7 +15,12 @@ body {
 	line-height: 1.5;
 	color: #ffffff;
 }
-h1,
+h1
+{
+	font-size: 2em;
+	margin: 0.25em 0 0;
+	color: #ffffff;
+}
 h2,
 h3,
 h4,
