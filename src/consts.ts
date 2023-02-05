@@ -1,17 +1,18 @@
+import { link } from "fs";
+
 export const SITE = {
-	title: 'Documentation',
-	description: 'Your website description.',
+	title: 'TerrierDarts',
+	description: 'Home of all Things TD',
 	defaultLanguage: 'en-us',
 } as const;
 
 export const OPEN_GRAPH = {
 	image: {
-		src: 'https://github.com/withastro/astro/blob/main/assets/social/banner-minimal.png?raw=true',
+		src: 'https://static-cdn.jtvnw.net/jtv_user_pictures/c91df95a-6854-41eb-b6e8-471d1216ff99-profile_image-300x300.png',
 		alt:
-			'astro logo on a starry expanse of space,' +
-			' with a purple saturn-like planet floating in the right foreground',
+			'TerrierDarts Logo',
 	},
-	twitter: 'astrodotbuild',
+	twitter: 'TerrierDarts',
 };
 
 export const KNOWN_LANGUAGES = {
@@ -19,9 +20,9 @@ export const KNOWN_LANGUAGES = {
 } as const;
 export const KNOWN_LANGUAGE_CODES = Object.values(KNOWN_LANGUAGES);
 
-export const GITHUB_EDIT_URL = `https://github.com/withastro/astro/tree/main/examples/docs`;
+export const GITHUB_EDIT_URL = ``;
 
-export const COMMUNITY_INVITE_URL = `https://astro.build/chat`;
+export const COMMUNITY_INVITE_URL = ``;
 
 // See "Algolia" section of the README for more information.
 export const ALGOLIA = {
@@ -35,12 +36,14 @@ export type Sidebar = Record<
 	Record<string, { text: string; link: string }[]>
 >;
 export const SIDEBAR: Sidebar = {
-	en: {
-		'Section Header': [
-			{ text: 'Introduction', link: 'en/introduction' },
-			{ text: 'Page 2', link: 'en/page-2' },
-			{ text: 'Page 3', link: 'en/page-3' },
-		],
-		'Another Section': [{ text: 'Page 4', link: 'en/page-4' }],
+	en: 
+	{'Pages':[
+		{ text: 'Home', link:'en/home'}
+	],
+		'Builds': [
+			{ text: 'Custom Welcomes', link: 'en/builds/welcomeusers' },
+			{ text: 'Follow Age Responses', link: 'en/builds/followageresponses' }
+			
+		]
 	},
 };

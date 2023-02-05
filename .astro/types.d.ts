@@ -66,47 +66,24 @@ declare module 'astro:content' {
 	};
 
 	const entryMap: {
-		"builds": {
-"followageresponses.mdx": {
-  id: "followageresponses.mdx",
-  slug: "followageresponses",
+		"docs": {
+"en/builds/followageresponses.md": {
+  id: "en/builds/followageresponses.md",
+  slug: "en/builds/followageresponses",
   body: string,
-  collection: "builds",
-  data: any
+  collection: "docs",
+  data: InferEntrySchema<"docs">
 },
-"welcomeusers.mdx": {
-  id: "welcomeusers.mdx",
-  slug: "welcomeusers",
+"en/builds/welcomeusers.md": {
+  id: "en/builds/welcomeusers.md",
+  slug: "en/builds/welcomeusers",
   body: string,
-  collection: "builds",
-  data: any
+  collection: "docs",
+  data: InferEntrySchema<"docs">
 },
-},
-"docs": {
 "en/home.md": {
   id: "en/home.md",
   slug: "en/home",
-  body: string,
-  collection: "docs",
-  data: InferEntrySchema<"docs">
-},
-"en/page-2.md": {
-  id: "en/page-2.md",
-  slug: "en/page-2",
-  body: string,
-  collection: "docs",
-  data: InferEntrySchema<"docs">
-},
-"en/page-3.md": {
-  id: "en/page-3.md",
-  slug: "en/page-3",
-  body: string,
-  collection: "docs",
-  data: InferEntrySchema<"docs">
-},
-"en/page-4.md": {
-  id: "en/page-4.md",
-  slug: "en/page-4",
   body: string,
   collection: "docs",
   data: InferEntrySchema<"docs">
