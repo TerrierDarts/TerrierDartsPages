@@ -4,7 +4,7 @@ description: "Give your users there own special welcome, when they enter the str
 pubDate: "Feb 04 2024"
 heroImage: "/welcome_users_thumb.png"
 ---
-
+![Thumbnail](../../../../../dist/welcome_users_thumb.png)
 ### Import Code
 
 ```
