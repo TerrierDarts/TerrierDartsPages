@@ -83,9 +83,9 @@ declare module 'astro:content' {
 },
 },
 "docs": {
-"en/introduction.md": {
-  id: "en/introduction.md",
-  slug: "en/introduction",
+"en/home.md": {
+  id: "en/home.md",
+  slug: "en/home",
   body: string,
   collection: "docs",
   data: InferEntrySchema<"docs">
