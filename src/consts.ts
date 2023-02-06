@@ -41,7 +41,7 @@ export const SIDEBAR: Sidebar = {
 		{ text: 'Home', link:'home'}
 	],
 		'Builds': [
-			{ text: 'Custom Welcomes', link: 'welcomeusers' },
+			{ text: 'Custom Welcomes!!', link: 'welcomeusers' },
 			{ text: 'Follow Age Responses', link: 'followageresponses' }
 			
 		]

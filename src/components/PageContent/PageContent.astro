@@ -1,19 +1,20 @@
 ---
 import type { CollectionEntry } from 'astro:content';
-//import type { MarkdownHeading } from 'astro';
+import type { MarkdownHeading } from 'astro';
 import MoreMenu from '../RightSidebar/MoreMenu.astro';
 import TableOfContents from '../RightSidebar/TableOfContents';
 
-type Props = CollectionEntry<'docs'>['data'];
-/*
+//type Props = CollectionEntry<'docs'>['data'];
+
 type Props = {
 	title: string;
 	headings: MarkdownHeading[];
 	githubEditUrl: string;
 	code:string; 
 	pubDate:string;
+	alias:CollectionEntry<'docs'>['data'];
 	
-}; */
+};
 
 const { title, headings, githubEditUrl, pubDate, code } = Astro.props;
 

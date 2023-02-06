@@ -67,9 +67,9 @@ declare module 'astro:content' {
 
 	const entryMap: {
 		"builds": {
-"followageresponses.md": {
-  id: "followageresponses.md",
-  slug: "followageresponses",
+"welcomeusers.md": {
+  id: "welcomeusers.md",
+  slug: "welcomeusers",
   body: string,
   collection: "builds",
   data: any
