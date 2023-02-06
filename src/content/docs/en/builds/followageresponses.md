@@ -7,5 +7,5 @@ heroImage: "././placeholder-hero.jpg"
 ## Follow Age
 
 Different Responses based on number of days followed.
-Update 6
+Update 7
 
