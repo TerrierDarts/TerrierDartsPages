@@ -8,7 +8,7 @@ export const SITE = {
 
 export const OPEN_GRAPH = {
 	image: {
-		src: 'https://static-cdn.jtvnw.net/jtv_user_pictures/c91df95a-6854-41eb-b6e8-471d1216ff99-profile_image-75x75.png',
+		src: './icon.png',
 		alt:
 			'TerrierDarts Logo',
 	},
@@ -38,11 +38,11 @@ export type Sidebar = Record<
 export const SIDEBAR: Sidebar = {
 	en: 
 	{'Pages':[
-		{ text: 'Home', link:'en/home'}
+		{ text: 'Home', link:'home'}
 	],
 		'Builds': [
-			{ text: 'Custom Welcomes', link: 'en/builds/welcomeusers' },
-			{ text: 'Follow Age Responses', link: 'en/builds/followageresponses' }
+			{ text: 'Custom Welcomes', link: 'welcomeusers' },
+			{ text: 'Follow Age Responses', link: 'followageresponses' }
 			
 		]
 	},

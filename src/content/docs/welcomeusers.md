@@ -2,7 +2,7 @@
 title: "Welcome Users"
 description: "Give your users there own special welcome, when they enter the stream"
 pubDate: "Feb 04 2024"
-heroImage: "welcome_users_thumb.png"
+code: "1.0"
 ---
 
 ### Import Code

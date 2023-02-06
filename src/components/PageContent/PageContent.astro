@@ -1,29 +1,32 @@
 ---
-import type { MarkdownHeading } from 'astro';
+import type { CollectionEntry } from 'astro:content';
+//import type { MarkdownHeading } from 'astro';
 import MoreMenu from '../RightSidebar/MoreMenu.astro';
 import TableOfContents from '../RightSidebar/TableOfContents';
 
+type Props = CollectionEntry<'docs'>['data'];
+/*
 type Props = {
 	title: string;
 	headings: MarkdownHeading[];
 	githubEditUrl: string;
-};
+	code:string; 
+	pubDate:string;
+	
+}; */
 
-const { title, headings, githubEditUrl, heroImage, pubDate, updatedDate  } = Astro.props;
+const { title, headings, githubEditUrl, pubDate, code } = Astro.props;
+
 ---
 
 <article id="article" class="content">
 	<section class="main-section">
-		{heroImage && <img width={720} height={360} src={heroImage} alt="" />}
-		<h1 class="title">{title}</h1>DDDDDDDDDDDDDDD
-		{pubDate && <time>{pubDate}</time>}
-		{
-			updatedDate && (
-				<div>
-					Last updated on <time>{updatedDate}</time>
-				</div>
-			)
-		}
+		<!--<img width={720} height={360} src={heroImage} alt="" />-->
+		<h1 class="title"><u>{title}</u></h1>
+		
+				<h5>Last updated on <time>{pubDate}</time></h5>
+				<h5>Code Version : {code}</h5>
+		
 		<nav class="block sm:hidden">
 			<TableOfContents client:media="(max-width: 50em)" headings={headings} />
 		</nav>
