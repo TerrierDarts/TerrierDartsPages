@@ -8,7 +8,7 @@ export const SITE = {
 
 export const OPEN_GRAPH = {
 	image: {
-		src: 'https://static-cdn.jtvnw.net/jtv_user_pictures/c91df95a-6854-41eb-b6e8-471d1216ff99-profile_image-300x300.png',
+		src: 'https://static-cdn.jtvnw.net/jtv_user_pictures/c91df95a-6854-41eb-b6e8-471d1216ff99-profile_image-75x75.png',
 		alt:
 			'TerrierDarts Logo',
 	},

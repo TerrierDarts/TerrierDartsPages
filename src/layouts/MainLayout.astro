@@ -14,7 +14,7 @@ type Props = CollectionEntry<'docs'>['data'] & {
 	headings: MarkdownHeading[];
 };
 
-const { headings, ...data } = Astro.props;
+const { headings, ...data} = Astro.props;
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 const currentPage = Astro.url.pathname;
 const currentFile = `src/content/docs${currentPage.replace(/\/$/, '')}.md`;
@@ -127,6 +127,9 @@ const githubEditUrl = `${GITHUB_EDIT_URL}/${currentFile}`;
 			</aside>
 			<div id="grid-main">
 				<PageContent title={data.title} headings={headings} githubEditUrl={githubEditUrl}>
+					
+				
+					
 					<slot />
 				</PageContent>
 			</div>

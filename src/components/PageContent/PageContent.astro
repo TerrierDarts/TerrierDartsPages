@@ -9,12 +9,21 @@ type Props = {
 	githubEditUrl: string;
 };
 
-const { title, headings, githubEditUrl } = Astro.props;
+const { title, headings, githubEditUrl, heroImage, pubDate, updatedDate  } = Astro.props;
 ---
 
 <article id="article" class="content">
 	<section class="main-section">
-		<h1 class="content-title" id="overview">{title}</h1>
+		{heroImage && <img width={720} height={360} src={heroImage} alt="" />}
+		<h1 class="title">{title}</h1>
+		{pubDate && <time>{pubDate}</time>}
+		{
+			updatedDate && (
+				<div>
+					Last updated on <time>{updatedDate}</time>
+				</div>
+			)
+		}
 		<nav class="block sm:hidden">
 			<TableOfContents client:media="(max-width: 50em)" headings={headings} />
 		</nav>
