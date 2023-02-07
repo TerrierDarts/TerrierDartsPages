@@ -1,8 +1,10 @@
 ---
 title: "Welcome to TerrierDarts"
 description: "TerrierDart Home Page. Filled with builds, youtube tutorials and a blog!"
-pubDate: "Jul 08 2022"
+pubDate: "Feb 05 2023"
 code: "1.0"
+setUpDifficulty: "2/5"
+heroImage: "public\welcome_users_thumb.png"
 ---
 
 
