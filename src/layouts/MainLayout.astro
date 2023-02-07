@@ -14,7 +14,7 @@ type Props = CollectionEntry<'docs'>['data'] & {
 	headings: MarkdownHeading[];
 };
 
-const { headings,code,pubDate,setUpDifficulty, ...data} = Astro.props;
+const { headings, ...data} = Astro.props;
 console.log(Astro.props);
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 const currentPage = Astro.url.pathname;
@@ -127,7 +127,7 @@ const githubEditUrl = `${GITHUB_EDIT_URL}/${currentFile}`;
 				<LeftSidebar currentPage={currentPage} />
 			</aside>
 			<div id="grid-main">
-				<PageContent title={data.title} code={data.code} pubDate={data.pubDate} setUpDifficulty={data.setUpDifficulty} headings={headings} githubEditUrl={githubEditUrl}>				
+				<PageContent title={data.title} headings={headings} code={data.code}  pubDate={data.pubDate} setUpDifficulty={data.setUpDifficulty} githubEditUrl={githubEditUrl}>				
 					<slot />
 				</PageContent>
 			</div>

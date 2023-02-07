@@ -7,16 +7,17 @@ import TableOfContents from '../RightSidebar/TableOfContents';
 
 type Props ={
 	title: string;
-	code:string;
-	pubDate:string;
-	setUpDifficulty: string;
 	headings: MarkdownHeading[];
 	githubEditUrl: string;
+	code: string;
+	pubDate: string;
+	setUpDifficulty: string;
 	//heroImage: string;
 
 };
 
 const {title, headings, setUpDifficulty, githubEditUrl, pubDate, code} = Astro.props;
+
 
 ---
 
