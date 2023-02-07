@@ -1,34 +1,39 @@
 ---
-import type { CollectionEntry } from 'astro:content';
+//import type { CollectionEntry } from 'astro:content';
+//import type { MarkdownLayoutProps } from 'astro';
 import type { MarkdownHeading } from 'astro';
 import MoreMenu from '../RightSidebar/MoreMenu.astro';
 import TableOfContents from '../RightSidebar/TableOfContents';
 
 //type Props = CollectionEntry<'docs'>['data'];
 
-type Props = {
+type Props ={
 	title: string;
+	code:string;
+	pubDate:string;
 	headings: MarkdownHeading[];
 	githubEditUrl: string;
-	code:CollectionEntry<'docs'>['data'];
-	//code:string;
-	//pubDate:MarkdownHeading[];
+	heroImage:string;
+	setUpDifficulty: string;
+	
+	
 	
 	
 };
 
-const { title, headings, githubEditUrl, pubDate, code } = Astro.props;
+const { title, headings,heroImage, setUpDifficulty, githubEditUrl,pubDate, code} = Astro.props;
 
 ---
 
 <article id="article" class="content">
 	<section class="main-section">
-		<!--<img width={720} height={360} src={heroImage} alt="" />-->
+		<img width={720} height={360} src={heroImage} alt="" />
 		<h1 class="title"><u>{title}</u></h1>
 		
 				<h6>Last updated on : <time>{pubDate}</time></h6>
-				{code && <h6>Code Version 1: {code}</h6>}
-				<h6>Set-Up Difficulty : </h6>
+				<h6>Code Version : {code}</h6>
+				<h6>Set-Up Difficulty : {setUpDifficulty} </h6>
+				<hr>
 		
 		<nav class="block sm:hidden">
 			<TableOfContents client:media="(max-width: 50em)" headings={headings} />
