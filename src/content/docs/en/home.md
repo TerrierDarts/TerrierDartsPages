@@ -4,7 +4,7 @@ description: "TerrierDart Home Page. Filled with builds, youtube tutorials and a
 pubDate: "Feb 05 2023"
 code: ""
 setUpDifficulty: ""
-heroImage: "/assets/heroImage/default_image.png"
+heroImage: "../../heroImages/default_image.png"
 ---
 
 
