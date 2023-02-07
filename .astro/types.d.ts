@@ -66,33 +66,24 @@ declare module 'astro:content' {
 	};
 
 	const entryMap: {
-		"builds": {
-"welcomeusers.md": {
-  id: "welcomeusers.md",
-  slug: "welcomeusers",
-  body: string,
-  collection: "builds",
-  data: any
-},
-},
-"docs": {
-"followageresponses.md": {
-  id: "followageresponses.md",
-  slug: "followageresponses",
+		"docs": {
+"en/followageresponses.md": {
+  id: "en/followageresponses.md",
+  slug: "en/followageresponses",
   body: string,
   collection: "docs",
   data: InferEntrySchema<"docs">
 },
-"home.md": {
-  id: "home.md",
-  slug: "home",
+"en/home.md": {
+  id: "en/home.md",
+  slug: "en/home",
   body: string,
   collection: "docs",
   data: InferEntrySchema<"docs">
 },
-"welcomeusers.md": {
-  id: "welcomeusers.md",
-  slug: "welcomeusers",
+"en/welcomeusers.md": {
+  id: "en/welcomeusers.md",
+  slug: "en/welcomeusers",
   body: string,
   collection: "docs",
   data: InferEntrySchema<"docs">

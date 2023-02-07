@@ -1,5 +1,5 @@
 ---
-import type { CollectionEntry } from 'astro:content';
+//import type { CollectionEntry } from 'astro:content';
 import type { MarkdownHeading } from 'astro';
 import MoreMenu from '../RightSidebar/MoreMenu.astro';
 import TableOfContents from '../RightSidebar/TableOfContents';
@@ -10,7 +10,7 @@ type Props = {
 	title: string;
 	headings: MarkdownHeading[];
 	githubEditUrl: string;
-	data:CollectionEntry<'docs'>['data'];
+	//data:CollectionEntry<'docs'>['data'];
 	code:string; 
 	pubDate:string;
 	
@@ -26,8 +26,9 @@ const { title, headings, githubEditUrl, pubDate, code } = Astro.props;
 		<!--<img width={720} height={360} src={heroImage} alt="" />-->
 		<h1 class="title"><u>{title}</u></h1>
 		
-				<h5>Last updated on <time>{pubDate}</time></h5>
-				<h5>Code Version : {code}</h5>
+				<h6>Last updated on <time>{pubDate}</time></h6>
+				<h6>Code Version : {code}</h6>
+				<h6>Set-Up Difficulty : </h6>
 		
 		<nav class="block sm:hidden">
 			<TableOfContents client:media="(max-width: 50em)" headings={headings} />

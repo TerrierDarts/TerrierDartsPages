@@ -38,11 +38,11 @@ export type Sidebar = Record<
 export const SIDEBAR: Sidebar = {
 	en: 
 	{'Pages':[
-		{ text: 'Home', link:'home'}
+		{ text: 'Home', link:'../en/home'}
 	],
 		'Builds': [
-			{ text: 'Custom Welcomes!!', link: 'welcomeusers' },
-			{ text: 'Follow Age Responses', link: 'followageresponses' }
+			{ text: 'Custom Welcomes', link: '../en/welcomeusers' },
+			{ text: 'Follow Age Responses', link: '../en/followageresponses' }
 			
 		]
 	},
