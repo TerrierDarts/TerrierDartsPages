@@ -1,6 +1,4 @@
 ---
-//import type { CollectionEntry } from 'astro:content';
-//import type { MarkdownLayoutProps } from 'astro';
 import type { MarkdownHeading } from 'astro';
 import MoreMenu from '../RightSidebar/MoreMenu.astro';
 import TableOfContents from '../RightSidebar/TableOfContents';
@@ -11,17 +9,14 @@ type Props ={
 	title: string;
 	code:string;
 	pubDate:string;
+	setUpDifficulty: string;
 	headings: MarkdownHeading[];
 	githubEditUrl: string;
 	//heroImage: string;
-	setUpDifficulty: string;
-	
-	
-	
-	
+
 };
 
-const { title, headings,heroImage, setUpDifficulty, githubEditUrl,pubDate, code} = Astro.props;
+const {title, headings, setUpDifficulty, githubEditUrl, pubDate, code} = Astro.props;
 
 ---
 

@@ -4,7 +4,6 @@ description: "Give your users there own special welcome, when they enter the str
 pubDate: "Feb 04 2024"
 code: "1.0"
 setUpDifficulty: "2/5"
-heroImage: "/heroImages/welcome_users_thumb.png"
 ---
 
 ### Import Code
