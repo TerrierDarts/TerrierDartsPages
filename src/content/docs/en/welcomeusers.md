@@ -3,8 +3,8 @@ title: "Welcome Users"
 description: "Give your users there own special welcome, when they enter the stream"
 pubDate: "Feb 04 2024"
 code: "1.0"
-setUpDifficulty: "3/5"
-heroImage: "/assets/welcome_users_thumb.png"
+setUpDifficulty: "2/5"
+heroImage: "/heroImages/welcome_users_thumb.png"
 ---
 
 ### Import Code

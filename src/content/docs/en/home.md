@@ -2,9 +2,9 @@
 title: "Welcome to TerrierDarts"
 description: "TerrierDart Home Page. Filled with builds, youtube tutorials and a blog!"
 pubDate: "Feb 05 2023"
-code: "1.0"
-setUpDifficulty: "2/5"
-heroImage: "welcome_users_thumb.png"
+code: "This code will show if I have made any updates minor updates will add .1 and major will be 1"
+setUpDifficulty: "Difficulty is rated out of 5, with 5 been the hardest!"
+heroImage: "/heroImages/welcome_users_thumb.png"
 ---
 
 
