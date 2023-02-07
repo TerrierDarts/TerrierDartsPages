@@ -1,5 +1,5 @@
 ---
-//import type { CollectionEntry } from 'astro:content';
+import type { CollectionEntry } from 'astro:content';
 import type { MarkdownHeading } from 'astro';
 import MoreMenu from '../RightSidebar/MoreMenu.astro';
 import TableOfContents from '../RightSidebar/TableOfContents';
@@ -10,8 +10,8 @@ type Props = {
 	title: string;
 	headings: MarkdownHeading[];
 	githubEditUrl: string;
-	//data:CollectionEntry<'docs'>['data'];
-	code:string;
+	code:CollectionEntry<'docs'>['data'];
+	//code:string;
 	//pubDate:MarkdownHeading[];
 	
 	
