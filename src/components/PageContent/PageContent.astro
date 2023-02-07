@@ -11,8 +11,8 @@ type Props = {
 	headings: MarkdownHeading[];
 	githubEditUrl: string;
 	//data:CollectionEntry<'docs'>['data'];
-	code:string; 
-	pubDate:string;
+	code:string;
+	//pubDate:MarkdownHeading[];
 	
 	
 };
@@ -26,8 +26,8 @@ const { title, headings, githubEditUrl, pubDate, code } = Astro.props;
 		<!--<img width={720} height={360} src={heroImage} alt="" />-->
 		<h1 class="title"><u>{title}</u></h1>
 		
-				<h6>Last updated on <time>{pubDate}</time></h6>
-				<h6>Code Version : {code}</h6>
+				<h6>Last updated on : <time>{pubDate}</time></h6>
+				{code && <h6>Code Version 1: {code}</h6>}
 				<h6>Set-Up Difficulty : </h6>
 		
 		<nav class="block sm:hidden">
