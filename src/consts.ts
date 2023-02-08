@@ -42,7 +42,8 @@ export const SIDEBAR: Sidebar = {
 	],
 		'Builds': [
 			{ text: 'Custom Welcomes', link: '../en/welcomeusers' },
-			{ text: 'Follow Age Responses', link: '../en/followageresponses' }
+			{ text: 'Follow Age Responses', link: '../en/followageresponses' },
+			{ text: 'Per Game Death Counter', link: '../en/death_counter_multi_game'}
 			
 		]
 	},

@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+
+.container {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+img {
+  border: 8px solid Blue;
+  border-radius: 40px;
+}
+
+#currentGame{
+  font-size: 160px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color:white;
+  font-family: 'Fredoka One', cursive;
+  text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000,4px 4px 20px #000;
+ transform: translate(-50%, -50%);
+  
+}
+#total{
+   font-size:40px;
+   transform: translate(0%, 50%);
+  font-family: 'Fredoka One', cursive;
+  color:white;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000,2px 2px 10px #000;
+  text-align: center;
+  
+}

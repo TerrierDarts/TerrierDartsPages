@@ -67,6 +67,13 @@ declare module 'astro:content' {
 
 	const entryMap: {
 		"docs": {
+"en/death_counter_multi_game.md": {
+  id: "en/death_counter_multi_game.md",
+  slug: "en/death_counter_multi_game",
+  body: string,
+  collection: "docs",
+  data: InferEntrySchema<"docs">
+},
 "en/followageresponses.md": {
   id: "en/followageresponses.md",
   slug: "en/followageresponses",

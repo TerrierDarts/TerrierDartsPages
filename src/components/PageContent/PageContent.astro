@@ -26,9 +26,9 @@ const {title, headings, setUpDifficulty, githubEditUrl, pubDate, code, heroImage
 		
 		<h1 class="title"><u>{title}</u></h1>
 		<img width={720} height={360} src={heroImage} alt=""/>
-				<b>Last updated on : <time>{pubDate}</time></b>
-				<b>Code Version : {code}</b>
-				<b>Set-Up Difficulty : {setUpDifficulty} </b>
+				<small><b>Last updated on : <time>{pubDate}</time><br>
+				Code Version : {code}<br>
+				Set-Up Difficulty : {setUpDifficulty} </b><br></small>
 				<hr>
 		
 		<nav class="block sm:hidden">
