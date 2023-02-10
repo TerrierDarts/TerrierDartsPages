@@ -36,15 +36,23 @@ export type Sidebar = Record<
 	Record<string, { text: string; link: string }[]>
 >;
 export const SIDEBAR: Sidebar = {
-	en: 
-	{'Pages':[
-		{ text: 'Home', link:'../en/home'}
-	],
+	en:
+	{
+		'Pages': [
+			{ text: 'Home', link: '../en/home' }
+		],
 		'Builds': [
-			{ text: 'Custom Welcomes', link: '../en/welcomeusers' },
-			{ text: 'Follow Age Responses', link: '../en/followageresponses' },
-			{ text: 'Per Game Death Counter', link: '../en/death_counter_multi_game'}
-			
-		]
+			{ text: 'Custom Welcomes', link: '../en/welcome_users' },
+			{ text: 'Follow Age Responses', link: '../en/follow_age_responses' },
+			{ text: 'Per Game Death Counter', link: '../en/death_counter_multi_game' },
+			'Heat', [
+			  { text: 'Heat - Core', link: '../en/heat_core_ws5' },
+			  { text: 'Heat - Mario', link: '../en/heat_mario' },
+			  { text: 'Heat - Click Map', link: '../en/heat_click_map' },
+			]
+		  ]
+		  
+
+
 	},
 };
