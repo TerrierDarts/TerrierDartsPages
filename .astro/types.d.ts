@@ -74,9 +74,37 @@ declare module 'astro:content' {
   collection: "docs",
   data: InferEntrySchema<"docs">
 },
-"en/followageresponses.md": {
-  id: "en/followageresponses.md",
-  slug: "en/followageresponses",
+"en/follow_age_responses.md": {
+  id: "en/follow_age_responses.md",
+  slug: "en/follow_age_responses",
+  body: string,
+  collection: "docs",
+  data: InferEntrySchema<"docs">
+},
+"en/heat_click_map.md": {
+  id: "en/heat_click_map.md",
+  slug: "en/heat_click_map",
+  body: string,
+  collection: "docs",
+  data: InferEntrySchema<"docs">
+},
+"en/heat_core_ws5.md": {
+  id: "en/heat_core_ws5.md",
+  slug: "en/heat_core_ws5",
+  body: string,
+  collection: "docs",
+  data: InferEntrySchema<"docs">
+},
+"en/heat_mario.mdx": {
+  id: "en/heat_mario.mdx",
+  slug: "en/heat_mario",
+  body: string,
+  collection: "docs",
+  data: InferEntrySchema<"docs">
+},
+"en/heat_offline_test.mdx": {
+  id: "en/heat_offline_test.mdx",
+  slug: "en/heat_offline_test",
   body: string,
   collection: "docs",
   data: InferEntrySchema<"docs">
@@ -88,9 +116,9 @@ declare module 'astro:content' {
   collection: "docs",
   data: InferEntrySchema<"docs">
 },
-"en/welcomeusers.md": {
-  id: "en/welcomeusers.md",
-  slug: "en/welcomeusers",
+"en/welcome_users.md": {
+  id: "en/welcome_users.md",
+  slug: "en/welcome_users",
   body: string,
   collection: "docs",
   data: InferEntrySchema<"docs">
