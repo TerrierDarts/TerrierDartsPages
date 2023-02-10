@@ -15,6 +15,11 @@ export const OPEN_GRAPH = {
 	twitter: 'TerrierDarts',
 };
 
+export const HEADING = {
+	children : Map 
+} as const ;
+export const HEADING_NAMES = Object.values(HEADING);
+
 export const KNOWN_LANGUAGES = {
 	English: 'en',
 } as const;
@@ -31,28 +36,46 @@ export const ALGOLIA = {
 	apiKey: 'XXXXXXXXXX',
 };
 
+interface NavLink {
+	text: string;
+	link: string;
+}
+
+interface NavGroup {
+	text: string;
+	children?: (NavLink | NavGroup)[];
+	link?: string;
+  }
+  
+
 export type Sidebar = Record<
 	(typeof KNOWN_LANGUAGE_CODES)[number],
-	Record<string, { text: string; link: string }[]>
+	Record<string, NavLink[] | NavGroup>
 >;
+
 export const SIDEBAR: Sidebar = {
-	en:
-	{
-		'Pages': [
-			{ text: 'Home', link: '../en/home' }
-		],
-		'Builds': [
-			{ text: 'Custom Welcomes', link: '../en/welcome_users' },
-			{ text: 'Follow Age Responses', link: '../en/follow_age_responses' },
-			{ text: 'Per Game Death Counter', link: '../en/death_counter_multi_game' },
-			'Heat', [
+	en: {
+	  'Pages': { text: 'Pages', children: [
+		{ text: 'Home', link: '../en/home' }
+	  ]},
+	  'Builds': { text: 'Builds', children: [
+		{ text: 'Custom Welcomes', link: '../en/welcome_users' },
+		{ text: 'Follow Age Responses', link: '../en/follow_age_responses' },
+		{ text: 'Per Game Death Counter', link: '../en/death_counter_multi_game' },
+		{
+			text: 'Heat',
+			link: '',
+			children: [
 			  { text: 'Heat - Core', link: '../en/heat_core_ws5' },
 			  { text: 'Heat - Mario', link: '../en/heat_mario' },
 			  { text: 'Heat - Click Map', link: '../en/heat_click_map' },
 			]
-		  ]
+		  }
 		  
-
-
+		  
+		  
+		  
+	  ]}
 	},
-};
+  };
+

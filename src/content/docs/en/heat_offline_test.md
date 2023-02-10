@@ -6,9 +6,11 @@ pubDate: "Feb 10 2023"
 setUpDifficulty: "4/5"
 heroImage: "../../heroImages/heat_ws5.png"
 ---
+```html
 import Script from '../../obs_links/heat_offline/script.js';
 import Style from '../../obs_links/heat_offline/style.css';
 ---
+
 <div id="textBoxes">
 User ID : <input type="text" id="user" value="535833752"><br>
 SB WS Address : <input type="text" id="url" value="ws://127.0.0.1:8080/"><br>
@@ -25,3 +27,4 @@ Ensure Data is Correct above and press Open Click Map: <br>
   <div id="thing">
   </div>
 </div>
+```

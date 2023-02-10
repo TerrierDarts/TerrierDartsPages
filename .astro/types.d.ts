@@ -102,8 +102,8 @@ declare module 'astro:content' {
   collection: "docs",
   data: InferEntrySchema<"docs">
 },
-"en/heat_offline_test.mdx": {
-  id: "en/heat_offline_test.mdx",
+"en/heat_offline_test.md": {
+  id: "en/heat_offline_test.md",
   slug: "en/heat_offline_test",
   body: string,
   collection: "docs",
