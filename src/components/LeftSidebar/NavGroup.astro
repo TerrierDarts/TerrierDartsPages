@@ -1,0 +1,30 @@
+---
+import type { NavGroup as NavGroupType,NavLink as NavLinkType } from '../../consts';
+import NavLink from './NavLink.astro';
+
+type Props = NavLinkType | NavGroupType;
+
+const { text, children, link } = Astro.props;
+---
+
+<div class="nav-group">
+  <h2 class="nav-group-title">{text}</h2>
+  <ul>
+    {children?.map((child) => 'children' in child ? <Astro.self {...child} /> : <NavLink text={child.text} link={child.link} />)}
+  </ul>
+</div>
+
+<style>
+  .nav-group-title {
+		font-size: 1rem;
+		font-weight: 700;
+		padding: 0.1rem 1rem;
+		text-transform: uppercase;
+		margin: 1rem 0 .25rem 0;
+	}
+
+  .nav-group > ul > .nav-group {
+    margin-left: 1rem;
+    border-left: 2px solid rgba(255,255,255,0.5);
+  }
+</style>

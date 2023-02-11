@@ -1,0 +1,35 @@
+---
+import type { NavLink } from '../../consts';
+
+type Props = NavLink;
+
+const { text, link } = Astro.props;
+const url = Astro.site?.pathname + link;
+---
+
+<li class="nav-link">
+  <a href={url}>{text}</a>
+</li>
+
+<style>
+  .nav-link a {
+		font-size: 1rem;
+		margin: 1px;
+		padding: 0.3rem 1rem;
+		font: inherit;
+		color: rgba(255,255,255,0.7);
+		text-decoration: none;
+		display: block;
+	}
+
+	.nav-link a:hover,
+	.nav-link a:focus {
+		background-color: var(--theme-bg-hover);
+	}
+
+	.nav-link a[aria-current='page'] {
+		color: var(--theme-text-accent);
+		background-color: var(--theme-bg-accent);
+		font-weight: 600;
+	}
+</style>
