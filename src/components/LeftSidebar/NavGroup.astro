@@ -1,6 +1,18 @@
 ---
-import type { NavGroup as NavGroupType,NavLink as NavLinkType } from '../../consts';
-import NavLink from './NavLink.astro';
+import type {
+  NavGroup as NavGroupType,
+  NavLink as NavLinkType,
+} from "../../consts";
+import NavLink from "./NavLink.astro";
+import React from "@astrojs/react";
+import {
+  Accordion,
+  AccordionItem,
+  AccordionItemButton,
+  AccordionItemHeading,
+  AccordionItemPanel,
+} from "react-accessible-accordion";
+import 'react-accessible-accordion/dist/fancy-example.css'
 
 type Props = NavLinkType | NavGroupType;
 
@@ -9,22 +21,34 @@ const { text, children, link } = Astro.props;
 
 <div class="nav-group">
   <h2 class="nav-group-title">{text}</h2>
+<Accordion>
+  
   <ul>
-    {children?.map((child) => 'children' in child ? <Astro.self {...child} /> : <NavLink text={child.text} link={child.link} />)}
+    {
+      children?.map((child: astroHTML.JSX.IntrinsicAttributes) =>
+        "children" in child ? (
+        <AccordionItem><AccordionItemHeading><AccordionItemButton><Astro.self {...child} /></AccordionItemButton></AccordionItemHeading></AccordionItem>
+        ) : ( <AccordionItemPanel><NavLink text={child.text} link={child.link} /></AccordionItemPanel>
+          
+        )
+      )
+    }
   </ul>
+</Accordion>
 </div>
 
 <style>
   .nav-group-title {
-		font-size: 1rem;
-		font-weight: 700;
-		padding: 0.1rem 1rem;
-		text-transform: uppercase;
-		margin: 1rem 0 .25rem 0;
-	}
+    font-size: 1rem;
+    font-weight: 700;
+    padding: 0.1rem 1rem;
+    text-transform: uppercase;
+    margin: 1rem 0 0.25rem 0;
+  }
 
   .nav-group > ul > .nav-group {
     margin-left: 1rem;
-    border-left: 2px solid rgba(255,255,255,0.5);
+    cursor: crosshair;
+    border-left: 2px solid rgba(255, 255, 255, 0.5);
   }
 </style>
