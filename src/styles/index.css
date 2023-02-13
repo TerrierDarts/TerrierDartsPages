@@ -409,3 +409,11 @@ h2.heading {
 .current-header-link a {
 	color: var(--theme-text);
 }
+
+.hide-scrollbar {
+	-ms-overflow-style: none;
+	scrollbar-width: none;
+}
+.hide-scrollbar::-webkit-scrollbar{
+	display: none;
+}

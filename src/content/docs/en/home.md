@@ -1,8 +1,8 @@
 ---
 title: "Welcome to TerrierDarts"
 description: "TerrierDart Home Page. Filled with builds, youtube tutorials and a blog!"
-pubDate: "Feb 05 2023"
-code: ""
+pubDate: "Feb 13 2023"
+code: "4"
 setUpDifficulty: ""
 heroImage: "../../heroImages/default_image.png"
 ---
@@ -10,7 +10,9 @@ heroImage: "../../heroImages/default_image.png"
 
 ## About Me
 
-I am known around most parts as TD, but Terrier or TerrierDarts is just fine. I am a Twitch Streamer and Youtube content creator. I am also an extension developer for [streamer.bot](https://streamer.bot). The main content of my Youtube is tutorials and builds of things i have made. I also upload my podcast on there.
+I am known around most parts as TD, but Terrier or TerrierDarts is just fine. I am a Twitch Streamer and Youtube content creator. I am also an extension developer for [Streamer.bot](https://streamer.bot). The main content of my Youtube is tutorials and builds of things i have made. I also upload my podcast on there.
+
+If you need any help or advice you can reach out to me in the streamer bot discord or my own personal discord! Links for them can be found below.
 
 ## My Podcast
 
