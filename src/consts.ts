@@ -30,9 +30,9 @@ export const COMMUNITY_INVITE_URL = ``;
 
 // See "Algolia" section of the README for more information.
 export const ALGOLIA = {
-  indexName: 'XXXXXXXXXX',
-  appId: 'XXXXXXXXXX',
-  apiKey: 'XXXXXXXXXX',
+  indexName: 'terrierdarts',
+  appId: '838PE0CCOQ',
+  apiKey: 'fd6e9a258b906c49aae341b2335ff8f6',
 };
 
 export interface NavLink {
@@ -54,7 +54,7 @@ export type Sidebar = Record<
 
 export const SIDEBAR: Sidebar = {
   en: {
-    Pages: { text: 'Main', children: [{ text: 'Home', link: '../en/home' }] },
+    Pages: { text: '', children: [{ text: 'Home', link: '../en/home' }] },
     Builds: {
       text: 'Builds',
       children: [
@@ -77,7 +77,7 @@ export const SIDEBAR: Sidebar = {
             { text: 'Heat - Core', link: '../en/heat_core_ws5' },
             { text: 'Heat - Mario', link: '../en/heat_mario' },
             { text: 'Heat - Click Map', link: '../en/heat_click_map' },
-            { text: 'Heat - Offline Test', link: '' },
+            { text: 'Heat - Offline Test', link: '../en/heat_offline_test' },
           ],
         },
         {
