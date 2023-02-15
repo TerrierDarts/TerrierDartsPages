@@ -67,6 +67,13 @@ declare module 'astro:content' {
 
 	const entryMap: {
 		"docs": {
+"en/casino_roulette.md": {
+  id: "en/casino_roulette.md",
+  slug: "en/casino_roulette",
+  body: string,
+  collection: "docs",
+  data: InferEntrySchema<"docs">
+},
 "en/death_counter_multi_game.md": {
   id: "en/death_counter_multi_game.md",
   slug: "en/death_counter_multi_game",
@@ -77,6 +84,20 @@ declare module 'astro:content' {
 "en/follow_age_responses.md": {
   id: "en/follow_age_responses.md",
   slug: "en/follow_age_responses",
+  body: string,
+  collection: "docs",
+  data: InferEntrySchema<"docs">
+},
+"en/free_for_all.md": {
+  id: "en/free_for_all.md",
+  slug: "en/free_for_all",
+  body: string,
+  collection: "docs",
+  data: InferEntrySchema<"docs">
+},
+"en/gamble.mdx": {
+  id: "en/gamble.mdx",
+  slug: "en/gamble",
   body: string,
   collection: "docs",
   data: InferEntrySchema<"docs">
@@ -95,16 +116,23 @@ declare module 'astro:content' {
   collection: "docs",
   data: InferEntrySchema<"docs">
 },
-"en/heat_mario.mdx": {
-  id: "en/heat_mario.mdx",
+"en/heat_mario.md": {
+  id: "en/heat_mario.md",
   slug: "en/heat_mario",
   body: string,
   collection: "docs",
   data: InferEntrySchema<"docs">
 },
-"en/heat_offline_test.md": {
-  id: "en/heat_offline_test.md",
+"en/heat_offline_test.mdx": {
+  id: "en/heat_offline_test.mdx",
   slug: "en/heat_offline_test",
+  body: string,
+  collection: "docs",
+  data: InferEntrySchema<"docs">
+},
+"en/heists.md": {
+  id: "en/heists.md",
+  slug: "en/heists",
   body: string,
   collection: "docs",
   data: InferEntrySchema<"docs">
@@ -112,6 +140,27 @@ declare module 'astro:content' {
 "en/home.md": {
   id: "en/home.md",
   slug: "en/home",
+  body: string,
+  collection: "docs",
+  data: InferEntrySchema<"docs">
+},
+"en/lotto.md": {
+  id: "en/lotto.md",
+  slug: "en/lotto",
+  body: string,
+  collection: "docs",
+  data: InferEntrySchema<"docs">
+},
+"en/raffles.md": {
+  id: "en/raffles.md",
+  slug: "en/raffles",
+  body: string,
+  collection: "docs",
+  data: InferEntrySchema<"docs">
+},
+"en/slots.md": {
+  id: "en/slots.md",
+  slug: "en/slots",
   body: string,
   collection: "docs",
   data: InferEntrySchema<"docs">

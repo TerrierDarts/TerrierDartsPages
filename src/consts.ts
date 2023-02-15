@@ -30,9 +30,9 @@ export const COMMUNITY_INVITE_URL = ``;
 
 // See "Algolia" section of the README for more information.
 export const ALGOLIA = {
-  indexName: 'terrierdarts',
-  appId: '838PE0CCOQ',
-  apiKey: 'fd6e9a258b906c49aae341b2335ff8f6',
+  indexName: 'TD_Search',
+  appId: 'G0IGEJ4ZKT',
+  apiKey: 'b616a19419fb11dcda495f7bb20db388',
 };
 
 export interface NavLink {
@@ -84,14 +84,14 @@ export const SIDEBAR: Sidebar = {
           text: 'Point System Games',
           link: '',
           children: [
-            { text: 'Slots', link: '' },
-            { text: 'Gamble', link: '' },
-            { text: 'Casino Roulette', link: '' },
-            { text: 'Lotto', link: '' },
-            { text: 'Heists', link: '' },
+            { text: 'Slots', link: '../en/slots' },
+            { text: 'Gamble', link: '../en/gamble' },
+            { text: 'Casino Roulette', link: '../en/casino_roulette' },
+            { text: 'Lotto', link: '../en/lotto' },
+            { text: 'Heists', link: '../en/heists' },
             { text: 'Boss Battles', link: '' },
-            { text: 'Raffles', link: '' },
-            { text: 'Free-For-Alls', link: '' },
+            { text: 'Raffles', link: '../en/raffles' },
+            { text: 'Free-For-Alls', link: '../en/free_for_all' },
             { text: 'Dice Game', link: '' },
           ],
         },

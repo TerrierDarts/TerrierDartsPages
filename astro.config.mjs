@@ -23,12 +23,16 @@ import tailwind from "@astrojs/tailwind";
 // https://astro.build/config
 
 // https://astro.build/config
+import rollup from "astro-rollup";
+
+// https://astro.build/config
 export default defineConfig({
+  legacy: { astroFlavoredMarkdown: true },
   integrations: [
   // Enable Preact to support Preact JSX components.
   preact(),
   // Enable React for the Algolia search component.
-  react(), sitemap(), mdx(), tailwind()],
+  react(), sitemap(), mdx(), tailwind(), rollup()],
   site: `https://astro.build`
   //output: "server",
   //adapter: node()

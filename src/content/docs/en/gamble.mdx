@@ -1,0 +1,39 @@
+---
+title: "Gamble"
+description: "A Gamble Game using VRFlad's Point System"
+pubDate: "Feb 13 2023"
+code: "2"
+setUpDifficulty: "1/5"
+heroImage: "../../heroImages/ps_gambles.png"
+---
+
+import {YouTube} from 'astro-embed';
+
+## Import Code.
+
+```
+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
+```
+
+## How To Install
+
+Once the code is imported you will need to firstly make sure that the code compiles. If it doesnt compile try adding `system.dll` and that should make it compile.
+
+Then you will need to make sure that the Command you have also imported is enabled and these are disbaled by default.
+
+Once these are done the Gamble will be fully installed. 
+
+## How to Configure
+
+The Execute Code can be edited if you wish to change the output messages, but just be careful if making any edits to any code.
+
+The Arguments are the way you can adjust it to suit your requirements.
+
+|Argument| Purpose|
+|---|---|
+|`defaultBet`| This is the amount that will be bet if a user bets an invaild amount or doesn't declare a bet|
+|`winPercentage`| This is the number that controls the frequecy of wins, if your random number is lower you will win. So higher the more wins|
+|`pushEnabled`| This will mean if the random number is equal to the winPercentage then the player will get there points back, if turned off equal will be a loss.|
+
+## YouTube Tutorial 
+<YouTube id="https://youtu.be/5Wq0g3bR42o" />
