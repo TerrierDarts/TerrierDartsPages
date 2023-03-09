@@ -64,10 +64,8 @@ export const SIDEBAR: Sidebar = {
           children: [
             { text: 'Custom Welcomes', link: '../en/welcome_users' },
             { text: 'Follow Age Responses', link: '../en/follow_age_responses' },
-            {
-              text: 'Per Game Death Counter',
-              link: '../en/death_counter_multi_game',
-            },
+            { text: 'Per Game Death Counter', link: '../en/death_counter_multi_game'},
+            { text: 'Gameboy Game Changer', link: '../en/gameboy_game_change'},
           ]
         },
         {

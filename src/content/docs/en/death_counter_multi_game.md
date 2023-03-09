@@ -20,7 +20,13 @@ TlM0RR+LCAAAAAAABADtXFlzIjkSft+I+Q9sR3Tsw456VapSHRsxD4DNZUy3wQab9TzoKqCpg6EKMJ6Y
 You can get the original pen from here if you wish to make any edits.
 [Here is My Codepen](https://codepen.io/terrierdarts/pen/jOppbZy?editors=0110)
 
-Or you can just add `https://www.terrierdarts.pages.dev/obs_links/multi_death_counter/index.html` as a browser source in obs if you are happy with how it looks.
+Or you can just add,
+
+```bash
+https://terrierdarts.pages.dev/obs_links/multi_death_counter/index.html
+```
+
+as a browser source in obs if you are happy with how it looks.
 > Just note if you don't use 127.0.0.1:8080 then you will need to grab the code pen version
 
 When adding this as a browser source, please set it as `Width:420` and `Height:700`
@@ -28,7 +34,7 @@ When adding this as a browser source, please set it as `Width:420` and `Height:7
 All the commands you will need are Imported however you will need to ensure they are enabled (Streamer.bot disables them by default for security). You will also need make sure the correct commands are Mod and Broadcaster Only.
 Commands Imported
 
-```text
+```
 !death-
 !death+
 !deaths

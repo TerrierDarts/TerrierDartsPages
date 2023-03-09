@@ -35,7 +35,7 @@
         clearTimeout(target._timerId);
       }
       target._timerId = setTimeout(() => {
-        target.innerText = 'Copy';
+        target.innerText = "Copy";
         target.classList.remove('copied');
       }, 2000);
     }
@@ -45,7 +45,7 @@
           codeBlocks.forEach(div => {
               // create the copy button
               const copy = document.createElement("button")
-              copy.innerHTML = "Copy"
+              copy.innerHTML = "Copy";
       copy.classList.add('code-copy');
               // add the event listener to each click
               copy.addEventListener("click", handleCopyClick)

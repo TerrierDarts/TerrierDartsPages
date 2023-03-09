@@ -102,6 +102,13 @@ declare module 'astro:content' {
   collection: "docs",
   data: InferEntrySchema<"docs">
 },
+"en/gameboy_game_change.mdx": {
+  id: "en/gameboy_game_change.mdx",
+  slug: "en/gameboy_game_change",
+  body: string,
+  collection: "docs",
+  data: InferEntrySchema<"docs">
+},
 "en/heat_click_map.md": {
   id: "en/heat_click_map.md",
   slug: "en/heat_click_map",
@@ -151,15 +158,15 @@ declare module 'astro:content' {
   collection: "docs",
   data: InferEntrySchema<"docs">
 },
-"en/raffles.md": {
-  id: "en/raffles.md",
+"en/raffles.mdx": {
+  id: "en/raffles.mdx",
   slug: "en/raffles",
   body: string,
   collection: "docs",
   data: InferEntrySchema<"docs">
 },
-"en/slots.md": {
-  id: "en/slots.md",
+"en/slots.mdx": {
+  id: "en/slots.mdx",
   slug: "en/slots",
   body: string,
   collection: "docs",

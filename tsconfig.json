@@ -4,6 +4,12 @@
     "jsx": "react-jsx",
     "skipLibCheck": true,
     "strictNullChecks": true,
-    "jsxImportSource": "preact"
+    "jsxImportSource": "preact",
+    "module": "esnext",
+    "target": "esnext",
+    "lib": ["esnext", "dom"],
+    "strict": true,
+    "esModuleInterop": true,
+    "types": ["astro"]
   }
 }
