@@ -6,7 +6,7 @@ export interface Props extends astroHTML.JSX.HTMLAttributes {
     importCode: string;
 }
 const {topText,bottomText,importCode} = Astro.props as Props;
-const copyButton = createCopyButton(importCode, topText, bottomText);
+const CopyButton = createCopyButton(importCode, topText, bottomText);
 
     function handleClick(importCode: string) {
       navigator.clipboard.writeText(importCode);
@@ -41,4 +41,4 @@ const copyButton = createCopyButton(importCode, topText, bottomText);
     }
   
 ---
-<copyButton>{copyButton}</copyButton>
+<CopyButton>{CopyButton}</CopyButton>

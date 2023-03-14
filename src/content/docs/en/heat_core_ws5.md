@@ -48,6 +48,59 @@ In `[Heat] Message` they are a few settings. These will change how heat behaves 
 |`realTime`| Setting this to true means that your sources will be updated with each click, rather than with the lock event. This is not reccomented for high click volumes, false will just use the lock event|
 |`debugMode`|This is on by default, you will want this off. The purpose of this is to help you follow the logic it is also helpful if you reach out for help in discords however for production you will want it off, but you may want it on just while setting up|
 
+## Additional Information
+
+You can click and press `Ctrl`, `Alt` and/or `Shift` (Will be slightly different for mac users)  [Check here for Info on the modifires](https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/getModifierState). You can use the following c# code below to have different actions based on said modifiers.
+
+```cs
+using System;
+
+public class CPHInline
+{
+    public bool Execute()
+    {
+        bool alt = bool.Parse(args["alt"].ToString());
+        bool ctrl = bool.Parse(args["ctrl"].ToString());
+        bool shift = bool.Parse(args["shift"].ToString());
+        string message;
+        int flag = (alt ? 1 : 0) + (ctrl ? 2 : 0) + (shift ? 4 : 0);
+        switch (flag)
+        {
+            case 1: //Just Alt
+                message = "Just Alt";
+                break;
+            case 2: //Just Ctrl
+                message = "Just Ctrl";
+                break;
+            case 4: // Just Shift
+                message = "Just Shift";
+                break;
+            case 3: // Ctrl + Alt
+                message = "Ctrl&Alt";
+                break;
+            case 5: //Alt + Shift
+                message = "Alt&Shift";
+                break;
+            case 6: //Shift + Ctrl
+                message = "Ctrl&Shift";
+                break;
+            case 7: //All3
+                message = "ALL 3";
+                break;
+            default: //None
+                message = "None or Error";
+                break;
+        }
+
+        //CPH.SendMessage(message);
+        return true;
+    }
+}
+
+```
+
+Here you can add something like `CPH.RunAction(string actionName)` under the `message=` to run the actions you want to or you can just code them in. Just note above is an example of how it can be done.
+
 ## Special Thanks
 
 Special Thanks to Farlezz for this, the code here would not be possible without you.
