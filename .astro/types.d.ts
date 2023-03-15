@@ -99,6 +99,13 @@ declare module 'astro:content' {
   collection: "docs",
   data: InferEntrySchema<"docs">
 } & { render(): Render[".mdx"] },
+"en/extensions.mdx": {
+  id: "en/extensions.mdx",
+  slug: "en/extensions",
+  body: string,
+  collection: "docs",
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".mdx"] },
 "en/follow_age_responses.mdx": {
   id: "en/follow_age_responses.mdx",
   slug: "en/follow_age_responses",
@@ -176,6 +183,13 @@ declare module 'astro:content' {
   collection: "docs",
   data: InferEntrySchema<"docs">
 } & { render(): Render[".mdx"] },
+"en/podcasts.mdx": {
+  id: "en/podcasts.mdx",
+  slug: "en/podcasts",
+  body: string,
+  collection: "docs",
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".mdx"] },
 "en/raffles.mdx": {
   id: "en/raffles.mdx",
   slug: "en/raffles",
@@ -186,6 +200,13 @@ declare module 'astro:content' {
 "en/slots.mdx": {
   id: "en/slots.mdx",
   slug: "en/slots",
+  body: string,
+  collection: "docs",
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".mdx"] },
+"en/streamerbot.mdx": {
+  id: "en/streamerbot.mdx",
+  slug: "en/streamerbot",
   body: string,
   collection: "docs",
   data: InferEntrySchema<"docs">
