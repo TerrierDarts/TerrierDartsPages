@@ -1,19 +1,70 @@
 ---
-import AvatarList from './AvatarList.astro';
+import AvatarList from "./AvatarList.astro";
 type Props = {
 	path: string;
 };
 const { path } = Astro.props;
+
+import { Icon } from "astro-icon";
 ---
 
 <footer>
-	<AvatarList path={path} />
+	
+	<a class="twitch" href="https://twitch.tv/TerrierDarts"><Icon class="twitch" name="mdi:twitch"/>TerrierDarts</a>
+
+	<a class="youtube" href="https://youtube.com/TerrierDarts"><Icon class="youtube" name="mdi:youtube" /> TerrierDarts</a>
+	
+	<a class="twitter" href="https://twitter.com/TerrierDarts"><Icon class="twitter" name="mdi:twitter" /> TerrierDarts</a>
+
+	<a class="github" href="https://github.com/TerrierDarts"><Icon class="github" name="mdi:github" /> TerrierDarts</a>
+
+	<a class="kofi" href="https://ko-fi.com/TerrierDarts"><Icon class="kofi" name="simple-icons:kofi" /> TerrierDarts</a>
+
+	<a class="patreon" href="https://patreon.com/TerrierDarts"><Icon class="patreon" name="mdi:patreon" /> TerrierDarts</a>
+	
 </footer>
 
 <style>
 	footer {
-		margin-top: auto;
-		padding: 2rem;
-		border-top: 3px solid var(--theme-divider);
+	margin-top: auto;
+    padding: 2rem;
+    font-size: 25px;
+    text-indent: 50px;
+    border-top: 4px solid var(--theme-divider);
+    display: inline-flex;
+    flex-wrap: nowrap;
+    align-content: flex-start;
+    align-items: stretch;
+    justify-content: space-evenly;
+	}
+	a:hover {
+		color: rgb(255, 238, 0);
+		background-color: transparent;
+		text-decoration: underline;
+	}
+
+	.twitch {
+		color: blueviolet;
+		height: 50px;
+	}
+	.youtube {
+		color: red;
+		height: 50px;
+	}
+	.twitter {
+		color: skyblue;
+		height: 50px;
+	}
+	.github {
+		color: whitesmoke;
+		height: 50px;
+	}
+	.kofi {
+		color: pink;
+		height: 50px;
+	}
+	.patreon {
+		color: orangered;
+		height: 50px;
 	}
 </style>

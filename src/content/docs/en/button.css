@@ -2,7 +2,6 @@
   position: relative;
   border: 1px solid #292929;
   background: #1c1c1c;
-  padding: 0 !important;
   margin: 0 !important;
   transition-property: color, border-color, background-color;
   transition-duration: 0.15s;
@@ -36,9 +35,8 @@ i {
 }
 
 .topText {
-  font-weight: 600 !important;
+  font-weight: 600;
   display: block;
- 
   font-size: 2em;
 
 }

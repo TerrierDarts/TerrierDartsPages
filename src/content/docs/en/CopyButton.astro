@@ -1,17 +1,78 @@
 ---
-import "./button.css";
+import { Icon } from 'astro-icon'
 ---
+
+
+
 <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 <html>
 <button id="copyBtn" class="copyButton" onclick="navigator.clipboard.writeText(document.getElementById('textToCopy').textContent.trim())">
     <div class="contents">
-      <i class="far fa-clipboard"></i>
+      <Icon class="icon" name="mdi:clipboard-file-outline" />
       <div>
-        <h1 class="topText">Import Code.</h1>
-        <h2 class="bottomText">Click to Copy.</h2>
+        <span class="topText">Import Code.</span>
+        <span class="bottomText">Click to Copy.</span>
       </div>
     </div>
   </button>
 </html>
   
 <div id="textToCopy" class="slotText"> <slot/> </div>
+
+<style>
+.copyButton {
+  position: relative;
+  border: 1px solid #292929;
+  background: #1c1c1c;
+  margin: 0 !important;
+  transition-property: color, border-color, background-color;
+  transition-duration: 0.15s;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 25px;
+}
+.copyButton:hover {
+  box-shadow: 0px 0px 59px -10px rgba(255,0,255,1);
+  border-color: #8400ff !important;
+}
+.copyButton:active {
+  background: rgb(39, 79, 39);
+}
+.contents {
+  color: #fff !important;
+  text-decoration: none;
+  font-weight: 600;
+  
+  display: flex;
+  align-items: center;
+  
+}
+.icon {
+  display: block;
+  height: 110px;
+  margin-right: 2rem;
+  color: silver;
+}
+
+.topText {
+  font-weight: 600 !important;
+  display: block;
+ 
+  font-size: 2em;
+
+}
+
+.bottomText {
+  font-style: normal;
+  font-weight: 400;
+  color: #ccc;
+  font-size: 1.4em;
+   display: block;
+ 
+}
+.slotText{
+
+  visibility: hidden;
+}
+
+
+</style>
