@@ -1,0 +1,23 @@
+
+<!-- class CopyButton extends HTMLElement {
+        constructor() {
+          super();
+    
+          // Read the message from the data attribute.
+          const message = this.dataset.value | "NO IMPORT COPIED";
+          const button = this.querySelector('button');
+          button.addEventListener('click', () => navigator.clipboard.writeText(message));
+        }
+      }
+        customElements.define('copybutton', CopyButton); -->
+
+
+
+        
+const buttons = document.querySelectorAll('button.copyButton');
+// Handle clicks on each button.
+buttons.forEach((button) => {
+  button.addEventListener('load', () => {
+    alert('Button was clicked!');
+  });
+});

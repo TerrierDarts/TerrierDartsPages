@@ -1,7 +1,33 @@
 declare module 'astro:content' {
+	interface Render {
+		'.mdx': Promise<{
+			Content: import('astro').MarkdownInstance<{}>['Content'];
+			headings: import('astro').MarkdownHeading[];
+			remarkPluginFrontmatter: Record<string, any>;
+		}>;
+	}
+}
+declare module 'astro:content' {
+	interface Render {
+		'.md': Promise<{
+			Content: import('astro').MarkdownInstance<{}>['Content'];
+			headings: import('astro').MarkdownHeading[];
+			remarkPluginFrontmatter: Record<string, any>;
+		}>;
+	}
+}
+
+declare module 'astro:content' {
 	export { z } from 'astro/zod';
 	export type CollectionEntry<C extends keyof typeof entryMap> =
-		(typeof entryMap)[C][keyof (typeof entryMap)[C]] & Render;
+		(typeof entryMap)[C][keyof (typeof entryMap)[C]];
+
+	export const image: () => import('astro/zod').ZodObject<{
+		src: import('astro/zod').ZodString;
+		width: import('astro/zod').ZodNumber;
+		height: import('astro/zod').ZodNumber;
+		format: import('astro/zod').ZodString;
+	}>;
 
 	type BaseSchemaWithoutEffects =
 		| import('astro/zod').AnyZodObject
@@ -57,14 +83,6 @@ declare module 'astro:content' {
 		Required<ContentConfig['collections'][C]>['schema']
 	>;
 
-	type Render = {
-		render(): Promise<{
-			Content: import('astro').MarkdownInstance<{}>['Content'];
-			headings: import('astro').MarkdownHeading[];
-			remarkPluginFrontmatter: Record<string, any>;
-		}>;
-	};
-
 	const entryMap: {
 		"docs": {
 "en/casino_roulette.md": {
@@ -73,112 +91,112 @@ declare module 'astro:content' {
   body: string,
   collection: "docs",
   data: InferEntrySchema<"docs">
-},
-"en/death_counter_multi_game.md": {
-  id: "en/death_counter_multi_game.md",
+} & { render(): Render[".md"] },
+"en/death_counter_multi_game.mdx": {
+  id: "en/death_counter_multi_game.mdx",
   slug: "en/death_counter_multi_game",
   body: string,
   collection: "docs",
   data: InferEntrySchema<"docs">
-},
+} & { render(): Render[".mdx"] },
 "en/follow_age_responses.md": {
   id: "en/follow_age_responses.md",
   slug: "en/follow_age_responses",
   body: string,
   collection: "docs",
   data: InferEntrySchema<"docs">
-},
+} & { render(): Render[".md"] },
 "en/free_for_all.md": {
   id: "en/free_for_all.md",
   slug: "en/free_for_all",
   body: string,
   collection: "docs",
   data: InferEntrySchema<"docs">
-},
+} & { render(): Render[".md"] },
 "en/gamble.mdx": {
   id: "en/gamble.mdx",
   slug: "en/gamble",
   body: string,
   collection: "docs",
   data: InferEntrySchema<"docs">
-},
+} & { render(): Render[".mdx"] },
 "en/gameboy_game_change.mdx": {
   id: "en/gameboy_game_change.mdx",
   slug: "en/gameboy_game_change",
   body: string,
   collection: "docs",
   data: InferEntrySchema<"docs">
-},
+} & { render(): Render[".mdx"] },
 "en/heat_click_map.md": {
   id: "en/heat_click_map.md",
   slug: "en/heat_click_map",
   body: string,
   collection: "docs",
   data: InferEntrySchema<"docs">
-},
+} & { render(): Render[".md"] },
 "en/heat_core_ws5.md": {
   id: "en/heat_core_ws5.md",
   slug: "en/heat_core_ws5",
   body: string,
   collection: "docs",
   data: InferEntrySchema<"docs">
-},
+} & { render(): Render[".md"] },
 "en/heat_mario.md": {
   id: "en/heat_mario.md",
   slug: "en/heat_mario",
   body: string,
   collection: "docs",
   data: InferEntrySchema<"docs">
-},
+} & { render(): Render[".md"] },
 "en/heat_offline_test.mdx": {
   id: "en/heat_offline_test.mdx",
   slug: "en/heat_offline_test",
   body: string,
   collection: "docs",
   data: InferEntrySchema<"docs">
-},
+} & { render(): Render[".mdx"] },
 "en/heists.md": {
   id: "en/heists.md",
   slug: "en/heists",
   body: string,
   collection: "docs",
   data: InferEntrySchema<"docs">
-},
+} & { render(): Render[".md"] },
 "en/home.md": {
   id: "en/home.md",
   slug: "en/home",
   body: string,
   collection: "docs",
   data: InferEntrySchema<"docs">
-},
+} & { render(): Render[".md"] },
 "en/lotto.md": {
   id: "en/lotto.md",
   slug: "en/lotto",
   body: string,
   collection: "docs",
   data: InferEntrySchema<"docs">
-},
+} & { render(): Render[".md"] },
 "en/raffles.mdx": {
   id: "en/raffles.mdx",
   slug: "en/raffles",
   body: string,
   collection: "docs",
   data: InferEntrySchema<"docs">
-},
+} & { render(): Render[".mdx"] },
 "en/slots.mdx": {
   id: "en/slots.mdx",
   slug: "en/slots",
   body: string,
   collection: "docs",
   data: InferEntrySchema<"docs">
-},
+} & { render(): Render[".mdx"] },
 "en/welcome_users.md": {
   id: "en/welcome_users.md",
   slug: "en/welcome_users",
   body: string,
   collection: "docs",
   data: InferEntrySchema<"docs">
-},
+} & { render(): Render[".md"] },
 },
 
 	};

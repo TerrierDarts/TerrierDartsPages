@@ -1,0 +1,58 @@
+.copyButton {
+  position: relative;
+  border: 1px solid #292929;
+  background: #1c1c1c;
+  padding: 0 !important;
+  margin: 0 !important;
+  transition-property: color, border-color, background-color;
+  transition-duration: 0.15s;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 25px;
+}
+.copyButton:hover {
+  box-shadow: 4px 2px 16px 4px rgb(33 96 253 / 8%),
+    0 8px 24px rgb(33 96 253 / 70%);
+  border-color: #00b9ff !important;
+}
+.copyButton:active {
+  background: green;
+}
+.contents {
+  color: #fff !important;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 1rem !important;
+  display: flex;
+  align-items: center;
+  
+}
+i {
+  display: block;
+  font-size: 4rem;
+  width: 35px;
+  margin-right: 3rem;
+  color: silver;
+  font-size: 4rem;
+}
+
+.topText {
+  font-weight: 600 !important;
+  display: block;
+ 
+  font-size: 2em;
+
+}
+
+.bottomText {
+  font-style: normal;
+  font-weight: 400;
+  color: #ccc;
+  font-size: 1.4em;
+   display: block;
+ 
+}
+
+.slotText{
+
+    visibility: hidden;
+  }

@@ -1,4 +1,4 @@
-.button {
+.copyButton {
   position: relative;
   border: 1px solid #292929;
   background: #1c1c1c;
@@ -9,12 +9,12 @@
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   border-radius: 25px;
 }
-.button:hover {
+.copyButton:hover {
   box-shadow: 4px 2px 16px 4px rgb(33 96 253 / 8%),
     0 8px 24px rgb(33 96 253 / 70%);
   border-color: #00b9ff !important;
 }
-.button:active {
+.copyButton:active {
   background: green;
 }
 .contents {
