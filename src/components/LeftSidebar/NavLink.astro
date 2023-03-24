@@ -1,4 +1,6 @@
 ---
+
+
 import type { NavLink } from '../../consts';
 
 type Props = NavLink;
@@ -7,10 +9,10 @@ const { text, link } = Astro.props;
 const url = Astro.site?.pathname + link;
 ---
 
-<li class="nav-link">
+		<li class="nav-link">
   <a href={url}>{text}</a>
-</li>
-
+</li>	
+	
 <style>
   .nav-link a {
 		font-size: 1rem;

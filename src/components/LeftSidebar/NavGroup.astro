@@ -5,11 +5,14 @@ import type {
 } from "../../consts";
 import NavLink from "./NavLink.astro";
 
+
+
 type Props = NavLinkType | NavGroupType;
 
 const { text, children, link } = Astro.props;
 ---
 
+  
 <div class="nav-group">
   <h2 class="nav-group-title">{text}</h2>
 
@@ -24,6 +27,7 @@ const { text, children, link } = Astro.props;
         )
       }
   </ul>
+
 </div>
 
 <style>
@@ -37,7 +41,7 @@ const { text, children, link } = Astro.props;
 
   .nav-group > ul > .nav-group {
     margin-left: 1rem;
-    cursor: crosshair;
+    cursor: pointer;
     border-left: 2px solid rgba(255, 255, 255, 0.5);
   }
 

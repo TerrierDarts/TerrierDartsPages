@@ -9,61 +9,172 @@ import { Icon } from "astro-icon";
 ---
 
 <footer>
+
 	
-	<a class="twitch" href="https://twitch.tv/TerrierDarts" target="_blank"><Icon class="twitch" style="align-items: center;" name="mdi:twitch"/></a>
 
-	<a class="youtube" href="https://youtube.com/TerrierDarts" target="_blank"><Icon class="youtube" name="mdi:youtube" /></a>
-	
-	<a class="twitter" href="https://twitter.com/TerrierDarts" target="_blank"><Icon class="twitter" name="mdi:twitter" /></a>
 
-	<a class="github" href="https://github.com/TerrierDarts" target="_blank"><Icon class="github" name="mdi:github" /></a>
+	<a class="twitch" href="https://twitch.tv/TerrierDarts" target="_blank">
+		<Icon class="twitchIcon" name="mdi:twitch"/>
+		<span class="twitchText">Live On Twitch</span>
+	</a>
 
-	<a class="kofi" href="https://ko-fi.com/TerrierDarts" target="_blank"><Icon class="kofi" name="simple-icons:kofi" /></a>
+	<a class="youtube" href="https://youtube.com/TerrierDarts" target="_blank">
+		<Icon class="youtubeIcon" name="mdi:youtube" />
+		<span class="youtubeText">Watch My Videos</span>
+	</a>
 
-	<a class="patreon" href="https://patreon.com/TerrierDarts" target="_blank"><Icon class="patreon" name="mdi:patreon" /></a>
-	
+	<a class="twitter"  href="https://twitter.com/TerrierDarts" target="_blank">
+		<Icon class="twitterIcon" name="mdi:twitter" />
+		<span class="twitterText">Follow for Updates</span>
+	</a>
+
+	<a class="github"  href="https://github.com/TerrierDarts" target="_blank">
+		<Icon class="githubIcon" name="mdi:github" />
+		<span class="githubText">See my Code</span>
+	</a>
+
+	<a class="kofi"  href="https://ko-fi.com/TerrierDarts" target="_blank">
+		<Icon class="kofiIcon" name="simple-icons:kofi" />
+		<span class="kofiText">Buy Me a Kofi</span>
+	</a>
+
+	<a class="patreon"  href="https://patreon.com/TerrierDarts" target="_blank">
+		<Icon class="patreonIcon" name="mdi:patreon" />
+		<span class="patreonText">Join the Patreon</span>
+	</a>
 </footer>
+
 
 <style>
 	footer {
 	margin-top: auto;
-	padding: 2rem;
+    padding: 2rem;
     font-size: 25px;
     border-top: 2px solid var(--theme-divider);
     display: flex;
-    align-content: flex-start;
-    align-items: stretch;
-    justify-content: space-evenly;
+    align-content: flex-end;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
 	}
-	a:hover {
-		color: rgb(255, 238, 0);
-		background-color: transparent;
-		text-decoration: underline;
-	}
-	
 
-	.twitch {
+a:link { text-decoration: none; }
+
+
+a:visited { text-decoration: none; }
+
+
+a:hover { text-decoration: none; }
+
+
+a:active { text-decoration: none; }
+
+.twitch:hover > .twitchIcon { 
+  display: none;
+}
+
+.twitch:hover > .twitchText { 
+  display: flex; 
+  color: blueviolet;
+}
+.twitch > .twitchIcon {
+	    display: flex;
 		color: blueviolet;
 		height: 50px;
 	}
-	.youtube {
+.twitch > .twitchText {
+		display:none;
+	}
+
+
+.youtube:hover > .youtubeIcon { 
+	display: none;
+}
+
+.youtube:hover > .youtubeText { 
+  display: flex; 
+  color: red;
+}
+.youtube > .youtubeIcon {
+	    display: flex;
 		color: red;
 		height: 50px;
 	}
-	.twitter {
+.youtube > .youtubeText {
+		display:none;
+	}
+	
+
+
+	.twitter:hover > .twitterIcon { 
+  display: none;
+}
+
+.twitter:hover > .twitterText { 
+  display: flex; 
+  color: skyblue;
+}
+.twitter > .twitterIcon {
+	    display: flex;
 		color: skyblue;
 		height: 50px;
 	}
-	.github {
-		color: whitesmoke;
+.twitter > .twitterText {
+		display:none;
+	}
+
+	.github:hover > .githubIcon { 
+  display: none;
+}
+
+.github:hover > .githubText { 
+  display: flex; 
+  color: gray;
+}
+.github > .githubIcon {
+	    display: flex;
+		color: gray;
 		height: 50px;
 	}
-	.kofi {
-		color: pink;
+.github > .githubText {
+		display:none;
+	}
+
+	
+.kofi:hover > .kofiIcon { 
+  display: none;
+}
+
+.kofi:hover > .kofiText { 
+  display: flex; 
+  color: deeppink;
+}
+.kofi > .kofiIcon {
+	    display: flex;
+		color: deeppink;
 		height: 50px;
 	}
-	.patreon {
+.kofi > .kofiText {
+		display:none;
+	}
+
+	.patreon:hover > .patreonIcon { 
+  display: none;
+}
+
+.patreon:hover > .patreonText { 
+  display: flex; 
+  color: orangered;
+}
+.patreon > .patreonIcon {
+	    display: flex;
 		color: orangered;
 		height: 50px;
 	}
+.patreon > .patreonText {
+		display:none;
+	}
+
+	
+
 </style>

@@ -1,5 +1,6 @@
 import { Children } from "react";
 
+
 export const SITE = {
   title: 'TerrierDarts',
   description: 'Home of all Things TD',
@@ -110,7 +111,7 @@ export const SIDEBAR: Sidebar = {
           {
           text: 'Chat Based Games',
           children: [
-           // { text: 'Cluedo', link: '' },
+           { text: 'Cluedo', link: '' },
            // { text: 'Snakes and Ladders', link: '' },
            // { text: 'Hangman', link: '' },
            // { text: 'Word Wheel', link: '' },

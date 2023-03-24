@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+		/>
+		<style>
+			body {
+				font-family: "Century Gothic", sans-serif;
+				
+			}
+
+			/* Style the sidenav links and the dropdown button */
+			.sidenav a,
+			.dropdown-btn {
+				padding: 6px 8px 6px 16px;
+				text-decoration: none;
+				font-size: 20px;
+				color: #818181;
+				display: block;
+				border: none;
+				background: none;
+				width: 100%;
+				text-align: left;
+				cursor: pointer;
+				outline: none;
+				
+		        font-weight: bold;
+			}
+
+			/* On mouse-over */
+			.sidenav a:hover,
+			.dropdown-btn:hover {
+				color: #f1f1f1;
+			}
+
+			.dropdown-btn {
+				text-transform: uppercase;
+			}
+
+
+			/* Main content */
+			.main {
+				margin-left: 200px; /* Same as the width of the sidenav */
+				font-size: 20px; /* Increased text to enable scrolling */
+				padding: 0px 10px;
+			}
+
+			/* Add an active class to the active dropdown button */
+			.active {
+			
+				color: white;
+			}
+
+			/* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
+			.dropdown-container {
+				display: none;
+				
+				padding-left: 8px;
+			}
+
+			.link{
+				text-transform: none;
+			}
+		
+			/* Some media queries for responsiveness */
+			@media screen and (max-height: 450px) {
+				.sidenav {
+					padding-top: 15px;
+				}
+				.sidenav a {
+					font-size: 18px;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="sidenav">
+			<a class="link" href="../../../en/home">Home</a>
+			<a class="link" href="../../../en/podcasts">Podcasts</a>
+			<a class="link" href="../../../en/streamerbot">Streamer.bot</a>
+			<a class="link" href="../../../en/home">Extensions</a>
+
+				<button class="dropdown-btn">Builds</button><div class="dropdown-container">
+					<button class="dropdown-btn">General</button><div class="dropdown-container">
+					
+						<a class="link" href="../../../en/follow_age_responses">Follow Age Responses</a>
+						<a class="link" href="../../../en/death_counter_multi_game">Multi Game Death Counter</a>
+						<a class="link" href="../../../en/welcome_users">Custom Welcomes</a>
+						<a class="link" href="../../../en/gameboy_game_change">Gameboy Game Changer</a>
+
+					
+					</div>
+					<button class="dropdown-btn">Heat</button><div class="dropdown-container">
+						<a class="link" href="../../../en/heat_core_ws5">Heat Map Core</a>
+						<a class="link" href="#">Mario Clicker (Coming Soon)</a>
+						<a class="link" href="#">Tower Game (Coming Soon)</a>
+						<a class="link" href="#">Offline Heat Test (Coming Soon)</a>
+					</div>
+				<button class="dropdown-btn">Points System</button><div class="dropdown-container">
+					<a class="link"href="../../../en/gamble">Gamble</a>
+					<a class="link" href="../../../en/slots">Slots</a>
+					<a class="link" href="../../../en/raffles">Raffle</a>
+					<a class="link"href="../../../en/gamble">Lotto (Coming Soon)</a>
+					<a class="link" href="../../../en/slots">Casino Roulette (Coming Soon)</a>
+					<a class="link" href="../../../en/raffles">Heists (Coming Soon)</a>
+					<a class="link"href="../../../en/gamble">Boss Battles (Coming Soon)</a>
+					<a class="link" href="../../../en/slots">Free-For-Alls (Coming Soon)</a>
+					<a class="link" href="../../../en/raffles">Dice Game (Coming Soon)</a>
+				</div>
+				<button class="dropdown-btn">Chat Games</button><div class="dropdown-container">
+					<a class="link" href="#">Cluedo (Coming Soon)</a>
+					<a class="link" href="#">Hangman (Coming Soon)</a>
+					<a class="link" href="#">Word Wheel (Coming Soon)</a>
+					<a class="link" href="#">Snakes and Ladders (Coming Soon)</a>
+				
+				</div>
+				
+				</div>
+		</div>
+
+		<script>
+			/* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+			var dropdown = document.getElementsByClassName("dropdown-btn");
+			var i;
+
+			for (i = 0; i < dropdown.length; i++) {
+				dropdown[i].addEventListener("click", function () {
+					this.classList.toggle("active");
+					var dropdownContent = this.nextElementSibling;
+					if (dropdownContent.style.display === "block") {
+						dropdownContent.style.display = "none";
+					} else {
+						dropdownContent.style.display = "block";
+					}
+				});
+			}
+		</script>
+	</body>
+</html>
