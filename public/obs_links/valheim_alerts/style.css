@@ -1,0 +1,57 @@
+.event {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 150px;
+  width:1000px;
+  font-family: Norse;
+  font-weight: bold;
+  font-size: 100px;
+  color: white;
+ -webkit-text-stroke: 2px black;
+}
+.username {
+  position: absolute;
+   display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 250px;
+  width:1000px;
+  font-family: Norse;
+  font-weight: bold;
+  font-size: 50px;
+  color: white;
+  -webkit-text-stroke: 2px black;
+}
+
+.top{
+   position: absolute;
+   display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 50px;
+  width:1000px;
+ 
+}
+.bottom{
+   position: absolute;
+   display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 300px;
+  width:1000px;
+ 
+}
+.gradient{
+  position: absolute;
+   display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  top: 126px;
+  width:1000px;
+  height:205px;
+  background: radial-gradient(rgba(0,0,0,0.1),rgba(0,0,0,-3));
+  
+}

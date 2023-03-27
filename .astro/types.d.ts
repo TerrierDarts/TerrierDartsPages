@@ -85,13 +85,13 @@ declare module 'astro:content' {
 
 	const entryMap: {
 		"docs": {
-"en/casino_roulette.md": {
-  id: "en/casino_roulette.md",
+"en/casino_roulette.mdx": {
+  id: "en/casino_roulette.mdx",
   slug: "en/casino_roulette",
   body: string,
   collection: "docs",
   data: InferEntrySchema<"docs">
-} & { render(): Render[".md"] },
+} & { render(): Render[".mdx"] },
 "en/death_counter_multi_game.mdx": {
   id: "en/death_counter_multi_game.mdx",
   slug: "en/death_counter_multi_game",
@@ -123,6 +123,13 @@ declare module 'astro:content' {
 "en/gamble.mdx": {
   id: "en/gamble.mdx",
   slug: "en/gamble",
+  body: string,
+  collection: "docs",
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".mdx"] },
+"en/game_alerts.mdx": {
+  id: "en/game_alerts.mdx",
+  slug: "en/game_alerts",
   body: string,
   collection: "docs",
   data: InferEntrySchema<"docs">
