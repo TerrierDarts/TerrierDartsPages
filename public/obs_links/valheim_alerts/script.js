@@ -20,10 +20,10 @@ function processQueue() {
   if (queue.length > 0) {
     // Get the first item in the queue
     var item = queue[0];
-    
+    alert(item.topText, item.bottomText);
     // Call the alert function with the item's parameters after a 6 second delay
     setTimeout(function() {
-      alert(item.topText, item.bottomText);
+      
       
       // Remove the item from the queue
       queue.shift();
@@ -104,10 +104,12 @@ ws.addEventListener("message", (event) => {
     }
     
     if (data.event.type == "GiftSub") {
+      if (!data.data.fromSubBomb) {
        var topText = "GIFT TO " + data.data.recipientDisplayName;
         var bottomText = data.data.displayName;
       addToQueue(topText,bottomText);
     }
+  }
     if (data.event.type == "ReSub") {
        var topText = "RESUB " + data.data.cumulativeMonths + " Months" ;
         var bottomText = data.data.displayName;
@@ -123,6 +125,11 @@ ws.addEventListener("message", (event) => {
        var topText = "GIFT BOMB OF " + data.data.gifts;
         var bottomText = data.data.displayName;
       addToQueue(topText,bottomText);
+    }
+    if (data.event.type == "Raid") {
+    var  topText = data.data.displayName;
+      var bottomText = " RAIDED WITH " + data.data.viewerCount;
+      addToQueue(topText, bottomText);
     }
     
 });

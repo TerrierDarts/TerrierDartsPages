@@ -1,0 +1,181 @@
+@import url("https://fonts.googleapis.com/css2?family=Fugaz+One&family=Phudu:wght@500&family=Playfair+Display&display=swap");
+
+.alert {
+  width: 1920px;
+  height: 1080px;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  overflow: hidden;
+}
+
+.oval {
+  position: absolute;
+  height: 190px;
+  width: 300px;
+  right: -300px;
+  top: 360px;
+  transform: rotate(-45deg);
+  background-color: #837fe8;
+  border-radius: 50%;
+  border: solid black;
+}
+.oval.animate {
+  animation: ovalIn 5.7s 1 forwards;
+  animation-timing-function: linear;
+}
+
+.name {
+  position: absolute;
+  font-size: 100px;
+  width: 100%;
+  right:3000px;
+  text-align-last: right;
+  font-family: "Playfair Display", serif;
+  color: white;
+  text-shadow: 3px 3px 1px #000;
+  text-transform: uppercase;
+  transform-origin: center right;
+  transform: translateX(650px) translateY(325px);
+  z-index: 1;
+}
+.name.animate {
+  animation: nameIn 5.7s 1 forwards;
+  animation-timing-function: linear;
+}
+
+.zone {
+  position: absolute;
+  font-size: 100px;
+  width: 100%;
+  right:3000px;
+  text-align-last: right;
+  font-family: "Playfair Display", serif;
+  color: white;
+  text-shadow: 3px 3px 1px #000;
+  text-transform: uppercase;
+  transform-origin: center right;
+  transform: translateX(650px) translateY(415px);
+
+  z-index: 1;
+}
+.zone.animate {
+  animation: zoneIn 4s 1 forwards;
+  animation-delay: 1.5s;
+  animation-timing-function: linear;
+}
+.act {
+  position: absolute;
+  font-size: 40px;
+  width: 100%;
+  right:-100;
+  text-align-last: right;
+  font-family: "Fugaz One", cursive;
+  color: #eda481;
+  text-shadow: 3px 3px 1px #000;
+  text-transform: uppercase;
+  transform-origin: center right;
+  transform: translateX(650px) translateY(525px);
+  z-index: 1;
+}
+.act.animate {
+  animation: actIn 3s 1 forwards;
+  animation-delay: 2.5s;
+  animation-timing-function: linear;
+}
+.num {
+  position: absolute;
+  font-size: 170px;
+  width: 100%;
+  right:-365px;
+  text-align-last: left;
+  font-family: "Phudu", cursive;
+  color: yellow;
+  text-shadow: 3px 3px 1px #000;
+  text-transform: uppercase;
+  transform-origin: center left;
+  transform: translateX(2325px) translateY(400px);
+  z-index: 1;
+}
+.num.animate {
+  animation: numIn 3s 1 forwards;
+  animation-delay: 2.5s;
+  animation-timing-function: linear;
+}
+
+@keyframes nameIn {
+  0% {
+    right: 3000px;
+  }
+  10% {
+    right: 1400px;
+  }
+  90% {
+    right: 1400px;
+  }
+  100% {
+    right: 3000px;
+  }
+}
+
+@keyframes ovalIn {
+  0% {
+    right: -300px;
+  }
+  10% {
+    right: 650px;
+  }
+  90% {
+    right: 650px;
+  }
+  100% {
+    right: -300px;
+  }
+}
+@keyframes actIn {
+  0% {
+    right: -100px;
+  }
+  10% {
+    right: 1450px;
+  }
+  90% {
+    right: 1450px;
+  }
+  100% {
+    right: -100px;
+  }
+}
+
+@keyframes zoneIn {
+  0% {
+    right: 3000px;
+  }
+  10% {
+    right: 1450px;
+  }
+  90% {
+    right: 1450px;
+  }
+  100% {
+    right: 3000px;
+  }
+}
+
+@keyframes numIn {
+  0% {
+    right: -365px;
+  }
+  10% {
+    right: 1185px;
+  }
+  90% {
+    right: 1185px;
+  }
+  100% {
+    right: -365px;
+  }
+}

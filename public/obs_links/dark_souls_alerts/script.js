@@ -1,6 +1,43 @@
-//https://www.dafont.com/optimusprinceps.font
- $("#alert").fadeOut();
+// Initialize an empty queue
+var queue = [];
 
+// Define the function to add a new item to the queue
+function addToQueue(text) {
+  queue.push({
+   text : text
+  });
+  
+  // If the queue was empty before adding this item, start processing the queue
+  if (queue.length === 1) {
+    processQueue();
+  }
+}
+
+// Define the function to process the queue
+function processQueue() {
+  // If the queue is not empty
+  if (queue.length > 0) {
+    // Get the first item in the queue
+    var item = queue[0];
+       alert(item.text);
+    // Call the alert function with the item's parameters after a 6 second delay
+    setTimeout(function() {
+   
+      
+      // Remove the item from the queue
+      queue.shift();
+      
+      // Call the processQueue function again to process the next item in the queue
+      processQueue();
+    }, 6000);
+  }
+}
+
+
+
+//https://www.dafont.com/optimusprinceps.font
+
+alert("YOU DIED");
 function alert(text) {
 
   document.getElementById("text").textContent = text;
@@ -38,7 +75,7 @@ sound.play();
 
 function growText(element, maxSize) {
   
-  let fontSize = 40;
+  let fontSize = 60;
    
   let interval = setInterval(() => {
     if (element.offsetWidth >= maxSize || fontSize >= 100) {
@@ -48,12 +85,12 @@ function growText(element, maxSize) {
       element.style.fontSize = fontSize + "px";
    
     }
-  }, 45); // Update the font size every 20 milliseconds
+  }, 55); // Update the font size every 20 milliseconds
 }
 
 function shrinkText(element, maxSize) {
   
-let fontSize =40;
+let fontSize =60;
 element.style.fontSize = fontSize + "px";
 
 }
@@ -91,36 +128,38 @@ ws.addEventListener("message", (event) => {
     user = data.data.message.displayName;
     text = user + " Cheered " + bits + " Bits";
 
-    alert(text);
+    addToQueue(text);
   }
   if (data.event.type == "Follow") {
     user = data.data.user_name;
     text = "NEW FOLLOWER " + user;
-    alert(text);
+    addToQueue(text);
   }
 
   if (data.event.type == "GiftSub") {
+    if (!data.data.fromSubBomb) {
     text =  data.data.displayName + " GIFTED TO " + data.data.recipientDisplayName;
 
-    alert(text);
+    addToQueue(text);
   }
+}
   if (data.event.type == "ReSub") {
     text =  data.data.displayName + " RESUB " + data.data.cumulativeMonths + " Months";
 
-    alert(text);
+    addToQueue(text);
   }
   if (data.event.type == "Sub") {
      text = data.data.displayName + " NEW SUBSCRIBER";
 
-    alert(text);
+     addToQueue(text);
   }
 
   if (data.event.type == "GiftBomb") {
     text = data.data.displayName + " GIFT BOMB OF " + data.data.gifts;
-    alert(text);
+    addToQueue(text);
   }
   if (data.event.type == "Raid") {
     text = data.data.displayName + " RAIDED WITH " + data.data.viewerCount;
-    alert(text);
+    addToQueue(text);
   }
 });
