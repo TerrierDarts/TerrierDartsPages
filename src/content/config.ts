@@ -9,7 +9,8 @@ const docs = defineCollection({
 		code: z.string(),
 		pubDate: z.string(),
 		setUpDifficulty: z.string(),
-		heroImage: z.string(),
+		heroImage: z.string().optional(),
+		youTubeLink: z.string().optional(),
 		dir: z.union([z.literal('ltr'), z.literal('rtl')]).default('ltr'),
 		image: z
 			.object({

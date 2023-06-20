@@ -3,6 +3,7 @@ import type { MarkdownHeading } from 'astro';
 import MoreMenu from '../RightSidebar/MoreMenu.astro';
 import TableOfContents from '../RightSidebar/TableOfContents';
 import { Icon } from 'astro-icon'
+import {YouTube} from 'astro-embed';
 
 
 
@@ -11,18 +12,27 @@ import { Icon } from 'astro-icon'
 
 //type Props = CollectionEntry<'docs'>['data'];
 
-type Props ={
-	title: string;
-	headings: MarkdownHeading[];
-	githubEditUrl: string;
-	code: string;
-	pubDate: string;
-	setUpDifficulty: string;
-	heroImage: string;
-
+type Props = {
+  title: string;
+  headings: MarkdownHeading[];
+  githubEditUrl: string;
+  code: string;
+  pubDate: string;
+  setUpDifficulty: string;
+  heroImage?: string;
+  youTubeLink: string;
 };
 
-const {title, headings, setUpDifficulty, githubEditUrl, pubDate, code, heroImage} = Astro.props;
+const {
+  title,
+  headings,
+  setUpDifficulty,
+  githubEditUrl,
+  pubDate,
+  code,
+  heroImage = "../../heroImages/default_image.png",
+  youTubeLink
+} = Astro.props;
 
 
 ---
@@ -30,11 +40,15 @@ const {title, headings, setUpDifficulty, githubEditUrl, pubDate, code, heroImage
 <article id="article" class="content" >
 	<section class="main-section" >
 		<span class="title">{title}</span>
-		<img width={720} height={360} src={heroImage} alt=""/>
+		{youTubeLink ? (
+			<YouTube class="video" id={youTubeLink}/>
+		  ) : (
+			<img class="hero" src={heroImage} alt="" />
+		  )}
 				
 		Last updated on : <span class="time">{pubDate}</span>,
-				Code Version : <span class="code">{code}</span>,
-				Set-Up Difficulty : <span class="stars">{setUpDifficulty}</span>.
+		Code Version : <span class="code">{code}</span>,
+		Set-Up Difficulty : <span class="stars">{setUpDifficulty}</span>.
 				<hr>
 		<nav class="block sm:hidden">
 			<TableOfContents client:media="(max-width: 50em)" headings={headings}  />
@@ -54,6 +68,7 @@ const {title, headings, setUpDifficulty, githubEditUrl, pubDate, code, heroImage
 		font-size: 2.25rem;
 	    font-weight: 800;
 		text-decoration-line: underline;
+		text-align: center;
 	}
 	.time
 	{
@@ -91,6 +106,18 @@ const {title, headings, setUpDifficulty, githubEditUrl, pubDate, code, heroImage
 
 	.block {
 		display: block;
+	}
+	.hero{
+		
+		height: 200px;
+		width: 400px;
+	
+	}
+	.video{
+		
+		height: 400px;
+		width: 720px;
+	
 	}
 
 	@media (min-width: 50em) {
