@@ -5,4 +5,15 @@ module.exports = {
 		extend: {},
 	},
 	plugins: [],
+	module: {
+		rules: [
+		  {
+			resourceQuery: /raw/,
+			type: 'asset/source',
+		  },
+		  // ...other rules
+		],
+	  },
+
+	
 }

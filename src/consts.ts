@@ -80,6 +80,7 @@ export const SIDEBAR: Sidebar = {
               { text: 'Follow Age Responses', link: '../en/follow_age_responses' },
               { text: 'Per Game Death Counter', link: '../en/death_counter_multi_game'},
               { text: 'Gameboy Game Changer', link: '../en/gameboy_game_change'},
+              { text: 'Random Game Changer', link: '../en/random_game_change'},
           ]
           },
 
