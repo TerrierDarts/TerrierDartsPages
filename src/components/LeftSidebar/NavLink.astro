@@ -1,21 +1,29 @@
 ---
-
-
 import type { NavLink } from '../../consts';
 
 type Props = NavLink;
 
-const { text, link } = Astro.props;
-const url = Astro.site?.pathname + link;
----
+const { text, link} = Astro.props;
+let url = link || '';
+let newtab = 2;
+let dd = url;
 
-		<li class="nav-link">
-  <a href={url}>{text}</a>
-</li>	
+if (link.includes("https://")) {
+    newtab =1;
+  }
+
+---
+<li class="nav-link">
+  <a href={url} target={newtab == 1 ? '_blank' : '_self'}>
+    {text}
+  </a>
+</li>
+
+	
 	
 <style>
   .nav-link a {
-		font-size: 1rem;
+		font-size: 0.8rem;
 		margin: 1px;
 		padding: 0.3rem 1rem;
 		font: inherit;

@@ -71,6 +71,7 @@ h2 {
 h1 {
 	font-size: 3.25rem;
 	font-weight: 800;
+	text-align: center;
 }
 
 h2 {
@@ -279,6 +280,8 @@ blockquote {
 
 img {
 	max-width: 100%;
+	display: flex;
+	justify-content: center;
 }
 
 .flex {

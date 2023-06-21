@@ -22,7 +22,8 @@ const { text, children, link } = Astro.props;
           "children" in child ? (
             <Astro.self {...child} />
           ) : (
-            <NavLink text={child.text} link={child.link} />
+            <NavLink text={child.text} link={child.link} /> 
+            
           )
         )
       }
@@ -40,9 +41,9 @@ const { text, children, link } = Astro.props;
   }
 
   .nav-group > ul > .nav-group {
-    margin-left: 1rem;
+    margin-left: 0.5rem;
     cursor: pointer;
-    border-left: 2px solid rgba(255, 255, 255, 0.5);
+   
   }
 
 

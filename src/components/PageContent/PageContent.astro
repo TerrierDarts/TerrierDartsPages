@@ -16,20 +16,20 @@ type Props = {
   title: string;
   headings: MarkdownHeading[];
   githubEditUrl: string;
-  code: string;
-  pubDate: string;
-  setUpDifficulty: string;
+  code?: string;
+  pubDate?: string;
+  setUpDifficulty?: string;
   heroImage?: string;
-  youTubeLink: string;
+  youTubeLink?: string;
 };
 
 const {
   title,
   headings,
-  setUpDifficulty,
+  setUpDifficulty="",
   githubEditUrl,
-  pubDate,
-  code,
+  pubDate = "",
+  code="" ,
   heroImage = "../../heroImages/default_image.png",
   youTubeLink
 } = Astro.props;
@@ -40,16 +40,32 @@ const {
 <article id="article" class="content" >
 	<section class="main-section" >
 		<span class="title">{title}</span>
+
 		{youTubeLink ? (
 			<YouTube class="video" id={youTubeLink}/>
 		  ) : (
 			<img class="hero" src={heroImage} alt="" />
 		  )}
 				
-		Last updated on : <span class="time">{pubDate}</span>,
-		Code Version : <span class="code">{code}</span>,
-		Set-Up Difficulty : <span class="stars">{setUpDifficulty}</span>.
-				<hr>
+				{pubDate ? (
+					<>
+					  Last updated on: <span class="time">{pubDate}</span>,
+					</>
+				  ) : null}
+				  {code ? (
+					<>
+					  Code Version: <span class="code">{code}</span>,
+					</>
+				  ) : null}
+				  {setUpDifficulty ? (
+					<>
+					  Set-Up Difficulty: <span class="stars">{setUpDifficulty}</span>.
+					</>
+				  ) : null}
+
+
+		<hr>
+		
 		<nav class="block sm:hidden">
 			<TableOfContents client:media="(max-width: 50em)" headings={headings}  />
 		</nav>
@@ -58,17 +74,17 @@ const {
 		
 	</section>
 	<nav class="block sm:hidden">
-		<MoreMenu editHref={githubEditUrl} />
+		<MoreMenu/>
 	</nav>
 </article>
 
 <style>
 	.title{
-		color: rgb(0, 170, 255);
+		color: rgb(172, 172, 172);
 		font-size: 2.25rem;
 	    font-weight: 800;
-		text-decoration-line: underline;
-		text-align: center;
+		justify-content: center;
+		display:flex !important;
 	}
 	.time
 	{
@@ -98,6 +114,8 @@ const {
 		height: 100%;
 		display: flex;
 		flex-direction: column;
+		
+        
 	}
 
 	.content > section {
@@ -109,8 +127,10 @@ const {
 	}
 	.hero{
 		
-		height: 200px;
-		width: 400px;
+		height: 300px;
+		width: 540px;
+		justify-content: center;
+		display:flex !important;
 	
 	}
 	.video{

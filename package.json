@@ -9,7 +9,7 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "publish-pages": "npm run build && npx wrangler pages publish dist"
+    "publish-pages": "npm run build && npx wrangler pages deploy dist"
   },
   "dependencies": {
     "@algolia/client-search": "^4.13.1",
