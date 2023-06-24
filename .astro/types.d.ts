@@ -198,93 +198,128 @@ declare module 'astro:content' {
 
 	type ContentEntryMap = {
 		"docs": {
-"en/casino_roulette.mdx": {
-	id: "en/casino_roulette.mdx";
-  slug: "en/casino_roulette";
+"en/chat_games/cludeo.mdx": {
+	id: "en/chat_games/cludeo.mdx";
+  slug: "en/chat_games/cludeo";
   body: string;
   collection: "docs";
   data: InferEntrySchema<"docs">
 } & { render(): Render[".mdx"] };
-"en/death_counter_multi_game.mdx": {
-	id: "en/death_counter_multi_game.mdx";
-  slug: "en/death_counter_multi_game";
+"en/chat_games/hangman.mdx": {
+	id: "en/chat_games/hangman.mdx";
+  slug: "en/chat_games/hangman";
   body: string;
   collection: "docs";
   data: InferEntrySchema<"docs">
 } & { render(): Render[".mdx"] };
-"en/extensions.mdx": {
-	id: "en/extensions.mdx";
-  slug: "en/extensions";
+"en/chat_games/snakes_and_ladders.mdx": {
+	id: "en/chat_games/snakes_and_ladders.mdx";
+  slug: "en/chat_games/snakes_and_ladders";
   body: string;
   collection: "docs";
   data: InferEntrySchema<"docs">
 } & { render(): Render[".mdx"] };
-"en/follow_age_responses.mdx": {
-	id: "en/follow_age_responses.mdx";
-  slug: "en/follow_age_responses";
+"en/chat_games/word_wheel.mdx": {
+	id: "en/chat_games/word_wheel.mdx";
+  slug: "en/chat_games/word_wheel";
   body: string;
   collection: "docs";
   data: InferEntrySchema<"docs">
 } & { render(): Render[".mdx"] };
-"en/free_for_all.mdx": {
-	id: "en/free_for_all.mdx";
-  slug: "en/free_for_all";
+"en/game_alerts_credits/ga_dark_souls.mdx": {
+	id: "en/game_alerts_credits/ga_dark_souls.mdx";
+  slug: "en/game_alerts_credits/ga_dark_souls";
   body: string;
   collection: "docs";
   data: InferEntrySchema<"docs">
 } & { render(): Render[".mdx"] };
-"en/gamble.mdx": {
-	id: "en/gamble.mdx";
-  slug: "en/gamble";
+"en/game_alerts_credits/ga_sonic_one.mdx": {
+	id: "en/game_alerts_credits/ga_sonic_one.mdx";
+  slug: "en/game_alerts_credits/ga_sonic_one";
   body: string;
   collection: "docs";
   data: InferEntrySchema<"docs">
 } & { render(): Render[".mdx"] };
-"en/game_alerts.mdx": {
-	id: "en/game_alerts.mdx";
-  slug: "en/game_alerts";
+"en/game_alerts_credits/ga_sonic_two.mdx": {
+	id: "en/game_alerts_credits/ga_sonic_two.mdx";
+  slug: "en/game_alerts_credits/ga_sonic_two";
   body: string;
   collection: "docs";
   data: InferEntrySchema<"docs">
 } & { render(): Render[".mdx"] };
-"en/gameboy_game_change.mdx": {
-	id: "en/gameboy_game_change.mdx";
-  slug: "en/gameboy_game_change";
+"en/game_alerts_credits/ga_valheim.mdx": {
+	id: "en/game_alerts_credits/ga_valheim.mdx";
+  slug: "en/game_alerts_credits/ga_valheim";
   body: string;
   collection: "docs";
   data: InferEntrySchema<"docs">
 } & { render(): Render[".mdx"] };
-"en/heat_click_map.mdx": {
-	id: "en/heat_click_map.mdx";
-  slug: "en/heat_click_map";
+"en/game_alerts_credits/gc_star_wars.mdx": {
+	id: "en/game_alerts_credits/gc_star_wars.mdx";
+  slug: "en/game_alerts_credits/gc_star_wars";
   body: string;
   collection: "docs";
   data: InferEntrySchema<"docs">
 } & { render(): Render[".mdx"] };
-"en/heat_core_ws5.mdx": {
-	id: "en/heat_core_ws5.mdx";
-  slug: "en/heat_core_ws5";
+"en/general/follow_age_responses.mdx": {
+	id: "en/general/follow_age_responses.mdx";
+  slug: "en/general/follow_age_responses";
   body: string;
   collection: "docs";
   data: InferEntrySchema<"docs">
 } & { render(): Render[".mdx"] };
-"en/heat_mario.mdx": {
-	id: "en/heat_mario.mdx";
-  slug: "en/heat_mario";
+"en/general/log_viewer.mdx": {
+	id: "en/general/log_viewer.mdx";
+  slug: "en/general/log_viewer";
   body: string;
   collection: "docs";
   data: InferEntrySchema<"docs">
 } & { render(): Render[".mdx"] };
-"en/heat_offline_test.mdx": {
-	id: "en/heat_offline_test.mdx";
-  slug: "en/heat_offline_test";
+"en/general/random_game_change.mdx": {
+	id: "en/general/random_game_change.mdx";
+  slug: "en/general/random_game_change";
   body: string;
   collection: "docs";
   data: InferEntrySchema<"docs">
 } & { render(): Render[".mdx"] };
-"en/heists.mdx": {
-	id: "en/heists.mdx";
-  slug: "en/heists";
+"en/general/welcome_users.mdx": {
+	id: "en/general/welcome_users.mdx";
+  slug: "en/general/welcome_users";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".mdx"] };
+"en/heat/heat_click_map.mdx": {
+	id: "en/heat/heat_click_map.mdx";
+  slug: "en/heat/heat_click_map";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".mdx"] };
+"en/heat/heat_core_ws5.mdx": {
+	id: "en/heat/heat_core_ws5.mdx";
+  slug: "en/heat/heat_core_ws5";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".mdx"] };
+"en/heat/heat_mario.mdx": {
+	id: "en/heat/heat_mario.mdx";
+  slug: "en/heat/heat_mario";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".mdx"] };
+"en/heat/heat_offline_test.mdx": {
+	id: "en/heat/heat_offline_test.mdx";
+  slug: "en/heat/heat_offline_test";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".mdx"] };
+"en/heat/heat_street_fighter.mdx": {
+	id: "en/heat/heat_street_fighter.mdx";
+  slug: "en/heat/heat_street_fighter";
   body: string;
   collection: "docs";
   data: InferEntrySchema<"docs">
@@ -296,9 +331,16 @@ declare module 'astro:content' {
   collection: "docs";
   data: InferEntrySchema<"docs">
 } & { render(): Render[".mdx"] };
-"en/lotto.mdx": {
-	id: "en/lotto.mdx";
-  slug: "en/lotto";
+"en/overlays/death_counter_multi_game.mdx": {
+	id: "en/overlays/death_counter_multi_game.mdx";
+  slug: "en/overlays/death_counter_multi_game";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".mdx"] };
+"en/overlays/gameboy_game_change.mdx": {
+	id: "en/overlays/gameboy_game_change.mdx";
+  slug: "en/overlays/gameboy_game_change";
   body: string;
   collection: "docs";
   data: InferEntrySchema<"docs">
@@ -310,37 +352,51 @@ declare module 'astro:content' {
   collection: "docs";
   data: InferEntrySchema<"docs">
 } & { render(): Render[".mdx"] };
-"en/raffles.mdx": {
-	id: "en/raffles.mdx";
-  slug: "en/raffles";
+"en/points_system/casino_roulette.mdx": {
+	id: "en/points_system/casino_roulette.mdx";
+  slug: "en/points_system/casino_roulette";
   body: string;
   collection: "docs";
   data: InferEntrySchema<"docs">
 } & { render(): Render[".mdx"] };
-"en/random_game_change.mdx": {
-	id: "en/random_game_change.mdx";
-  slug: "en/random_game_change";
+"en/points_system/free_for_all.mdx": {
+	id: "en/points_system/free_for_all.mdx";
+  slug: "en/points_system/free_for_all";
   body: string;
   collection: "docs";
   data: InferEntrySchema<"docs">
 } & { render(): Render[".mdx"] };
-"en/slots.mdx": {
-	id: "en/slots.mdx";
-  slug: "en/slots";
+"en/points_system/gamble.mdx": {
+	id: "en/points_system/gamble.mdx";
+  slug: "en/points_system/gamble";
   body: string;
   collection: "docs";
   data: InferEntrySchema<"docs">
 } & { render(): Render[".mdx"] };
-"en/streamerbot.mdx": {
-	id: "en/streamerbot.mdx";
-  slug: "en/streamerbot";
+"en/points_system/heists.mdx": {
+	id: "en/points_system/heists.mdx";
+  slug: "en/points_system/heists";
   body: string;
   collection: "docs";
   data: InferEntrySchema<"docs">
 } & { render(): Render[".mdx"] };
-"en/welcome_users.mdx": {
-	id: "en/welcome_users.mdx";
-  slug: "en/welcome_users";
+"en/points_system/lotto.mdx": {
+	id: "en/points_system/lotto.mdx";
+  slug: "en/points_system/lotto";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".mdx"] };
+"en/points_system/raffles.mdx": {
+	id: "en/points_system/raffles.mdx";
+  slug: "en/points_system/raffles";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".mdx"] };
+"en/points_system/slots.mdx": {
+	id: "en/points_system/slots.mdx";
+  slug: "en/points_system/slots";
   body: string;
   collection: "docs";
   data: InferEntrySchema<"docs">

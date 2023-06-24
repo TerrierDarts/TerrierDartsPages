@@ -1,0 +1,29 @@
+---
+title: "Welcome Users"
+description: "Give your users there own special welcome, when they enter the stream"
+pubDate: "Jun 22 2023"
+code: "2.0"
+setUpDifficulty: "2/5"
+heroImage: "/heroImages/welcome_users_thumb.png"
+---
+
+import CopyButton from '../CopyButton.astro'
+import importCode from '/sb_codes/general/welcome_users.txt?raw';
+
+### Grab The Import Code
+
+
+<CopyButton>
+{importCode}
+</CopyButton>
+
+
+### In Streamer.bot
+
+Once the code is imported you will notice it already has the `Twitch First Words` Trigger on, however you can easily swap this for the YouTube Version if you so wish.
+
+### Configure
+
+In order to add a new user all you need to do is create an Action called `[FW]-` followed by there name. So if you wanted to create one for me the action would be called `[FW]-TerrierDarts`.
+
+In the main action you imported there is also a part at the bottom where you can add the parts of the default action so things can run if a non-custom user walks in.

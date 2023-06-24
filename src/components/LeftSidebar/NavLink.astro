@@ -3,43 +3,59 @@ import type { NavLink } from '../../consts';
 
 type Props = NavLink;
 
-const { text, link} = Astro.props;
-let url = link || '';
+const { text, link}= Astro.props;
+const currentPath = Astro.url.pathname;
+const url = link || '';
 let newtab = 2;
-let dd = url;
+
 
 if (link.includes("https://")) {
-    newtab =1;
-  }
+  newtab = 1;
+}
+
+
+
+
+let isActive = 1;
+if(url + "/" === currentPath){
+	isActive = 2
+}
 
 ---
-<li class="nav-link">
+
+<li class={`nav-link${isActive == 2 ? ' active' : ''}`}>
   <a href={url} target={newtab == 1 ? '_blank' : '_self'}>
     {text}
   </a>
 </li>
 
-	
-	
 <style>
   .nav-link a {
-		font-size: 0.8rem;
-		margin: 1px;
-		padding: 0.3rem 1rem;
-		font: inherit;
-		color: rgba(255,255,255,0.7);
-		text-decoration: none;
-		display: block;
-	}
+    font-size: 0.8rem;
+    margin: 1px;
+    padding: 0.5rem 3rem;
+    font: inherit;
+    color: rgba(255, 255, 255, 0.7);
+	
+    text-decoration: none;
+    display: block;
+    border: 2px solid transparent;
+  }
 
-	.nav-link a:hover,
-	.nav-link a:focus {
-		background-color: var(--theme-bg-hover);
-	}
+  .nav-link a:hover,
+  .nav-link a:focus {
+    background: linear-gradient(90deg, rgba(1, 17, 68, 0.5), rgba(0, 17, 255, 0.5));
+    border-radius: 30px 5px;
+    border: 2px solid rgb(1, 17, 68);
+	color: rgb(238, 255, 0);
+  }
 
-	.nav-link a[aria-current='page'] {
-		color: var(--theme-text-accent);
-		background-color: var(--theme-bg-accent);
-		font-weight: 600;
-	}
+  
+  .nav-link.active a{
+    color: rgb(0, 204, 255);
+	background: linear-gradient(90deg, rgba(1, 17, 68, 0.5), rgba(0, 17, 255, 0.5));
+    border-radius: 30px 15px;
+    border: 2px solid rgb(1, 17, 68);
+   
+  }
 </style>

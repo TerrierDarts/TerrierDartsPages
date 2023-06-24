@@ -1,0 +1,38 @@
+---
+title: "Gamble"
+description: "A Gamble Game using VRFlad's Point System"
+pubDate: "Feb 15 2023"
+code: "2"
+setUpDifficulty: "1/5"
+youTubeLink: "https://youtu.be/5Wq0g3bR42o"
+---
+import CopyButton from '../CopyButton.astro';
+import {YouTube} from 'astro-embed';
+import importCode from '/sb_codes/points_system/gamble.txt?raw';
+
+### Grab the Import Code
+
+<CopyButton>
+{importCode}
+</CopyButton>
+
+### In Streamer.bot
+
+Once the code is imported you will need to firstly make sure that the code compiles. If it doesnt compile try adding `system.dll` and that should make it compile.
+
+Then you will need to make sure that the Command you have also imported is enabled and these are disbaled by default.
+
+Once these are done the Gamble will be fully installed. 
+
+### Configure
+
+The Execute Code can be edited if you wish to change the output messages, but just be careful if making any edits to any code.
+
+The Arguments are the way you can adjust it to suit your requirements.
+
+|Argument| Purpose|
+|---|---|
+|`defaultBet`| This is the amount that will be bet if a user bets an invaild amount or doesn't declare a bet|
+|`winPercentage`| This is the number that controls the frequecy of wins, if your random number is lower you will win. So higher the more wins|
+|`pushEnabled`| This will mean if the random number is equal to the winPercentage then the player will get there points back, if turned off equal will be a loss.|
+

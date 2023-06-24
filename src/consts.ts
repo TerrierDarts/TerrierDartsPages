@@ -65,11 +65,11 @@ export const SIDEBAR: Sidebar = {
           {
             text: 'General',
             children: [
-              { text: 'Home', link: '../en/home' },
-              { text: 'Podcasts', link: '../en/podcasts' },
+              { text: 'Home', link: '/en/home' },
+              { text: 'Podcasts', link: '/en/podcasts' },
               { text: 'Streamer.bot', link: 'https://streamer.bot' },
               { text: 'Extensions', link: 'https://extensions.streamer.bot' },
-            ]
+            ],
           },
           {
             text: 'Builds',
@@ -78,50 +78,83 @@ export const SIDEBAR: Sidebar = {
               {
                 text: 'General',
                 children: [
-                  { text: 'Custom Welcomes', link: '../en/welcome_users' },
-                  { text: 'Follow Age Responses', link: '../en/follow_age_responses' },
-                  { text: 'Per Game Death Counter', link: '../en/death_counter_multi_game' },
-                  { text: 'Gameboy Game Changer', link: '../en/gameboy_game_change' },
-                  { text: 'Random Game Changer', link: '../en/random_game_change' },
+                //  { text: 'A Selection of Smaller Codes', link: '' },
+                  { text: 'Custom Welcomes', link: '/en/general/welcome_users' },
+                  { text: 'Follow Age Responses', link: '/en/general/follow_age_responses' },
+                //  {text: 'Football Chat Alerts', link: 'en/general/footbal_chat_alerts'}
+                  { text: 'Log Viewer', link: '/en/general/log_viewer' },
+                //  { text: 'Mod Added Commands', link: '' },
+                //  { text: 'Random Actions with No Repeat', link: '' },
+                  { text: 'Random Game Changer', link: '/en/general/random_game_change' },    
+                //  { text: 'User Queue System', link: '' },
+                
+                
+                ],
+              },
+
+              {
+                text: 'Overlays',
+                children: [
+                //  { text: 'Per Game Death Counter', link: '/en/overlays/death_counter_multi_game' },
+                //  { text: 'Gameboy Game Changer', link: '/en/overlays/gameboy_game_change' },
+                //  { text: 'Windows Live First Word', link: '' },
+                //  { text: 'Chat Dots', link: '' },
+                //  { text: 'Simple Donation Goal', link: '' },
+                //  { text: 'Real Time Slider', link: '' },
+                ],
+              },
+
+              {
+                text : 'Alert/Credit Systems',
+                children: [
+                  {text : 'Sonic 1 Alerts', link:'/en/game_alerts_credits/ga_sonic_one'},
+                  {text : 'Sonic 2 Alerts', link:'/en/game_alerts_credits/ga_sonic_two'},
+                  {text : 'Valheim Alerts', link:'/en/game_alerts_credits/ga_valheim'},
+                  {text : 'Dark Souls Alerts', link:'/en/game_alerts_credits/ga_dark_souls'},
+                //  {text : 'Star Wars Credits', link:'/en/game_alerts_credits/gc_star_wars'}
                 ]
               },
 
               {
                 text: 'Heat',
                 children: [
-                  { text: 'Heat - Core', link: '../en/heat_core_ws5' },
-                  { text: 'Heat - Mario', link: '../en/heat_mario' },
-                  { text: 'Heat - Click Map', link: '../en/heat_click_map' },
-                  { text: 'Heat - Offline Test', link: '../en/heat_offline_test' },
+                  { text: 'Core', link: '/en/heat/heat_core_ws5' },
+                //  { text: 'Mario', link: '/en/heat/heat_mario' },
+                //  { text: 'Click Map', link: '/en/heat/heat_click_map' },
+                //  {text : 'Street Fighter', link:'/en/heat/street_fighter'}
+                //  { text: 'Heat - Offline Test', link: '/en/heat/heat_offline_test' },
                 ],
               },
 
               {
                 text: 'Point System Add-Ons',
                 children: [
-                  { text: 'Slots', link: '../en/slots' },
-                  { text: 'Gamble', link: '../en/gamble' },
-                  { text: 'Casino Roulette', link: '../en/casino_roulette' },
-                  { text: 'Lotto', link: '../en/lotto' },
-                  { text: 'Heists', link: '../en/heists' },
-                  { text: 'Boss Battles', link: '' },
-                  { text: 'Raffles', link: '../en/raffles' },
-                  { text: 'Free-For-Alls', link: '../en/free_for_all' },
-                  { text: 'Dice Game', link: '' },
+                  
+                //  { text: 'Additional Commands', link: '' },
+                //  { text: 'Boss Battles', link: '' },
+                { text: 'Casino Roulette', link: '/en/points_system/casino_roulette' },
+                //  { text: 'Dice Game', link: '' },
+                //  { text: 'Free-For-Alls', link: '/en/free_for_all' },
+                { text: 'Gamble', link: '/en/points_system/gamble' },
+                //  { text: 'Heists', link: '/en/heists' },
+                //  { text: 'Leaderboard', link: '' },
+                { text: 'Lotto', link: '/en/points_system/lotto' },
+                { text: 'Raffles', link: '/en/points_system/raffles' },
+                { text: 'Slots', link: '/en/points_system/slots' }               
                 ],
               },
               {
                 text: 'Ranking System',
                 children: [
-                  { text: 'Slots', link: '../en/slots' },
-                  { text: 'Gamble', link: '../en/gamble' },
-                  { text: 'Casino Roulette', link: '../en/casino_roulette' },
-                  { text: 'Lotto', link: '../en/lotto' },
-                  { text: 'Heists', link: '../en/heists' },
-                  { text: 'Boss Battles', link: '' },
-                  { text: 'Raffles', link: '../en/raffles' },
-                  { text: 'Free-For-Alls', link: '../en/free_for_all' },
-                  { text: 'Dice Game', link: '' },
+                //  { text: 'Slots', link: '/en/points_system/slots' },
+                //  { text: 'Gamble', link: '/en/points_system/gamble' },
+                //  { text: 'Casino Roulette', link: '/en/points_system/casino_roulette' },
+                //  { text: 'Lotto', link: '/en/points_system/lotto' },
+                //  { text: 'Heists', link: '/en/points_system/heists' },
+                //  { text: 'Boss Battles', link: 'en/points_system/boss_battles' },
+                //  { text: 'Raffles', link: '/en/points_system/raffles' },
+                //  { text: 'Free-For-Alls', link: '/en/points_system/free_for_all' },
+                //  { text: 'Dice Game', link: 'en/points_system/dice_game' },
                 ],
               },
 
@@ -129,10 +162,10 @@ export const SIDEBAR: Sidebar = {
               {
                 text: 'Chat Based Games',
                 children: [
-                  { text: 'Cluedo', link: '' },
-                  { text: 'Snakes and Ladders', link: '' },
-                  { text: 'Hangman', link: '' },
-                  { text: 'Word Wheel', link: '' },
+                 // { text: 'Cluedo', link: '/en/chat_games/cludeo' },
+                 // { text: 'Snakes and Ladders', link: '/en/chat_games/snake_and_ladders' },
+                 // { text: 'Hangman', link: '/en/chat_games/hangman' },
+                 // { text: 'Word Wheel', link: '/en/chat_games/word_wheel' },
                 ],
               },
             ],

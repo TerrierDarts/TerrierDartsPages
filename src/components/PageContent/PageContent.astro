@@ -44,9 +44,9 @@ const {
 		{youTubeLink ? (
 			<YouTube class="video" id={youTubeLink}/>
 		  ) : (
-			<img class="hero" src={heroImage} alt="" />
+			<img class="hero" src={heroImage} alt="Display Image" />
 		  )}
-				
+				<span class="stats">
 				{pubDate ? (
 					<>
 					  Last updated on: <span class="time">{pubDate}</span>,
@@ -62,7 +62,7 @@ const {
 					  Set-Up Difficulty: <span class="stars">{setUpDifficulty}</span>.
 					</>
 				  ) : null}
-
+				</span>
 
 		<hr>
 		
@@ -86,11 +86,15 @@ const {
 		justify-content: center;
 		display:flex !important;
 	}
+	.stats{
+		margin-left: 8%;
+	}
 	.time
 	{
 		color: rgb(255, 102, 0);
 		font-size: 1rem;
 	    font-weight: 800;
+		
 
 	}
 	.code
@@ -129,16 +133,12 @@ const {
 		
 		height: 300px;
 		width: 540px;
+		margin-left: 8%;
 		justify-content: center;
 		display:flex !important;
 	
 	}
-	.video{
-		
-		height: 400px;
-		width: 720px;
-	
-	}
+
 
 	@media (min-width: 50em) {
 		.sm\:hidden {

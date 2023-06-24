@@ -1,0 +1,36 @@
+---
+title: "Follow Age Responses"
+description: "A C# Follow Age Action that output a different message based on the number of days followed"
+pubDate: "Feb 09 2023"
+code: "1.0"
+setUpDifficulty: "2/5"
+heroImage: "/heroImages/follow_age.png"
+---
+import CopyButton from '../CopyButton.astro'
+import importCode from '/sb_codes/general/follow_age_responses.txt?raw';
+
+### Grab The Import Code
+
+<CopyButton>
+{importCode}
+</CopyButton>
+
+### In Streamer.bot
+
+After importing the **Import Code** you will need to enable command.
+
+You will need to ensure that all the get info's are correct. Like in the image below the first get info should be getting it from `info` and the Add follow age info should be getting it from `follower`, which in the sub-action setting is under Variable. 
+
+![Follow_Age_Info's](/buildImages/followage/follow_age_infos.png)
+
+### How to Configure
+
+Configuration is done via arguments, in the examples I have provided you will see there is several groups, and in each group there is an arguement called `rangeX` and `messageX` and in our case `X` is the number or count of arguments, so when adding a new range make sure to make the number adjustment.
+
+You will also need to make sure if you remove a range that you don't leave any number gaps. Otherwise you will find the higher numbers are not pulled in. The easy fix is to have the range equal `-1` that way it will the higher values will still be pulled in but you don't need to worry about that if you don't leave any gaps.
+
+Ranges can be exact number or between 2 values (inclusive) meaning if you say that range4 is equal to `50-100` (be sure to not forget that `-`) then any number from 50 to 100 will trigger this message.
+
+You may also have it where a number falls into 2 ranges, so lets say you have range `50-100` and range `69` which ever number (that `X` we spoke about earlier) is higher that is what will get outputted.
+
+Without editing the `C#` Code the date format is not editable.

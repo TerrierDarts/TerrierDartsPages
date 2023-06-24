@@ -21,52 +21,57 @@ import { Icon } from 'astro-icon'
 
 <style>
 .copyButton {
-  position: relative;
-  border: 1px solid #292929;
-  background: #1c1c1c;
-  margin: 0 !important;
+  
+  border-radius: 50px 20px;
+  border: 2px solid rgb(1, 17, 68);
+  background: linear-gradient(90deg, rgba(1, 17, 68, 0.5), rgba(0, 17, 255, 0.5));
+  width: 750px;
   transition-property: color, border-color, background-color;
   transition-duration: 0.15s;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  border-radius: 25px;
+  
+  
 }
 .copyButton:hover {
-  box-shadow: 0px 0px 59px -10px rgba(255,0,255,1);
-  border-color: #8400ff !important;
+  box-shadow: 0px 0px 25px -10px rgb(0, 204, 255);
 }
 .copyButton:active {
-  background: rgb(39, 79, 39);
+  background: rgb(8, 1, 75);
 }
 .contents {
   color: #fff !important;
   text-decoration: none;
   font-weight: 600;
-  
+  font: inherit;
   display: flex;
   align-items: center;
   
 }
 .icon {
   display: block;
-  height: 110px;
-  margin-right: 2rem;
-  color: silver;
+  height: 100px;
+  padding: 1rem;
+  margin-left: 3rem;
+  margin-right: 3rem;
+  color: rgb(238, 255, 0);
 }
 
 .topText {
   font-weight: 600 !important;
-  display: block;
- 
-  font-size: 2em;
+  
+  color: rgb(238, 255, 0);
+  padding: 10px;
+  font-size: 2.5em;
 
 }
 
 .bottomText {
   font-style: normal;
   font-weight: 400;
-  color: #ccc;
-  font-size: 1.4em;
-   display: block;
+  color: rgb(238, 255, 0);
+  font-size: 2em;
+   
+   padding: 10px;
  
 }
 .slotText{

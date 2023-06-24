@@ -1,0 +1,23 @@
+---
+title: ""
+description: ""
+pubDate: ""
+code: ""
+setUpDifficulty: ""
+youTubeLink:
+heroImage: "/heroImages/default_image.png"
+---
+import CopyButton from '../CopyButton.astro'
+import importCode from '/sb_codes/.txt?raw';
+
+### Grab The Import Code
+
+<CopyButton>
+{importCode}
+</CopyButton>
+
+### In Streamer.bot
+
+
+
+### How to Configure

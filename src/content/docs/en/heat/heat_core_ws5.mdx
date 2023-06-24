@@ -1,0 +1,108 @@
+---
+title: "Heat - Core WS5"
+description: "Connect to Heat with Streamer.bot and OBS. This Version only works with Websocket 5"
+code: "1.4"
+pubDate: "Feb 10 2023"
+setUpDifficulty: "4/5"
+heroImage: "/heroImages/heat_ws5.png"
+---
+import CopyButton from '../CopyButton.astro'
+import importCode from '/sb_codes/heat/heat_core.txt?raw';
+
+### Grab The Import Code
+
+<CopyButton>
+{importCode}
+</CopyButton>
+
+### In Streamer.bot
+
+After Importing the code you will have to make sure all the `Execute Code` sub-actions Compile they should but below are a list of refernces you may need if they do not.
+
+```
+System.Drawing.dll
+System.dll
+System.Net.dll
+```
+
+Next you need to set up the OBS Lock Event, which will update source positions if 'realTime' is set to false. (I will explain that a bit later). To find the OBS event you can go `Stream Apps >> OBS` and when you select your obs you can then right click on the events and add the following. `SceneItemLockStateChanged` and that is tied to the `[Heat] OBS Lock Event`.
+
+![OBS LOCK EVENT](/buildImages/heat_core/LockEvent.png)
+
+The next set is going to connect to the heat server. So you need to add a new connection, you can find this at `Servers and Clients >> Websocket Clients` you will need to add the following address `wss://heat-api.j38.net/channel/<YOUR ID>` and just swap in your channel ID. Finally you will need to add `[Heat] Message` Action to the Message Event. When set up correctly it will look like this.
+
+![Heat Websocket Server](/buildImages/heat_core/heatWsClient.png)
+
+Final Step is to add you actions, You will find these in `[Heat] Sources` you will notice from the import that there is a group. You just need to edit and duplicate for all the sources you wish to use. Then you will need to create actions of the **SAME NAME** which will be triggered on clicks. Meaning if you have a source called `Blue` then the action must be called `Blue` like seen below.
+
+![Sources](/buildImages/heat_core/sources.png)
+
+If you have done all that heat should be functional now.
+
+### Configuration
+
+In `[Heat] Message` they are a few settings. These will change how heat behaves for you. 
+
+|Arugment|Purpose|
+|---|---|
+|`obsWebsocketId`| This is if you use more than one OBS i.e Streaming and Recording then you can use this to connect to the streaming one.|
+|`allowAnon`| Heat requires the clicker (your viewers) to grant access to there ID's setting this to false will mean users who havent will have there clicks ignored, if its set to true then users who havent granted access will be handled as "someone" instead of their username if you choose to use user names.|
+|`realTime`| Setting this to true means that your sources will be updated with each click, rather than with the lock event. This is not reccomented for high click volumes, false will just use the lock event|
+|`debugMode`|This is on by default, you will want this off. The purpose of this is to help you follow the logic it is also helpful if you reach out for help in discords however for production you will want it off, but you may want it on just while setting up|
+
+### Additional Information
+
+You can click and press `Ctrl`, `Alt` and/or `Shift` (Will be slightly different for mac users)  [Check here for Info on the modifires](https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/getModifierState). You can use the following c# code below to have different actions based on said modifiers.
+
+```cs
+using System;
+
+public class CPHInline
+{
+    public bool Execute()
+    {
+        bool alt = bool.Parse(args["alt"].ToString());
+        bool ctrl = bool.Parse(args["ctrl"].ToString());
+        bool shift = bool.Parse(args["shift"].ToString());
+        string message;
+        int flag = (alt ? 1 : 0) + (ctrl ? 2 : 0) + (shift ? 4 : 0);
+        switch (flag)
+        {
+            case 1: //Just Alt
+                message = "Just Alt";
+                break;
+            case 2: //Just Ctrl
+                message = "Just Ctrl";
+                break;
+            case 4: // Just Shift
+                message = "Just Shift";
+                break;
+            case 3: // Ctrl + Alt
+                message = "Ctrl&Alt";
+                break;
+            case 5: //Alt + Shift
+                message = "Alt&Shift";
+                break;
+            case 6: //Shift + Ctrl
+                message = "Ctrl&Shift";
+                break;
+            case 7: //All3
+                message = "ALL 3";
+                break;
+            default: //None
+                message = "None or Error";
+                break;
+        }
+
+        //CPH.SendMessage(message);
+        return true;
+    }
+}
+
+```
+
+Here you can add something like `CPH.RunAction(string actionName)` under the `message=` to run the actions you want to or you can just code them in. Just note above is an example of how it can be done.
+
+### Special Thanks
+
+Special Thanks to Farlezz for this, the code here would not be possible without you.

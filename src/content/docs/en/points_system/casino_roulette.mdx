@@ -1,0 +1,33 @@
+---
+title: "Casino Roulette"
+description: "A Casio Roulette Style Game using VRFlad's Point System"
+pubDate: "Jun 23 2023"
+code: "1.2"
+setUpDifficulty: "1/5"
+heroImage: "../../heroImages/ps_casino_roulette.png"
+---
+
+import CopyButton from '../CopyButton.astro'
+import importCode from '/sb_codes/points_system/casino_roulette.txt?raw';
+
+# Grab the Import Code
+
+<CopyButton>
+{importCode}
+</CopyButton>
+
+# In Streamer.bot
+
+Once imported you will need to make sure that the command `!casino` is enabled.
+
+Then in order to correctly use this you can do  `<{trigger} (Amount To Gamble) (What your betting on)>`
+
+
+# Configuration
+
+There are 2 setting you can change here, 
+
+|Argument|Description|
+|---|---|
+|`bot`| This is if you wish for the bot to post the messages to chat|
+|`trigger`| This command a user will use to work this action|
