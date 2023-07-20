@@ -1,0 +1,100 @@
+---
+title: "Screen Filler!"
+description: "Allow your viewers to fill the screen with there profile Picture's or Emotes!"
+pubDate: "Jul 18 2023"
+code: "1.8"
+setUpDifficulty: "1/5"
+heroImage: "/heroImages/default_image.png"
+---
+
+
+#### OBS Set-Up
+
+Using OBS create a browser source.
+
+Add the dimensions (**Width:1920 / Height:1080**).
+
+Paste in the Link you want:
+
+##### Twitch Profile Picture
+
+```
+http://terrierdarts.pages.dev/obs_links/fillers/profile_picture/index.html
+```
+##### Twitch Emotes
+
+```
+http://terrierdarts.pages.dev/obs_links/fillers/emotes/index.html
+```
+
+##### Twitch All
+
+```
+http://terrierdarts.pages.dev/obs_links/fillers/all/index.html
+```
+
+##### YouTube Profile Picture
+```
+http://terrierdarts.pages.dev/obs_links/fillers/youtube_profile/index.html
+```
+
+
+
+You may want to add a cropping, This is what i found worked best for me but I've found adding a roof can change things.
+![croppping](/obs_links/fillers/cropping.png)
+
+
+### Notes
+This works straight from chat messages there is no import code.
+
+#### Commands
+`!ball` will add the users PFP 
+
+`!explode` will create an
+
+`!clear` Command for the mod+
+
+`!multiball` add multiples of one emote.
+
+For the Emote fillers they will be auto added (Animated ones do not fully work **yet!**)
+
+#### Url Param(Settings)
+There are also some URL Params so you can add these to the end of the Url.
+
+|Param|Value|Purpose|Default|
+|---|---|---|---|
+|`roof`|`bool`|This Will turn the roof on or off|`false`|
+|`timeout`|`int`|This is how long in seconds you want the balls to last on screen, use `null` if you dont want them to timeout|`60`|
+|`multion`|`bool`| This is if you want the multi feature on or off|`true`|
+|`multidefault`|`int`| This is the amount of balls that will drop if none is given|`25`|
+|`explode`|`double`|This controls the explode level, this can be a decimal `0.25` is fairly tame|`1`|
+|`permission` ^|`int`| The role of the user that can use `!multiball` 1=`Viewer`, 2=`VIP`, 3=`Moderator`, 4=`Broadcaster`|`1`|
+|`subonly` ^|`bool`|This controls if you want it to be subonly, this is alongside the above setting|`false`|
+
+^ This Setting is Twitch Only. 
+
+Url Params go at the end of an URL with a `?` then then a `&` for any extra so for example.
+
+`?roof=false&timeout=60`
+
+So an url would look like this.
+
+```
+http://terrierdarts.pages.dev/obs_links/fillers/emotes/index.html?roof=false&timeout=60
+```
+
+
+
+
+### Codepens
+
+Original (Twitch) Profile Picture Codepen  : https://codepen.io/terrierdarts/pen/KKrRWPb
+
+Original (Twitch) Emote Codepen : https://codepen.io/terrierdarts/pen/OJaZzgw
+
+Original (Twitch) All Codepen  : https://codepen.io/terrierdarts/pen/RwqyxMM
+
+Original (YouTube) Profile Picture: https://codepen.io/terrierdarts/pen/YzRvVyL?editors=0011
+
+
+

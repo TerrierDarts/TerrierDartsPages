@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Dart Scorer Rotation</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div id="rotation-table" class="scoreboard">
+        <div class="main">
+
+            <div class="heading"><span id="start">Leg of 100,001</span></div>
+
+            <div class="view">
+                <span class="name" id="player">TerrierDarts</span>
+                <span class="score" id="remaining">100001</span>
+            </div>
+        </div>
+        <div class="stat">
+            <div class="headscores">
+                <span>180's</span>
+                <span>170+</span>
+                <span>140+</span>
+                <span>100+</span>
+            </div>
+            <div class="scores">
+                <span class="count180" id="c180">0</span>
+                <span class="count170" id="c170">0</span>
+                <span class="count140" id="c140">0</span>
+                <span class="count100" id="c100">0</span>
+            </div>
+        </div>
+        <div class="stat">
+            <div>
+                <div colspan="4" class="average"><span id="average">3 Dart Avg: 0</span></div>
+            </div>
+            <div class="bottom">
+                <div colspan="4" class="darts"><span id="darts">Darts Thrown: 0</span></div>
+            </div>
+        </div>
+        <div class="stat">
+            <div>
+                <div colspan="4" class="darts"><span>Projected Finish</span></div>
+            </div>
+            <div class="bottom">
+                <div colspan="4" class="darts"><span id="projected">XXX Darts</span></div>
+            </div>
+        </div>
+        <div class="stat">
+            <div>
+                <div colspan="4" class="darts"><span>Last 5 Scores</span></div>
+            </div>
+            <div>
+                <div colspan="4" class="darts"><span id="previous"></span></div>
+            </div>
+        </div>
+    </div>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>

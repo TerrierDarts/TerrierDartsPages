@@ -1,0 +1,80 @@
+---
+title: "Ranking System Core"
+description: ""
+pubDate: ""
+code: ""
+setUpDifficulty: ""
+heroImage: "/heroImages/default_image.png"
+---
+import CopyButton from '../CopyButton.astro'
+import importCode from '/sb_codes/ranking_system/core.txt?raw';
+
+
+This is a new ranking system, built with the inspiration from VRFlad's original code. However this has an added twist, as once user hit a certian points total they will rank up and there points will be in some ways reset. This is just like earning XP in a game, everything your viewers do will earn XP, chatting, cheering, follows, raids, subs, gifts and so on.
+
+Donations are not yet added but it is the next thing on my list.
+
+This system took a lot of time and effort to build so if you do like it please consider signing up to my patreon https://www.patreon.com/terrierdarts
+
+
+Please Note, this system is still under testing.
+
+### Grab The Import Code
+
+<CopyButton>
+{importCode}
+</CopyButton>
+
+<a href="/sb_codes/ranking_system/RankingSystem.dll"><button class="btn"><i class="fa fa-download"></i>Click here to Download the DLL</button></a>
+**Warning Since this is a `.dll` it might be treated as dangerous but it is perfectly safe**
+
+Once downloaded add it to you dll folder inside your streamerbot folder, and then when you open streamerbot go to Settings >> C# Compiler and add it there this will make life easier.
+
+### In Streamer.bot
+
+None of the triggers currently correctly so ive left them out. They will be added in the future but atm you will need to add them.
+
+
+This is the thing i need testing, 
+
+If you already use Flads point system, then you should be able to run the action `[PRS] - Import from Current System` This should create a userRanks.json file inside you streamerbot data folder.
+
+
+### How to Configure
+
+Here are the methods that can be used with this ranking system.
+
+```csharp
+using Ranking.Points;
+//Get File Path
+string RankingSystem.GetFilePath();  //internal method
+
+//Adding, Getting and Setting Points
+void RankingSystem.AddPoints(string user, int points);
+void RankingSystem.SetPoints(string user, int points);
+int RankingSystem.GetPoints(string user);
+
+//Adding Getting and Setting Rank
+void RankingSystem.AddRank(string user, int ranks);
+void RankingSystem.SetRank(string user, int ranks);
+int RankingSystem.GetRank(string user);
+
+// Check if user has ranked up
+bool RankingSystem.RankUpCheck(string user);
+
+// Return Info for Leaderboard
+List<string> RankingSystem.FullLeaderboard();
+
+//Get Users
+List<string> RankingSystem.UserList();
+int RankingSystem.GetUserCount();
+int RankingSystem.GetPosition();
+
+// Blocking Users
+void RankingSystem.BlockUser(string user);
+void RankingSystem.UnblockUser(string user);
+
+//Moderation
+void RankingSystem.RemoveUser(string user);
+void RankingSystem.FullReset(string user);
+```

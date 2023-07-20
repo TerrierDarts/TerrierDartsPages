@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Arc Time Slider Real Timer</title>
+  <link rel='stylesheet' href='https://codepen.io/nicolasjesenberger/pen/GRYvOWy/d5176f9552830811da3e2bde0120cc26.css'><link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="slider-wrapper">
+  <input class="slider-input" type="range" value="720" max="1440" step="1">
+  <div class="slider-thumb">
+    <div class="slider-value-container">
+      <p class="slider-value">12:00 PM</p>
+    </div>
+  </div>
+  <svg class="slider-svg" viewBox="0 0 238 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path class="slider-svg-path" d="M2 34L7.21879 31.0968C78.5901 -8.60616 165.659 -7.50128 236 34V34" stroke="url(#paint0_linear_339_100980)" stroke-width=".25em" stroke-linecap="round" vector-effect="non-scaling-stroke" filter="url(#filter0_i_339_100980)"/>
+    <defs>
+      <filter id="filter0_i_339_100980" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+        <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+        <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+        <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+        <feOffset dy="1"/>
+        <feGaussianBlur stdDeviation="0.5"/>
+        <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+        <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+        <feBlend mode="normal" in2="shape" result="effect1_innerShadow_339_100980"/>
+      </filter>
+      <linearGradient id="paint0_linear_339_100980" gradientUnits="userSpaceOnUse">
+        <stop stop-color="#F3D970"/>
+        <stop offset="0.2" stop-color="#FCBB5D"/>
+        <stop offset="0.4" stop-color="#F6876D"/>
+        <stop offset="0.6" stop-color="#934284"/>
+        <stop offset="0.8" stop-color="#402862"/>
+        <stop offset="1" stop-color="#011549"/>
+      </linearGradient>
+    </defs>
+  </svg>
+</div>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>

@@ -1,16 +1,68 @@
 ---
-title: "Heat - Mario"
-description: "Connect to Heat with Streamer.bot and OBS. This Version only works with Websocket 5"
-code: "1.4"
-pubDate: "Feb 10 2023"
+title: "Heat - Street Fighter"
+description: "Using Heat you can have this really cool Street Fighter Car Smash Game"
+code: "1.5"
+pubDate: "Jun 27 2023"
 setUpDifficulty: "4/5"
-heroImage: "/heroImages/heat_ws5.png"
+heroImage: "/heroImages/street_fighter.png"
 ---
 import CopyButton from '../CopyButton.astro'
-import importCode from '/sb_codes/heat/heat_core.txt?raw';
+import importCode from '/sb_codes/heat/street_fighter.txt?raw';
+import StreetFighterDownload from '../StreetFighterDownload.astro'
 
-### Grab The Import Code
+The Heat Extension and SB 0.2.0+ is Required for this to work.
+
+### Grab The Import Code 
 
 <CopyButton>
 {importCode}
 </CopyButton>
+
+
+### Assets
+
+Click the Car to download the Assets folder.
+
+<StreetFighterDownload/>
+
+Once downloaded, please extract and place the files in a safe location.
+
+The first thing to do once extracted is to install the font.
+
+
+### In OBS
+
+You will download the Source Copy Plug-in so you can import the scene. You will also need to `Move Transition` and `ShaderFilter` for the filters. 
+
+Once/If installed go into OBS and `Tools >> Source Copy >> Load Scene` then you will want to select the `.json` you have just downloaded.
+
+You need to go into Scene Collection and `Search for missing files` for  a pop up , you should be able to select the folder where the assets.
+
+All the Car Parts are Numbered, (22 is for Streamerbot)
+
+Then you have background music (guile-theme-2) the other 3 sound files are used in Streamer.bot
+
+
+
+### In Streamer.Bot 
+
+Once youve imported the code, you need to make sure the `!resetGame` trigger and command are both working. The Trigger may need re-creating.
+
+The next thing you want to do is add this to your `[Heat] Sources` Action. Getting info from `[HSC] HitBox` Source. It will then trigger that action when pressed.
+![Heat Sources](/buildImages/street_fighter/heat_sources_sf.png)
+
+Then you will need to do into `[HSC] Win`, `[HSC] HitBox` and  `[HSC] Reset Game` You will need to ensure that the sound files are found, if not found they will say NOT FOUND.
+
+Also in `[HSC] Hitbox` there is a Set Argument and this is for the filepath of `22.png` from the asssets you downloaded.
+
+Now locking an source should save its location enabling the clicking. 
+
+I then would put it as a Nested Scene where you want it. Perfect for a BRB Screen!
+
+### Configuration
+
+In `[HSC] Smash` this is where you can control the how easy or hard you want it. Every click will add the amount stated in the `Increase temp global "carHealth" by` Sub-Action by default this is 10.
+
+You can then choose when each smash level appears to make it harder or easier, by default the last level is 8000 meaning it takes 800 clicks to break the car.
+
+Just note the `if` statements work on a equals check so all values need to be attainable otherwise it will skip that level and ruin the effect.

@@ -1,0 +1,104 @@
+---
+title: "100,001 Darts Scorer"
+description: "Score a Marathon Leg of Darts Using this handy Scorer"
+pubDate: "May 30 2023"
+code: "1.1"
+heroImage: "/heroImages/default_image.png"
+---
+import CopyButton from './CopyButton.astro'
+import importCode from '/darts/actions.txt?raw';
+
+### The Scorer
+
+Here is the link to the scorer.
+
+https://github.com/TerrierDarts/DartScorer/releases/tag/Darts
+
+#### How to Use
+
+Open the Program is Downloaded and Put somewhere safe you should be able to open it.
+
+##### Setting the Name and Starting Score
+![new_game](/darts/new_game.png)
+Here is where you can just enter a new name and a new score, if these are changed a new game must be started before they take effect.
+
+##### Entering a Score
+![enter_score](/darts/enter_score.png)
+Here is where you enter score you can either press the buttons or use the num keys. Pressing the enter key will confirm the score entered.
+
+##### Undoing
+![last 10](/darts/last_10_scores.png)
+Here are the Last 10 Scores, they are printed at the side. You can Undo by pressing the Undo button however you can only undo the last 10 scores.
+
+##### Stats
+![stats](/darts/stats.png)
+
+Here are the stats, this will show you all the information about your current game.
+
+All the data is saved in a `data.json` file with the scorer its self, this can be edited, shared or saved but if you are going to edit it do at your own risk!
+
+##### websocket
+
+This scorer has a built in websocket `ws://127.0.0.1:5010/` 
+
+This is what the sent json will look 
+
+```json
+{
+  "player": "TerrierDarts",
+  "startingScore": 100001,
+  "c180": 0,
+  "c170": 0,
+  "c140": 8,
+  "c100": 28,
+  "totalScored": 17843.0,
+  "dartsThrown": 903.0,
+  "average": 59.28,
+  "lastScore": 100,
+  "previousScores": [
+    85,
+    30,
+    100,
+    100,
+    60,
+    60,
+    45,
+    96,
+    43,
+    100
+  ],
+  "remaining": 82158.0
+}
+```
+
+
+### OBS
+
+
+![scorer](/darts/rotation_scorer.png)
+
+Create a Browser Source in OBS.
+
+Add the dimensions (**Width:750 / Height:250**).
+
+Paste In the Link
+
+```
+https://terrierdarts.pages.dev/darts/rotationScorer/index.html
+```
+
+#### Codepen
+Here is the codepen if you wish to make any changes: https://codepen.io/terrierdarts/pen/poxXaNK
+
+
+
+### Streamer.bot
+
+Since it has a websocket you can use a program like Streamer.bot to do things when scores are sent.
+Here is collection of Example Actions.
+
+<CopyButton>
+{importCode}
+</CopyButton>
+
+

@@ -248,7 +248,14 @@ th {
 td,
 th {
 	padding: 6px;
-	text-align: left;
+	
+	
+
+
+}
+td:first-child
+{
+	white-space: nowrap;
 }
 
 pre {
@@ -420,3 +427,17 @@ h2.heading {
 .hide-scrollbar::-webkit-scrollbar{
 	display: none;
 }
+
+.btn {
+	background-color: DodgerBlue;
+	border: none;
+	color: white;
+	padding: 12px 30px;
+	cursor: pointer;
+	font-size: 20px;
+  }
+  
+  /* Darker background on mouse-over */
+  .btn:hover {
+	background-color: RoyalBlue;
+  }

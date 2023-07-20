@@ -226,6 +226,13 @@ declare module 'astro:content' {
   collection: "docs";
   data: InferEntrySchema<"docs">
 } & { render(): Render[".mdx"] };
+"en/darts_scorer.mdx": {
+	id: "en/darts_scorer.mdx";
+  slug: "en/darts_scorer";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".mdx"] };
 "en/game_alerts_credits/ga_dark_souls.mdx": {
 	id: "en/game_alerts_credits/ga_dark_souls.mdx";
   slug: "en/game_alerts_credits/ga_dark_souls";
@@ -271,6 +278,13 @@ declare module 'astro:content' {
 "en/general/log_viewer.mdx": {
 	id: "en/general/log_viewer.mdx";
   slug: "en/general/log_viewer";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".mdx"] };
+"en/general/random_action_no_repeat.mdx": {
+	id: "en/general/random_action_no_repeat.mdx";
+  slug: "en/general/random_action_no_repeat";
   body: string;
   collection: "docs";
   data: InferEntrySchema<"docs">
@@ -331,6 +345,20 @@ declare module 'astro:content' {
   collection: "docs";
   data: InferEntrySchema<"docs">
 } & { render(): Render[".mdx"] };
+"en/overlays/additional_overlays.mdx": {
+	id: "en/overlays/additional_overlays.mdx";
+  slug: "en/overlays/additional_overlays";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".mdx"] };
+"en/overlays/chat_dots.mdx": {
+	id: "en/overlays/chat_dots.mdx";
+  slug: "en/overlays/chat_dots";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".mdx"] };
 "en/overlays/death_counter_multi_game.mdx": {
 	id: "en/overlays/death_counter_multi_game.mdx";
   slug: "en/overlays/death_counter_multi_game";
@@ -341,6 +369,20 @@ declare module 'astro:content' {
 "en/overlays/gameboy_game_change.mdx": {
 	id: "en/overlays/gameboy_game_change.mdx";
   slug: "en/overlays/gameboy_game_change";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".mdx"] };
+"en/overlays/screen_filler.mdx": {
+	id: "en/overlays/screen_filler.mdx";
+  slug: "en/overlays/screen_filler";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".mdx"] };
+"en/overlays/windows_live.mdx": {
+	id: "en/overlays/windows_live.mdx";
+  slug: "en/overlays/windows_live";
   body: string;
   collection: "docs";
   data: InferEntrySchema<"docs">
@@ -397,6 +439,34 @@ declare module 'astro:content' {
 "en/points_system/slots.mdx": {
 	id: "en/points_system/slots.mdx";
   slug: "en/points_system/slots";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".mdx"] };
+"en/ranking_system/core.mdx": {
+	id: "en/ranking_system/core.mdx";
+  slug: "en/ranking_system/core";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".mdx"] };
+"en/ranking_system/leaderboard.mdx": {
+	id: "en/ranking_system/leaderboard.mdx";
+  slug: "en/ranking_system/leaderboard";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".mdx"] };
+"en/ranking_system/lotto.mdx": {
+	id: "en/ranking_system/lotto.mdx";
+  slug: "en/ranking_system/lotto";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".mdx"] };
+"en/ranking_system/points_viewer.mdx": {
+	id: "en/ranking_system/points_viewer.mdx";
+  slug: "en/ranking_system/points_viewer";
   body: string;
   collection: "docs";
   data: InferEntrySchema<"docs">

@@ -23,15 +23,22 @@ const lang = getLanguageFromURL(currentPage);
 		</div>
 		<div class="logo flex">
 			<a href="/">
-				<AstroLogo size={40} />
-				<h1>{SITE.title ?? 'Documentation'}</h1>
+				<AstroLogo size={90} />
+				<div class="data">
+				<h1>{SITE.title ?? 'Documentation'}</h1><br>
+				<sub class="subheading"> {SITE.description}</sub>
+				</div>
 			</a>
+			
+			
 		</div>
-		<div style="flex-grow: 1;"></div>
-		{KNOWN_LANGUAGE_CODES.length > 1 && <LanguageSelect lang={lang} client:idle />}
+		
+		
 		
 	</nav>
+	
 </header>
+
 
 <style>
 	header {
@@ -46,7 +53,12 @@ const lang = getLanguageFromURL(currentPage);
 		position: sticky;
 		top: 0;
 	}
-
+.subheading{
+	font-size: small;
+}
+.data{
+	width: 100%;
+}
 	.logo {
 		flex: 1;
 		display: flex;
@@ -59,6 +71,7 @@ const lang = getLanguageFromURL(currentPage);
 		color: hsla(var(--color-base-white), 100%, 1);
 		gap: 0.25em;
 		z-index: -1;
+		
 	}
 
 	.logo a {
@@ -123,25 +136,5 @@ const lang = getLanguageFromURL(currentPage);
 		--docsearch-logo-color: var(--theme-text);
 	}
 
-	.search-item {
-		display: none;
-		position: relative;
-		z-index: 10;
-		flex-grow: 1;
-		padding-right: 0.7rem;
-		display: flex;
-		max-width: 200px;
-	}
-
-	@media (min-width: 50em) {
-		.search-item {
-			max-width: 400px;
-		}
-	}
-</style>
-
-<style is:global>
-	.search-item > * {
-		flex-grow: 1;
-	}
+	
 </style>

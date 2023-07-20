@@ -4,25 +4,37 @@ description: Show off your game change with an old school gameboy
 pubDate: "Feb 18 2023"
 code: "1.0"
 setUpDifficulty: "1/5"
-heroImage: "../../heroImages/game_change_animation.png"
+heroImage: "/heroImages/game_change_animation.png"
 ---
 
-## How to Install
+import CopyButton from '../CopyButton.astro'
+import importCode from '/sb_codes/overlays/game_change_animation.txt?raw';
 
-## Grab the Overlay
+### OBS Set-Up
 
- ```
- https://terrierdarts.pages.dev/obs_links/game_change_gameboy/index.html
- ```
+Using OBS create a browser source.
 
- Add as a browser source.
+Add the dimensions (**Width:1920 / Height:1080**).
 
- Height : 1920
- Width : 1080
+Paste in the Link:
 
- You will then need to crop the source to how you want it to look.
+```
+https://terrierdarts.pages.dev/obs_links/game_change_gameboy/index.html
+```
 
- ## In Streamer.bot 
+You will then need to crop the source to how you want it to look.
 
- Make sure your websocket is enabled.
+### Streamer.bot Set-Up
+
+Make sure your websocket is enabled.`ws://127.0.0.1:8080`
+
+<CopyButton>
+{importCode}
+</CopyButton>
+
+One the code is imported, you will need to make sure the 2 OBS Sub-Actions are pointed towards the Browser Source youve just created.
+
+Add This action to the "Stream Update" Event, so it will trigger when the game changes.
+
+
 

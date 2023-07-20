@@ -34,6 +34,11 @@ function processQueue() {
   }
 }
 
+function OnLoad(){
+  // Fade out the div
+  $("#alert").fadeOut();
+}
+
 
 
 function alert(top,bottom) {
@@ -133,3 +138,5 @@ ws.addEventListener("message", (event) => {
     }
     
 });
+
+OnLoad();

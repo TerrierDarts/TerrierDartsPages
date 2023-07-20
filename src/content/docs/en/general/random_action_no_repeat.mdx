@@ -1,0 +1,44 @@
+---
+title: "Random Action No Repeat"
+description: "Run actions randomly without them repeating"
+pubDate: "Jul 05 2023"
+code: "2.3"
+setUpDifficulty: "2/5"
+heroImage: "/heroImages/default_image.png"
+---
+import CopyButton from '../CopyButton.astro'
+import importCode from '/sb_codes/general/random_action_no_repeat.txt?raw';
+
+### Streamer.bot Set-Up
+
+<CopyButton>
+{importCode}
+</CopyButton>
+
+Once the code is imported into Streamer.bot you will have 2 main actions (the imported `[Social Link]` Actions are part of the example for a use case). You will need to enable the command so we can open the settings menu.
+ 
+
+### Configuration
+
+ The `[RANR] Settings` will open the Settings GUI and this is where you will create the lists.
+ 
+ You will need to select your main trigger, this will be a duplicate of the `[RANR] Main Trigger`. 
+ 
+ So in the imported Example you have `[Social Links] Main`. So you would select that action then you would need press `Load List`. Once a list is loaded you will see it says the name of the current list at the bottom.
+
+ ![Load List](/buildImages/random_action_no_repeat/load_list.png)
+ 
+ 
+ Then using the second dropdown you can select all the actions you want to add to the list. Once you've added all the actions you want in this list press save list. You can add the same action more than once. Also the Lists can be manually edited if you wish to remove actions.
+
+ ![Add Actions](/buildImages/random_action_no_repeat/add_actions.png)
+
+### Notes
+
+ - You need to `Save` the list every time you make an edit.
+ - If the actions are not in there own queue you may need to ensure the dialog is closed before running them.
+ - Actions Lists can be deleted with the delete list, just select them the same way you would when loading and press delete.
+ - The code does try avoid doing the same action twice in a row, but only does a 1 step check if you have the same action more than once in a list it could run twice in a row 
+ - If an action doesnt run it should post in the log file. 
+ - Any edits won't take effect until its completed its current run through of the actions. Unless you Press `Reset Activation`
+ - Duplicates can be added if you wish to leverage one action more than another.

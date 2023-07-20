@@ -1,6 +1,6 @@
 ---
 title: "Follow Age Responses"
-description: "A C# Follow Age Action that output a different message based on the number of days followed"
+description: "A C# Follow Age Action that outputs a different message based on the number of days followed"
 pubDate: "Feb 09 2023"
 code: "1.0"
 setUpDifficulty: "2/5"
@@ -9,13 +9,11 @@ heroImage: "/heroImages/follow_age.png"
 import CopyButton from '../CopyButton.astro'
 import importCode from '/sb_codes/general/follow_age_responses.txt?raw';
 
-### Grab The Import Code
+### Streamer.bot Set-Up
 
 <CopyButton>
 {importCode}
 </CopyButton>
-
-### In Streamer.bot
 
 After importing the **Import Code** you will need to enable command.
 
@@ -23,7 +21,7 @@ You will need to ensure that all the get info's are correct. Like in the image b
 
 ![Follow_Age_Info's](/buildImages/followage/follow_age_infos.png)
 
-### How to Configure
+### Configuration
 
 Configuration is done via arguments, in the examples I have provided you will see there is several groups, and in each group there is an arguement called `rangeX` and `messageX` and in our case `X` is the number or count of arguments, so when adding a new range make sure to make the number adjustment.
 

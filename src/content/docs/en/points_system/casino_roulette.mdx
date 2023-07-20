@@ -4,30 +4,41 @@ description: "A Casio Roulette Style Game using VRFlad's Point System"
 pubDate: "Jun 23 2023"
 code: "1.2"
 setUpDifficulty: "1/5"
-heroImage: "../../heroImages/ps_casino_roulette.png"
+heroImage: "/heroImages/ps_casino_roulette.png"
 ---
 
 import CopyButton from '../CopyButton.astro'
 import importCode from '/sb_codes/points_system/casino_roulette.txt?raw';
 
-# Grab the Import Code
+### Grab the Import Code (SB 0.2.0)
 
 <CopyButton>
 {importCode}
 </CopyButton>
 
-# In Streamer.bot
+### In Streamer.bot
 
 Once imported you will need to make sure that the command `!casino` is enabled.
 
 Then in order to correctly use this you can do  `<{trigger} (Amount To Gamble) (What your betting on)>`
 
+Users can bet on Direct Numbers paying x35, Red or Black paying x2 and Odd or Even Also paying x2
 
-# Configuration
+![Commands](/buildImages/point_systems/casino_commands.png)
+
+
+### Configuration
 
 There are 2 setting you can change here, 
 
 |Argument|Description|
 |---|---|
 |`bot`| This is if you wish for the bot to post the messages to chat|
-|`trigger`| This command a user will use to work this action|
+|`trigger`| This is how the user will play the game|
+
+If you wish to edit the Output messages this will require you to edit the C#
+The output message is down at the bottom.
+
+This is the default.
+
+`CPH.SendMessage($"{user},Wheel Spin was {colour} {parity} {winningNum} You {outcome} {gains} ", bot);`

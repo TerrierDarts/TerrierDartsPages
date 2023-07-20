@@ -1,0 +1,87 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway");
+@import url("https://fonts.googleapis.com/css?family=Candal");
+
+.result {
+  font-size: 16px;
+  width: 700px;
+  margin: 50px auto;
+}
+
+.result .ball {
+  float: left;
+  position: relative;
+  overflow: hidden;
+  margin: 10px;
+  box-shadow: -0.5em -0.5em 1.5em 0 rgba(0, 0, 0, 0.5) inset;
+  border-radius: 50%;
+  height: 6em;
+  width: 6em;
+  text-align: center;
+}
+
+.result .digit {
+  position: absolute;
+  left: 30%;
+  top: -15%;
+  font-family: "Raleway", sans-serif;
+  margin-top: 0.8em;
+  font-size: 2.5em;
+}
+
+.result .digit:not(.set) {
+  top: 30%;
+  animation: spin 0.7s ease-in-out infinite;
+}
+
+.result .digit .set {
+  transition: top 1s ease-in;
+}
+
+@keyframes spin {
+  0% {
+    top: -150%;
+  }
+  100% {
+    top: 150%;
+  }
+}
+
+.result .ball1 {
+  /* Styles for ball 1 and digit 1 */
+  /* Example styles: */
+  background-color: pink;
+  color: black;
+  visibility: hidden;
+}
+
+.result .ball2 {
+  /* Styles for ball 2 and digit 2 */
+  /* Example styles: */
+  background-color: pink;
+  color: black;
+  visibility: hidden;
+}
+
+.result .ball3 {
+  /* Styles for ball 3 and digit 3 */
+  /* Example styles: */
+  background-color: pink;
+  color: black;
+  visibility: hidden;
+}
+
+.result .ball4 {
+  /* Styles for ball 4 and digit 4 */
+  /* Example styles: */
+  background-color: pink;
+  color: black;
+  visibility: hidden;
+}
+
+.result .ball5 {
+  /* Styles for ball 5 and digit 5 */
+  /* Example styles: */
+  background-color: pink;
+  color: black;
+  visibility: hidden;
+}

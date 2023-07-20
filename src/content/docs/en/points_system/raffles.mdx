@@ -4,15 +4,42 @@ description: "Run Raffles using VRFlad's Point System"
 pubDate: "Feb 13 2023"
 code: "2"
 setUpDifficulty: "1/5"
-heroImage: "../../heroImages/ps_raffles.png"
+heroImage: "/heroImages/ps_raffles.png"
 ---
 
 import CopyButton from '../CopyButton.astro'
+import importCode from '/sb_codes/points_system/raffle.txt?raw';
 
-### Import Code
+### Grab the Import Code
 
-<CopyButton>FFDGFGDFG</CopyButton>
+<CopyButton>
+{importCode}
+</CopyButton>
+
+### In Streamer.bot
+
+Once imported you will need to make sure that the commands `!raffle` and `!ticket` are enabled. These commands can be changed if you wish  this is what they are by default. You will also need to double check the permissions on the command so `!raffle` is mod+ only or however you wish to set it.
+
+Then in order to correctly use this you can do  `<!raffle (Amount to win)>`
+
+Note: For the amount you can us `k` and `m` as short form if you wish, so `30K` or `2m` will work and `30000` or `2000000` isnt needed.  
 
 
-### How to Install
+### Configuration
 
+Here are a List of the arguments that are accross the 3 Actions
+
+|Argument|Description|
+|---|---|
+|`defaultPrize`| This is the default prize if none is given.|
+|`length`| This is how long the raffle will last for|
+|`trigger`| This is how users can joing the raffle|
+|`raffleCost`| This is a cost for a raffle Ticket, this can be 0|
+|`bot`| This is if you wish for the bot to post the messages to chat|
+|`maxEntry`| This is how many entries a person can have, if cost is 0 this will default to 1|
+|`multiWinners`| This is if you want more than 1 winner if enough people join|
+|`entriesPerWinner`| This controls how many entries we need to get an extra winner|
+|`sharePrize`| This is if they will share the prize or will they each get the prize value|
+|`messageOnMaxError`|This will control if a message is posted if a user has maximum tickets|
+|`messageOnCostError`| This will control if a message is posted if a user can not afford the tickets|
+|`messageOnSuccess`| This will contol if a message is posted when a user has successfully bought tickets|

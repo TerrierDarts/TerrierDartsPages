@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .download-link {
+      display: flex;
+      background-image: url('/buildImages/street_fighter/street_fighter_car.png');
+      background-repeat: no-repeat;
+      width: 200px;
+      height: 200px;
+    }
+
+    .download-link.active {
+      background-image: url('/buildImages/street_fighter/street_fighter_car_2.png');
+      background-repeat: no-repeat;
+    }
+  </style>
+</head>
+<body>
+    <a href="/files/StreetFighter_Assets.zip" download class="download-link" id="download-link" onclick="this.classList.add('active');"></a>
+</body>
+</html>
