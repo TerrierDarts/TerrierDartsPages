@@ -33,10 +33,22 @@ export default defineConfig({
     astroFlavoredMarkdown: true
   },
   integrations: [
-  // Enable Preact to support Preact JSX components.
-  preact(),
-  // Enable React for the Algolia search component.
-  react(), sitemap(), mdx(), tailwind(), rollup(), vue()],
+    // Enable Preact to support Preact JSX components.
+    preact(),
+    // Enable React for the Algolia search component.
+    react(), 
+    sitemap(), 
+    mdx(), 
+    tailwind(), 
+    rollup({
+      exclude: [
+        "filler.js",
+        "bluewaffle.js",
+        "blinder.js"
+      ]
+    }), 
+    vue()
+  ],
   site: `https://astro.build`
   //output: "server",
   //adapter: node()

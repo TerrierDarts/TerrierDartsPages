@@ -7,6 +7,8 @@ const multiDefault = urlParams.get("multidefault") || 25;
 const multiPermission = urlParams.get("permission") || 1;
 const multiSubs = urlParams.get("subonly") || "false";
 const explodeLevel = urlParams.get('explode') || 1;
+const canvasHeight = urlParams.get('height') || 1080;
+const canvasWidth = urlParams.get('width') || 1920;
 
 const Engine = Matter.Engine;
 const Render = Matter.Render;
@@ -22,8 +24,8 @@ const render = Render.create({
   engine: engine,
   runner: runner,
   options: {
-    width: 1920,
-    height: 1080,
+    width: canvasWidth,
+    height: canvasHeight,
     wireframes: false,
     background: "transparent"
   }
@@ -38,9 +40,10 @@ let balls = [];
 const ballTimeouts = [];
 
 // Create the ground, left wall, and right wall of the pen
-const ground = Bodies.rectangle(960, 1080, 1920, 30, { isStatic: true });
-const leftWall = Bodies.rectangle(0, 540, 30, 1080, { isStatic: true });
-const rightWall = Bodies.rectangle(1920, 540, 30, 1080, { isStatic: true });
+// Create the ground, left wall, and right wall of the pen
+const ground = Bodies.rectangle((canvasWidth/2),(canvasHeight+30), canvasWidth, 30, { isStatic: true });
+const leftWall = Bodies.rectangle(-30, (canvasHeight/2), 30, canvasHeight, { isStatic: true });
+const rightWall = Bodies.rectangle((canvasWidth+30), (canvasHeight/2), 30, canvasHeight, { isStatic: true });
 
 
 leftWall.render.fillStyle = "pink";
@@ -50,23 +53,14 @@ ground.render.fillStyle = "pink";
 World.add(engine.world, [ground, leftWall, rightWall]);
 
 if (roofBool == "true") {
-  const roof = Bodies.rectangle(960, 0, 1920, 30, { isStatic: true });
+  const roof = Bodies.rectangle((canvasWidth/2), -30, canvasWidth, 30, { isStatic: true });
   roof.render.fillStyle = "pink";
   World.add(engine.world, [roof]);
 }
 
-function getRandomColor() {
-  const letters = "0123456789ABCDEF";
-  let color = "#";
-  for (let i = 0; i < 6; i++) {
-    color += letters[Math.floor(Math.random() * 16)];
-  }
-  return color;
-}
-
 function addBall(imageUrl) {
   const ballRadius = 30;
-  const ballColor = getRandomColor();
+ 
   const ball = Bodies.circle(Math.random() * 1840 + 40, 1, ballRadius, {
     restitution: 0.8,
     render: {
@@ -83,30 +77,30 @@ function addBall(imageUrl) {
   World.add(engine.world, ball); // Add the ball body to the Matter.js world
 
   // Clear the ball after the timeout duration (if provided)
-  if (timeoutDuration !== null) {
-    const timeoutId = setTimeout(() => {
+if (timeoutDuration !== null) {
+  const timeoutId = setTimeout(() => {
+    explodeBall(ball);
+    setTimeout(() => {
       const index = balls.findIndex((b) => b === ball);
       if (index !== -1) {
         clearBall(index);
       }
-    }, timeoutDuration * 1000);
-    ballTimeouts.push(timeoutId); // Store the timeout ID for the ball
-  }
+    }, 1000); // 1000 milliseconds = 1 second
+  }, (timeoutDuration - 1) * 1000);
+  ballTimeouts.push(timeoutId); // Store the timeout ID for the ball
+}
 
 
 }
 
 function addEmote(imageUrl) {
   const ballRadius = 30;
-  const ballColor = getRandomColor();
   const ball = Bodies.circle(Math.random() * 1840 + 40, 1, ballRadius, {
     restitution: 0.8,
     render: {
       sprite: {
         texture: imageUrl,
-        //xScale: (ballRadius * 2) / 300,
-        //yScale: (ballRadius * 2) / 300
-      },
+       },
     },
 
   },
@@ -115,15 +109,18 @@ function addEmote(imageUrl) {
   World.add(engine.world, ball); // Add the ball body to the Matter.js world
 
   // Clear the ball after the timeout duration (if provided)
-  if (timeoutDuration !== null) {
-    const timeoutId = setTimeout(() => {
+if (timeoutDuration !== null) {
+  const timeoutId = setTimeout(() => {
+    explodeBall(ball);
+    setTimeout(() => {
       const index = balls.findIndex((b) => b === ball);
       if (index !== -1) {
         clearBall(index);
       }
-    }, timeoutDuration * 1000);
-    ballTimeouts.push(timeoutId); // Store the timeout ID for the ball
-  }
+    }, 1000); // 1000 milliseconds = 1 second
+  }, (timeoutDuration - 1) * 1000);
+  ballTimeouts.push(timeoutId); // Store the timeout ID for the ball
+}
 
 
 }
@@ -184,7 +181,29 @@ function addMultipleBalls(imageUrl, count) {
   }
 }
 
-// Example usage: addMultipleBalls(imageUrl, 5, 10);
+
+function explodeBall(ball) {
+  const explosionForce = 0.25; // Adjust the force value to control the intensity of the explosion
+
+  // Calculate the center position of the pen
+  const penCenterX = render.options.width / 2;
+  const penCenterY = render.options.height / 2;
+
+  // Calculate the direction from the ball to the center
+  const direction = Matter.Vector.sub(
+    { x: penCenterX, y: penCenterY },
+    ball.position
+  );
+
+  // Normalize the direction vector
+  const normalizedDirection = Matter.Vector.normalise(direction);
+
+  // Apply the explosion force in the normalized direction
+  const force = Matter.Vector.mult(normalizedDirection, explosionForce);
+  Matter.Body.applyForce(ball, ball.position, force);
+}
+
+
 
 
 // subscribe to Twitch events
@@ -201,18 +220,21 @@ function onConnect() {
   console.log("Explode Level = " + explodeLevel);
   console.log("Permissions = " + multiPermission);
   console.log("Sub Allowed = " + multiSubs);
+  console.log("Height = " + canvasHeight);
+  console.log("Width = " + canvasWidth );
 }
 
 client.on("Twitch.ChatMessage", (data) => {
-  console.log(data);
+  //console.log(data);
   var message = data.data.message.message;
   var user = data.data.message.username;
   var role = data.data.message.role;
   var emotes = data.data.message.emotes;
   var sub = data.data.message.subscriber;
-
-  emotes.forEach((emotes) => {
-    var imageUrl = emotes.imageUrl;
+ 
+  emotes.forEach((emote) => {
+    var imageUrl = emote.imageUrl;
+    console.log(imageUrl);
     addEmote(imageUrl);
   });
   console.log(message);
@@ -224,7 +246,7 @@ client.on("Twitch.ChatMessage", (data) => {
       console.log(role);
       console.log(multiPermission);
       if (role >= multiPermission) {
-        var imageUrl = emotes[0].imageUrl;
+        var imageUrl = emote[0].imageUrl;
         console.log(imageUrl);
 
         var input = message.split(" ");

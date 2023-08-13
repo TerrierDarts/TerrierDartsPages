@@ -8,6 +8,8 @@ heroImage: "/heroImages/heat_ws5.png"
 ---
 import CopyButton from '../CopyButton.astro'
 import importCode from '/sb_codes/heat/heat_core.txt?raw';
+import { Icon } from 'astro-icon'
+import { Notification } from "accessible-astro-components";
 
 ### Grab The Import Code
 
@@ -38,7 +40,10 @@ Final Step is to add you actions, You will find these in `[Heat] Sources` you wi
 ![Sources](/buildImages/heat_core/sources.png)
 
 If you have done all that heat should be functional now.
-
+<Notification type="error">
+ <Icon pack="ion" name="information-circle-outline" />
+One thing to note is in OBS Source Alignment needs to be "Top Left" other wise the source will be ignored.
+</Notification>
 ### Configuration
 
 In `[Heat] Message` they are a few settings. These will change how heat behaves for you. 

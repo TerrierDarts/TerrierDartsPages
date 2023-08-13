@@ -2,11 +2,73 @@
 title: "Lotto"
 description: "A Lotto Game using VRFlad's Point System"
 pubDate: "Feb 13 2023"
-code: "2"
+code: "2.1"
 setUpDifficulty: "1/5"
 heroImage: "/heroImages/ps_lotto.png"
 ---
 
-import CopyButton from '../CopyButton.astro'
+import CopyButton from '../CopyButton.astro';
+import importCode from '/sb_codes/points_system/lotto.txt?raw';
 
-<CopyButton>IMPORTCODE</CopyButton>
+### Grab the Import Code
+
+<CopyButton>
+{importCode}
+</CopyButton>
+
+### In Streamer.bot
+Once the code is imported you will need the following References in order to make the codes compile, if they aren't auto added.
+
+```csharp
+mscorlib.dll
+System.Linq.dll
+System.Net.dll
+```
+You will need to set up the following commands. If not imported. Just note that imported actions are disabled by default.
+
+|Command|Action tied to|
+|---|---|
+|!buyticket|[Currency] - [Lotto] - Buy Tickets|
+|!draw|[Currency] - [Lotto] - Draw|    
+|!tickets|[Currency] - [Lotto] - Check Num of Tickets|
+|!cleardraw|[Currency] - [Lotto] - Clear The Draw|
+|!giveticket|[Currency] - [Lotto] - Give Ticket|
+
+
+You can set **Lotto Draw** as a Channel Point Redeem if you wish if you want the viewers to decide when a draw is  done!
+
+
+### In OBS
+
+You can add the following Browser source (Width :600 Height: 200)
+```
+https://terrierdarts.pages.dev/obs_links/ranking_system/lotto/index.html
+```
+[The Codepen *Follow this link to get access to the codepen I used for the Visuals if you wish to make any edits*](https://codepen.io/terrierdarts/pen/JjMRRKv)
+
+In order to install this codepen, you will need to follow the link then press `Export` from the bottom right, then press `Export .Zip`
+
+Then you will need to extract the files to somewhere safe. Inside the folder you will have a `dist` folder inside that they will be a `index` file. Open that and it should open in a web browser. Copy and paste the url and create a browser source with that url.
+
+This pen works over SB Websocket, if you dont use the standard `ws://127.0.0.1:8080` you will need to edit it in the codepen/script.js file
+
+
+### Configuration
+
+The Following Setting are spread accross the 5 actions, here is what they all do.
+
+|Argument|Purpose|
+|---|---|
+|`bot` |This will control if messages are set from the bot account or not.|
+|`prize3` |This is the prize for matching 3 numbers.|
+|`prize4` |This is the prize for matching 4 numbers.|
+|`prize5` |This is the prize for matching 5 numbers.|
+|`clearDraw` |This is if you want to clear the entries after a draw.|
+|`upperLimit` |This is the highest number you want to be avaiable the higher the harder it is to win.|
+|`ticketCost` |This is how many points each ticket costs|
+|`fristOnFree` |This will allow the user to get the first one free is set to true.|
+|`ticketLimit` |This is the max number of tickets a user can buy.|
+|`ticketsToBuyMax`| This is the max number of tickets a user can buy in one go.|
+|`messageOnMax` |This will turn on the message to post if a user already has the max tickets.|
+|`messageOnCost` |This will turn on a message if the user can not afford|
+|`messageOnSuccess` |This will turn on the message if the user has successfully bought tickets|

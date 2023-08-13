@@ -2,7 +2,7 @@ import type { FunctionalComponent } from 'preact';
 import { useState, useEffect } from 'preact/hooks';
 import './ThemeToggleButton.css';
 
-const themes = ['light', 'dark'];
+const themes = ['dark'];
 
 const icons = [
 	<svg
@@ -46,7 +46,7 @@ const ThemeToggle: FunctionalComponent = () => {
 	useEffect(() => {
 		const root = document.documentElement;
 		if (theme === 'light') {
-			root.classList.remove('theme-dark');
+			root.classList.add('theme-dark');
 		} else {
 			root.classList.add('theme-dark');
 		}

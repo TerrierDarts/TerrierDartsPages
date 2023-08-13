@@ -142,9 +142,9 @@ export const SIDEBAR: Sidebar = {
                 { text: 'Gamble', link: '/en/points_system/gamble' },
                 //  { text: 'Heists', link: '/en/heists' },
                 //  { text: 'Leaderboard', link: '' },
-                //{ text: 'Lotto', link: '/en/points_system/lotto' },
+                { text: 'Lotto', link: '/en/points_system/lotto' },
                 { text: 'Raffles', link: '/en/points_system/raffles' },
-                { text: 'Slots', link: '/en/points_system/slots' }               
+                //{ text: 'Slots', link: '/en/points_system/slots' }               
                 ],
               },
               {

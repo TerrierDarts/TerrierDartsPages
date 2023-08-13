@@ -6,6 +6,13 @@ module.exports = {
 	},
 	plugins: [],
 	module: {
+		parser: {
+			javascript: {
+				importMeta: true,
+			  importMetaContext: true,
+			  url: true,
+			},
+		  },
 		rules: [
 		  {
 			resourceQuery: /raw/,
