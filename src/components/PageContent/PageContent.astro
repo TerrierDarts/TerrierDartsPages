@@ -14,6 +14,7 @@ type Props = {
 	code?: string;
 	pubDate?: string;
 	setUpDifficulty?: string;
+	sbRequiredV?: string;
 	heroImage?: string;
 	youTubeLink?: string;
 };
@@ -23,6 +24,7 @@ const {
 	description,
 	headings,
 	setUpDifficulty = "",
+	sbRequiredV= "",
 	pubDate = "",
 	code = "",
 	heroImage = "../../heroImages/default_image.png",
@@ -45,14 +47,23 @@ const {
 			{
 				pubDate ? (
 					<>
-						Last updated on: <span class="time">{pubDate}</span>,
+						Last update: <span class="time">{pubDate}</span>,
 					</>
 				) : null
 			}
 			{
 				code ? (
 					<>
-						Code Version: <span class="code">{code}</span>,
+						Version: <span class="code">{code}</span>,
+					</>
+				) : null
+			}
+			
+			{
+				sbRequiredV ? (
+					<>
+						SB Version:{" "}
+						<span class="vers">{sbRequiredV}</span>.
 					</>
 				) : null
 			}
@@ -110,6 +121,11 @@ const {
 	}
 	.stars {
 		color: rgb(255, 247, 0);
+		font-size: 1rem;
+		font-weight: 800;
+	}
+	.vers {
+		color: rgb(0, 238, 255);
 		font-size: 1rem;
 		font-weight: 800;
 	}

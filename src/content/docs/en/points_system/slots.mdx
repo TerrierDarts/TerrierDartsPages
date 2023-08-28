@@ -2,14 +2,17 @@
 title: "Slots"
 description: "A Slots Game using VRFlad's Point System"
 pubDate: "Jul 05 2023"
-code: "2.2"
+code: "3"
 setUpDifficulty: "1/5"
+sbRequiredV : "0.2.0+"
 heroImage: "/heroImages/ps_slots.png"
 ---
 import CopyButton from '../CopyButton.astro'
 import importCode from '/sb_codes/points_system/slots.txt?raw';
 
-### Grab the Import Code (SB 0.2.0)
+WORK IN PROGRESS
+
+### Grab the Import Code 
 
 <CopyButton>
 {importCode}
@@ -17,38 +20,77 @@ import importCode from '/sb_codes/points_system/slots.txt?raw';
 
 ### In Streamer.bot
 
-Once imported you will need to enable the commands and that should be enough for it to work straight out of the box.
+This extension will work better if you already have VRFlad's '***Point System***' installed.
 
-You will import 2 commands, a `!slot, !slots` command this is how your viewers will play the game.  You will also import an `!emote` command which will allow you to easily edit the emotes that you wish to use, You may want to set this command to be mod only.
+#### Trigger Action
+
+Once imported, you will notice like all of my chat games it includes an ***Action*** called `[Currency] - [Set Triggers]`. This ***Action*** will create a `.json` file in your data folder. It will only update when there is an update to be pulled from the site, also note it could create triggers for games or extensions you do not have, this is nothing to worry about.
+
+If you already have this **Action** I would reccommend you choose to replace it as it might change, but I am taking every effort and hope that it doesn't need to change. 
+
+You should then restart Streamer.bot so it can create the ***Triggers*** you need as the ***Triggers*** will create themselves every time you start Streamer.bot. If done correctly you should receieve a ***Toast Notification*** confirming this.
+
+
+#### Main Action
+
+You will import 1 ***Command***, `!slot, !slots` this is how your viewers will play the game. No other commands are needed for this to work. 
+
+You have 6 new ***Triggers*** that have been created they are as follows
+
+```
+Currency >> Slots >> Win
+Currency >> Slots >> Loss
+Currency >> Slots >> All In Win
+Currency >> Slots >> All In Loss
+Currency >> Slots >> Any Win
+Currency >> Slots >> Any Loss
+```
+If you don't want to specify a different ***Action*** based on the user going all in or not then use the `Any Win/Loss` ***Triggers***. If you want a different ***Action*** based on going all in the use the `Win/Loss` and `All In Win/Loss` ***Triggers***.
+
+Each Trigger will populate the following Arguments.
+|Argument | Description|
+|---|---|
+|`rolledEmote1`|This is the value of the 1st emote.|
+|`rolledEmote2`|This is the value of the 2nd emote.|
+|`rolledEmote3`|This is the value of the 3rd emote.|
+|`slotResult `| This will populate the slots result like `\|\|Slot1\|\|Slot2\|\|Slot3\|\|`. |	
+|`betAmount`| This is the amount that was bet, it will populate the actual value so if you did `All`, `10%` or `5k` it will be the number.|
+|`allIn`| This is a bool based on if bet was all in or not.|
+|`oldPoints`| This is the points the user had prior to the spin.|
+|`newPoints`| This is the points the user now has following the spin.|
+
+
 
 ### How To Configure
 
-In `[Currency]-[Slot] - Spin` you have several arguments this will have an impact on how your game runs.
 
-|Argument |Description|
+In `[Currency]-[Slot] - Spin` you have several ***Arguments*** this will have an impact on how your game runs.
+
+You will see there are Currently 6 ***Folders*** called `Emote Slot X` with X been numbers 1 to 6. It is possible to add more numbers and I will explain that later.
+In each ***Folder*** there are 3 ***Arguments*** `emoteX`, `percentX` and `payoutX`. There is also an `Additional Settings` ***Folder***. 
+
+All Settings are explained below in the table.
+
+|Setting|Purpose|
 |---|---|
-|`numOfEmotes`| This is the number of emotes that are in your list, you can lower this if you want your game to be easier without needing to edit the Emote List|
-|`auto`| If this is set to `True` then the `numOfEmotes` is ignored and it will automatically work out how many emotes are in the list|
-|`defaultBet`| This is the amount that will be bet if none is stated in the command|
-|`winMulti`| This is how much a user will win in comparision to there bet, Setting this at `10` and betting `1000` will mean the user wins `10,000`|
-|`bot`| This is if you wish for the bot to post the messages to chat|
+|`emote` |This is the emote that you will use|
+|`percent`|This is the value of frequency this emote will appear, the higher the more frequent|
+|`payout`|This is how much it will payout based on bet size so a 100 bet at 5 will pay 500| 
+|`defaultBet`|This is the bet that will be taken if the user doesnt specify or puts an invalid input|
+|`match2On`|This is if you want a win, if emote 1 and 2 are equal|
+|`match2Payout`|This is the payout value if you have `match2On` set to true|
+|`percentTotal`|This is the total of all the `percentX` you have, this been off could effect the game Ideally it will be set to 100|
+|`defaultPoints`|This is the amount of points a person will be given if they have never had any points before in the past|
 
-In `[Currency]-[Slot] - Edit Emotes` also have some arguments.
+In Order to add more emotes if you wish you need to just follow these steps.
 
-|Argument|Description|
-|---|---|
-|`bot`| This is if you wish for the bot to post the messages to chat|
-|`allowDuplicates`| If this is set to `True` you will be able to add the same emote more than once|
+1. Duplicate one of the current emote ***Folders***,
+2. For ease rename it `Emote Slot X` and X been the next number.
+3. Inside the ***Folder*** change the 3 ***Set Arguments*** so the number matches the ***Folder***.
+4. You can change the values as you see fit.
+5. If you do add an emote ensure that all the `Percent` ***Variables*** when added up do equal to the `percentTotal`.
 
-The `!emote` command has several ways it can be used.
 
-|Command|Description|
-|---|---|
-|`!emote add <emote>`| This will add an emote to the list|
-|`!emote remove <emote>`|This will remove all instances of that emote if it exists in the list|
-|`!emote print`| This will print out the current emotes in the list|
-|`!emote default`| This will restore the list to the default settting with the 12 I orginally added|
-|`!emote <anything else>`| This will just post a help message for you|
 
 
 

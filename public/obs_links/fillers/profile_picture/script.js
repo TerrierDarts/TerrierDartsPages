@@ -167,7 +167,9 @@ function explodeBall(ball) {
 function addMultipleBalls(imageUrl, count) {
   
   for (let i = 0; i < count; i++) {
-    addBall(imageUrl);
+    setTimeout(() => { 
+      addBall(imageUrl);
+    }, i);
   }
 }
 

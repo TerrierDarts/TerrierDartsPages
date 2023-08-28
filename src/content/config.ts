@@ -9,6 +9,7 @@ const docs = defineCollection({
 		code: z.string().optional(),
 		pubDate: z.string().optional(),
 		setUpDifficulty: z.string().optional(),
+		sbRequiredV: z.string().optional(),
 		heroImage: z.string().optional(),
 		youTubeLink: z.string().optional(),
 		dir: z.union([z.literal('ltr'), z.literal('rtl')]).default('ltr'),

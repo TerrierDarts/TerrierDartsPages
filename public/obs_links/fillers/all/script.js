@@ -177,7 +177,9 @@ function explodeBalls() {
 
 function addMultipleBalls(imageUrl, count) {
   for (let i = 0; i < count; i++) {
-    addEmote(imageUrl);
+    setTimeout(() => { 
+      addEmote(imageUrl);
+    }, i);
   }
 }
 
@@ -246,7 +248,7 @@ client.on("Twitch.ChatMessage", (data) => {
       console.log(role);
       console.log(multiPermission);
       if (role >= multiPermission) {
-        var imageUrl = emote[0].imageUrl;
+        var imageUrl = emotes[0].imageUrl;
         console.log(imageUrl);
 
         var input = message.split(" ");

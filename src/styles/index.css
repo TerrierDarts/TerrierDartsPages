@@ -241,7 +241,7 @@ tr:nth-of-type(odd) {
 	background: var(--theme-bg-hover);
 }
 th {
-	background: var(--color-black);
+	background: rgb(35, 42, 82); /*var(--color-black);*/
 	color: var(--theme-color);
 	font-weight: bold;
 }

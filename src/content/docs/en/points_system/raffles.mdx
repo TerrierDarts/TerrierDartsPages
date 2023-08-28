@@ -10,6 +10,9 @@ heroImage: "/heroImages/ps_raffles.png"
 import CopyButton from '../CopyButton.astro';
 import importCode from '/sb_codes/points_system/raffle.txt?raw';
 
+
+WORK IN PROGRESS
+
 ### Grab the Import Code
 
 <CopyButton>
@@ -22,7 +25,43 @@ Once imported you will need to make sure that the commands `!raffle` and `!join`
 
 Then in order to correctly use this you can do  `<!raffle (Amount to win)>`
 
-Note: For the amount you can us `k` and `m` as short form if you wish, so `30K` or `2m` will work and `30000` or `2000000` isn't needed.  
+Note: For the amount you can us `k` and `m` as short form if you wish, so `30K` or `2m` will work and `30000` or `2000000` isn't needed. 
+
+gameName
+length
+raffleCost
+entriesPerWinner
+maxEntry
+Trigger
+multiWinners
+sharePrize
+rafflePrize
+
+
+failCode 
+failReason
+1=already active 2 = not active 3= max tickets 4= cant afford 5 = No entries
+
+gameName
+oldTicketCount
+newTicketCount
+oldEntriesRemaining
+maxTicketCost
+maxToBuy
+ticketsBought
+totalTickets
+ticketTag
+
+
+oldPoints
+newPoints
+winningUser
+
+raffleWinnerCount
+raffleWinners
+winner[i] 
+
+prizeWon
 
 
 ### Configuration
@@ -40,6 +79,5 @@ Here are a List of the arguments that are accross the 3 Actions
 |`multiWinners`| This is if you want more than 1 winner if enough people join|
 |`entriesPerWinner`| This controls how many entries we need to get an extra winner|
 |`sharePrize`| This is if they will share the prize or will they each get the prize value|
-|`messageOnMaxError`|This will control if a message is posted if a user has maximum tickets|
-|`messageOnCostError`| This will control if a message is posted if a user can not afford the tickets|
-|`messageOnSuccess`| This will contol if a message is posted when a user has successfully bought tickets|
+
+defaultPoints

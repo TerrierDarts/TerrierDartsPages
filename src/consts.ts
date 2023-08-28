@@ -136,15 +136,15 @@ export const SIDEBAR: Sidebar = {
                   
                 //  { text: 'Additional Commands', link: '' },
                 //  { text: 'Boss Battles', link: '' },
-                { text: 'Casino Roulette', link: '/en/points_system/casino_roulette' },
+                // { text: 'Casino Roulette', link: '/en/points_system/casino_roulette' },
                 //  { text: 'Dice Game', link: '' },
                 //  { text: 'Free-For-Alls', link: '/en/free_for_all' },
-                { text: 'Gamble', link: '/en/points_system/gamble' },
+               // { text: 'Gamble', link: '/en/points_system/gamble' },
                 //  { text: 'Heists', link: '/en/heists' },
                 //  { text: 'Leaderboard', link: '' },
-                { text: 'Lotto', link: '/en/points_system/lotto' },
-                { text: 'Raffles', link: '/en/points_system/raffles' },
-                //{ text: 'Slots', link: '/en/points_system/slots' }               
+                //{ text: 'Lotto', link: '/en/points_system/lotto' },
+                //{ text: 'Raffles', link: '/en/points_system/raffles' },
+                { text: 'Slots', link: '/en/points_system/slots' }               
                 ],
               },
               {
