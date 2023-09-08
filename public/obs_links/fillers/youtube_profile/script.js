@@ -59,7 +59,7 @@ if (roofBool == "true") {
 }
 function addBall(imageUrl) {
   const ballRadius = 30;
-  const ballColor = getRandomColor();
+ 
   const ball = Bodies.circle(Math.random() * 1840 + 40, 1, ballRadius, {
     restitution: 0.8,
     render: {
@@ -95,7 +95,7 @@ function addBall(imageUrl) {
 
 function addEmote(imageUrl) {
   const ballRadius = 30;
-  const ballColor = getRandomColor();
+ 
   const ball = Bodies.circle(Math.random() * 1840 + 40, 1, ballRadius, {
     restitution: 1,
     render: {
