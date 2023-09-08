@@ -2,7 +2,7 @@
 const url = new URL(import.meta.url);
 const config = {
 // this must match the title of the Channel Points reward we want to trigger for
-actionName: url.searchParams.get('actionName') || "Blinder",
+actionName: url.searchParams.get('actionName') || "[HTML] Blinder",
 
 // this is the URL of the image we want to display
 imageUrl: url.searchParams.get('imageUrl') || "https://terrierdarts.co.uk/obs_links/overlay/white.png", 

@@ -78,7 +78,7 @@ ws.addEventListener("open", (event) => {
             request: "Subscribe",
             id: "123",
             events: {
-                Twitch: ["Follow","Cheer", "Sub", "Resub", "GiftSub", "GiftBomb"]
+                Twitch: ["Follow","Cheer", "Sub", "Resub", "GiftSub", "GiftBomb", "Raid"]
             }
         })
     );
@@ -132,10 +132,10 @@ ws.addEventListener("message", (event) => {
       addToQueue(topText,bottomText);
     }
     if (data.event.type == "Raid") {
-    var  topText = data.data.displayName;
-      var bottomText = " RAIDED WITH " + data.data.viewerCount;
-      addToQueue(topText, bottomText);
-    }
+      var  topText = data.data.from_broadcaster_user_name;
+        var bottomText = " RAIDED WITH " + data.data.viewers;
+        addToQueue(topText, bottomText);
+      }
     
 });
 
