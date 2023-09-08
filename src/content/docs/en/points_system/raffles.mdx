@@ -13,34 +13,63 @@ import importCode from '/sb_codes/points_system/raffle.txt?raw';
 
 WORK IN PROGRESS
 
-### Grab the Import Code
-
-<CopyButton>
-{importCode}
-</CopyButton>
-
 ### In Streamer.bot
 
-Once imported you will need to make sure that the commands `!raffle` and `!join` are enabled. These commands can be changed if you wish  this is what they are by default. You will also need to double check the permissions on the command so `!raffle` is mod+ only or however you wish to set it.
+This extension will work better if you already have VRFlad's '***Point System***' installed.
 
-Then in order to correctly use this you can do  `<!raffle (Amount to win)>`
+#### Trigger Action
 
-Note: For the amount you can us `k` and `m` as short form if you wish, so `30K` or `2m` will work and `30000` or `2000000` isn't needed. 
+Once imported, you will notice like all of my chat games it includes an ***Action*** called `[Currency] - [Set Triggers]`. This ***Action*** will create a `.json` file in your data folder. It will only update when there is an update to be pulled from the site, also note it could create triggers for games or extensions you do not have, this is nothing to worry about.
 
-gameName
-length
-raffleCost
-entriesPerWinner
-maxEntry
-Trigger
-multiWinners
-sharePrize
-rafflePrize
+If you already have this **Action** I would reccommend you choose to replace it as it might change, but I am taking every effort and hope that it doesn't need to change. 
+
+You should then restart Streamer.bot so it can create the ***Triggers*** you need as the ***Triggers*** will create themselves every time you start Streamer.bot. If done correctly you should receieve a ***Toast Notification*** confirming this.
 
 
-failCode 
-failReason
-1=already active 2 = not active 3= max tickets 4= cant afford 5 = No entries
+#### Main Action
+
+The import will contain 3 `Actions`. 1 to Start (`[Currency]-[Raffle]- Start`), this will be triggered by commands  but beware you will want your start command to be Mod+ as permissions do not import. You will also have an End `Action` (`[Currency]-[Raffle]- End`), this action will be triggered automattically after the time specified in the Start `Action` by default this will be 60 seconds.
+
+The thrid action is an `Action` is the action that will let your users join the raffle.
+
+Commands by default are disabled on import so you will need to make sure that the commands are enabled when you want to use them.
+
+You have 5 new ***Triggers*** that have been created they are as follows
+
+```
+Currency >> Reaffle >> Start
+Currency >> Raffle >> End
+Currency >> Raffle >> Join
+Currency >> Raffle >> Winners (Single)
+Currency >> Raffle >> Wiiners (All)
+```
+
+Each Event will populate some new arguments for you to use in your `Actions` you create.
+
+Firstly something goes wrong it will throw a fail, 'failCode' and 'failReason' are used to allow you to determine why what you tried to do failed.
+
+|failCode| failReason|
+|---|---|
+|1| `Raffle already active`|
+|2| `Raffle not active`|
+|3| `User maximum allowed tickets`|
+|4| `User can not afford`|
+|5| `Nobody entered the raffle`| 
+
+When starting  the raffle these arguments are populated.
+|Argument|Value|
+|---|---|
+|`gameName`| This will return the name of the game, in this case `raffle`|
+|`length`|This is a number in seconds of the length of the raffle|
+|`raffleCost`|This is how much you wish the raffle will cost, you can use 0 if you wish the raffle to be free.|
+|`maxEntry`|This is how many entries a user is allowed, note if cost is set to 0 this will lock at 1|
+|`multiWinners`|This is if you want to the raffle to give more winners, if this is set to false only 1 winner will be selected|
+|`entriesPerWinner`|This is how many entries you want before you have another winner. If multiWinner is set to false this will be locked at 1|
+|`trigger`|This is how your viewers will join.|
+|`sharePrize`|This is if you want the prize to be shared or not, setting this to false will mean each winner will win an instance of the prize rather than an equal percentage|
+|`rafflePrize`|This is the default prize of a raffle that will be given if one isnt specified|
+
+**Join**
 
 gameName
 oldTicketCount
