@@ -282,6 +282,13 @@ declare module 'astro:content' {
   collection: "docs";
   data: InferEntrySchema<"docs">
 } & { render(): Render[".mdx"] };
+"en/general/play_with_viewers.mdx": {
+	id: "en/general/play_with_viewers.mdx";
+  slug: "en/general/play_with_viewers";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".mdx"] };
 "en/general/random_action_no_repeat.mdx": {
 	id: "en/general/random_action_no_repeat.mdx";
   slug: "en/general/random_action_no_repeat";
@@ -292,6 +299,13 @@ declare module 'astro:content' {
 "en/general/random_game_change.mdx": {
 	id: "en/general/random_game_change.mdx";
   slug: "en/general/random_game_change";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".mdx"] };
+"en/general/watch_streaks.mdx": {
+	id: "en/general/watch_streaks.mdx";
+  slug: "en/general/watch_streaks";
   body: string;
   collection: "docs";
   data: InferEntrySchema<"docs">

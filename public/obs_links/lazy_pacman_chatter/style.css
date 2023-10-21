@@ -1,0 +1,182 @@
+html,body {
+  height: 100%;
+}
+
+html {
+
+  overflow: hidden;
+  padding-bottom: 142px;
+}
+
+p {
+  color: #FFF;
+  font: 50px 'Press Start 2P', cursive;
+  margin: 200px 139px;
+  position: absolute;
+  text-align: center;
+}
+
+.pacman {
+  position: absolute;
+  margin: 40px 10px;
+  z-index: 1000;
+}
+
+.pacman-top {
+  background-color: yellow;
+  height: 50px;
+  width: 100px;
+  border-radius: 100px 100px 0 0;
+  animation: spin1 0.8s infinite linear;
+
+}
+
+.pacman-bottom {
+  background-color: yellow;
+  height: 50px;
+  width: 100px;
+  border-radius: 0 0 100px 100px;
+  animation: spin2 0.8s infinite linear;
+
+}
+
+#feed {
+  position: absolute;
+  opacity: 0;
+  margin-top: -190px;
+  margin-left: 15px;
+  border-radius: 30%;
+  z-index: 100;
+  animation: eat2 10s linear;
+
+}
+
+#profile {
+
+  width: 40px;
+  height: 40px;
+}
+
+/* Animation*/
+
+@keyframes eat2 {
+  0% {
+    transform: translate3d(1965px, 250px, -50px);
+    opacity: 1;
+  }
+
+  99% {
+    transform: translate3d(12px, 250px, -50px);
+    opacity: 1;
+    ;
+  }
+
+  100% {
+    transform: translate3d(12px, 250px, -50px);
+    opacity: 0;
+    display: none;
+  }
+}
+
+@keyframes spin1 {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  50% {
+    transform: rotate(-35deg);
+  }
+
+}
+
+@keyframes spin2 {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  50% {
+    transform: rotate(35deg);
+  }
+}
+
+@-moz-keyframes spin1 {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  50% {
+    transform: rotate(-35deg);
+  }
+
+}
+
+@-moz-keyframes spin2 {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  50% {
+    transform: rotate(35deg);
+  }
+}
+
+@-webkit-keyframes spin1 {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  50% {
+    transform: rotate(-35deg);
+  }
+
+}
+
+@-webkit-keyframes spin2 {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  50% {
+    transform: rotate(35deg);
+  }
+}
+
+
+/* BELT CSS */
+
+@import "compass/css3";
+ * {
+	 box-sizing: border-box;
+}
+ *:after, *:before {
+	 box-sizing: border-box;
+}
+ .belt {
+	 position: relative;
+	 top: 110px;
+	 left: 116px;
+	 right: 20px;
+	 height: 10px;
+	 border-radius: 20px;
+	 background: #513f3e;
+}
+ .belt:before {
+	 background-image: linear-gradient(90deg, #513f3e 25%, rgba(0, 0, 0, 0) 25%, rgba(0, 0, 0, 0) 50%, #513f3e 50%, #513f3e 75%, rgba(0, 0, 0, 0) 75%, rgba(0, 0, 0, 0));
+	 background-size: 30px 30px;
+	 position: absolute;
+	 content: '';
+	 display: block;
+	 height: 10px;
+	 left: 10px;
+	 right: 11px;
+	 top: -2px;
+}
+ .belt:before {
+	 animation: moveLeft 5s infinite;
+	 animation-timing-function: linear;
+}
+ @keyframes moveLeft {
+	 to {
+		 background-position: -100%;
+	}
+}

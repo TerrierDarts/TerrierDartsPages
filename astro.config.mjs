@@ -44,7 +44,10 @@ export default defineConfig({
       exclude: [
         "filler.js",
         "bluewaffle.js",
-        "blinder.js"
+        "blinder.js",
+        "mario_clicker.js",
+        "catch_game.js"
+
       ]
     }), 
     vue()

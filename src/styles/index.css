@@ -443,31 +443,31 @@ h2.heading {
   }
 
   .notification {
-	color: var(--neutral-900, #202427);
+	color: var(--neutral-900, #000000);
 	background-color: var(--neutral-200, #e0f7ff0f);
 	border: 2px solid var(--neutral-600, #858d93);
   }
   
   .notification.type-info {
-	color: var(--info-900, #035486);
+	color: var(--info-900, #000000);
 	background-color: var(--info-100, #00bfff85);
 	border-color: var(--info-600, #1a91d1);
   }
   
   .notification.type-success {
-	color: var(--success-900, #014b3e);
+	color: var(--success-900, #000000);
 	background-color: var(--success-100, #41f67d7a);
 	border-color: var(--success-500, #28a980);
   }
   
   .notification.type-warning {
-	color: var(--warning-900, #8e2a0b);
+	color: var(--warning-900, #000000);
 	background-color: var(--warning-100, #fbb54b92);
 	border-color: var(--warning-600, #dc901e);
   }
   
   .notification.type-error {
-	color: var(--error-900, #5e0317);
+	color: var(--error-900, #000000);
 	background-color: var(--error-100, #d04a4ab6);
 	border-color: var(--error-500, #df2a39);
   }

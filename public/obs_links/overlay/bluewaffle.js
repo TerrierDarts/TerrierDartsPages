@@ -13,18 +13,20 @@ seconds: Number(url.searchParams.get('seconds')) || 10
 console.log(config.rewardTitle);
 console.log(config.imageUrl);
 console.log(config.seconds);
-// Will subscribe to these events, mapped directly to the websocket subscription request.
-;
 
-window.streamerbot.subscribeTo({
-  Twitch: [ "RewardRedemption" ]
+
+// Streamer.bot WebSocket Client configuration
+import "https://cdn.skypack.dev/@streamerbot/client";
+const client = new StreamerbotClient({
+  host: window.config.host || '127.0.0.1',
+  port: window.config.port || 8080,
+  endpoint: window.config.endpoint || '/',
 });
 
+
 // Called when any event is received from Streamerbot, including those subscribed to by other scripts.
-window.streamerbot.onMessage(message => {
-  console.log("Reward Redeemed");
-  const data = JSON.stringify(message);
-  console.log(data);
+
+  client.on('Twitch.RewardRedemption' , message => {
   var name = message.data.reward.title;
   console.log("B" + name);
     if (name === config.rewardTitle)

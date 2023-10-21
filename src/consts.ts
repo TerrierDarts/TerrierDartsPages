@@ -84,10 +84,11 @@ export const SIDEBAR: Sidebar = {
                   { text: 'Follow Age Responses', link: '/en/general/follow_age_responses' },
                 //  {text: 'Football Chat Alerts', link: 'en/general/footbal_chat_alerts'}
                   { text: 'Log Viewer', link: '/en/general/log_viewer' },
+                  { text: 'Play With Viewers', link: '/en/general/play_with_viewers' },
                 //  { text: 'Mod Added Commands', link: '' },
                   { text: 'Random Actions with No Repeat', link: '/en/general/random_action_no_repeat' },
                   { text: 'Random Game Changer', link: '/en/general/random_game_change' },    
-                //  { text: 'User Queue System', link: '' },
+                
                 
                 
                 ],
@@ -169,7 +170,7 @@ export const SIDEBAR: Sidebar = {
                 children: [
                  // { text: 'Cluedo', link: '/en/chat_games/cludeo' },
                  // { text: 'Snakes and Ladders', link: '/en/chat_games/snake_and_ladders' },
-                 // { text: 'Hangman', link: '/en/chat_games/hangman' },
+                 { text: 'Hangman', link: '/en/chat_games/hangman' },
                  // { text: 'Word Wheel', link: '/en/chat_games/word_wheel' },
                 ],
               },

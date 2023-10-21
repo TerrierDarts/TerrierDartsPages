@@ -1,0 +1,77 @@
+---
+title: "Hangman"
+description: "Play a nice game of hangman"
+pubDate: "Feb 09 2023"
+code: "1.0"
+setUpDifficulty: "2/5"
+heroImage: "/heroImages/default_image.png"
+---
+import CopyButton from '../CopyButton.astro'
+import importCode from '/sb_codes/chat_games/hangman.txt?raw';
+
+
+<CopyButton>
+{importCode}
+</CopyButton>
+
+## Set Up Overlay
+
+Add a `Browser Source` (Width: 800, Height : 600 ) with the following URL
+
+```
+https://terrierdarts.co.uk/obs_links/hangman/index.html
+```
+If you wish to make some styling changes you can with this codepen : https://codepen.io/terrierdarts/pen/ExGvyEq
+
+If you are happy with the Font but what to change the colour you can just add a Color Correction Filter onto the source.
+
+## In Streamer.bot
+
+Once you've imported the code you will have imported `13 Actions`, `6 Commands` and `1 Queue`. The commands will need enabling to work, just note that the `!hangman`, `!endHangman`, `!resetHangmanScores` commmand will need to be mod+ only.
+
+First thing you will need to do is in `[Hangman Admin 0] Start New Game`, you will need to edit the OBS Source Visability `Sub-Action` to the one youve created, if youve chosen to not use the overlay you can disable this action, if you are using SLOBS you will need to replace it with the StreamLabs equivalent, then you need to edit the word list to match the file path of your word lists. I've provided a few word lists below if you dont have one.
+
+Likewise in `[Hangman] End Game`, `[Hangman] Game Over` and `[Hangman] Game Solved` you need to edit the OBS `Sub-Action` to match your overlay.
+
+Action Names can be changed but I would advise against it, however if you delete any actions by mistake you will need to reimport the ac
+
+## How to Configure
+
+If you wish to have this work for YouTube you will need to Replace all the Send Messages with the YouTube equivalent. 
+
+You can also change the makeup of the text outputs if you wish these arguments are avalible in most of the actions
+
+|Argument|Actions Avalible In|
+|---|---|
+|`oldScore`| Any Correct Guess|
+|`newScore`|Any Correct Guess|
+|`scoreToAdd`|Any Correct Guess|
+|`hangmanDefinition`|End Game, Solve and Game Over|
+|`hangmanUserGuess`|Any Guess|
+|`hangmanGuessedLettersArgs`|Any Guess|
+|`currentGuess`|Any Guess|
+|`hangmanLivesArgs`|All Actions|
+|`hangmanSolution`|End Game, Solve and Game Over|
+
+
+You also have some fail codes for if things go wrong, these can be edited in the `[Hangman] Failed Guess` 
+
+|failCode|failReason|
+|---|---|
+|`1`|`User must guess 1 letter at a time`|
+|`2`|`User must guess a letter`|
+|`3`|`That letter has already been guessed`|
+
+## Word lists
+
+[English Words](/files/hangman/hangman_en.txt)
+
+[Streamerbot Methods](/files/hangman/hangman_streamerbot.txt)
+
+[Pokemon](/files/hangman/hangman_pokemon.txt")
+
+
+
+
+
+

@@ -1,6 +1,56 @@
 {
-	"version": 4.4,
+	"version": 5.0,
 	"triggers": [
+		{
+			"game": "Additional Commands",
+			"name": "User Can't Afford",
+			"triggerCode": "stealFailCost",
+			"categories": [
+				"Currency",
+				"Additional Commands",
+				"Steal"
+			]
+		},
+		{
+			"game": "Additional Commands",
+			"name": "User Self Stealing",
+			"triggerCode": "stealFailSelf",
+			"categories": [
+				"Currency",
+				"Additional Commands",
+				"Steal"
+			]
+		},
+		{
+			"game": "Additional Commands",
+			"name": "Target Banked",
+			"triggerCode": "stealTargetBanked",
+			"categories": [
+				"Currency",
+				"Additional Commands",
+				"Steal"
+			]
+		},
+		{
+			"game": "Additional Commands",
+			"name": "Steal Failed",
+			"triggerCode": "stealFailed",
+			"categories": [
+				"Currency",
+				"Additional Commands",
+				"Steal"
+			]
+		},
+		{
+			"game": "Additional Commands",
+			"name": "Steal Success",
+			"triggerCode": "stealSuccess",
+			"categories": [
+				"Currency",
+				"Additional Commands",
+				"Steal"
+			]
+		},
 		{
 			"game": "Casino Roulette",
 			"name": "All In Loss",
@@ -154,7 +204,6 @@
 				"Gamble"
 			]
 		},
-		
 		{
 			"game": "Lotto",
 			"name": "Buy Tickets Fail",
@@ -236,7 +285,6 @@
 				"Lotto"
 			]
 		},
-		
 		{
 			"game": "Lotto",
 			"name": "Tickets Cleared",
@@ -255,8 +303,6 @@
 				"Lotto"
 			]
 		},
-		
-	
 		{
 			"game": "Lotto",
 			"name": "Winner (Single)",
@@ -266,9 +312,6 @@
 				"Lotto"
 			]
 		},
-		
-
-
 		{
 			"game": "Raffle",
 			"name": "End (All Winners)",
@@ -314,7 +357,6 @@
 				"Raffle"
 			]
 		},
-		
 		{
 			"game": "Slots",
 			"name": "All In Loss",
@@ -355,6 +397,15 @@
 			"game": "Slots",
 			"name": "Loss",
 			"triggerCode": "slotsLoss",
+			"categories": [
+				"Currency",
+				"Slots"
+			]
+		},
+		{
+			"game": "Slots",
+			"name": "Slots Fail",
+			"triggerCode": "slotsFail",
 			"categories": [
 				"Currency",
 				"Slots"

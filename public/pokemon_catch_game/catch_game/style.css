@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+
+.container {
+  position: relative;
+  width: 601px;
+  height: 320px;
+  overflow: hidden;
+  
+}
+
+.pokemon {
+  width: 160px;
+  height: 160px;
+  top: 50px;
+  left: 300px;
+  position: absolute;
+  filter: brightness(1);
+  animation: none;
+}
+
+.ball {
+  width: 50px;
+  height: 50px;
+  top: -200px;
+  left: 295px;
+  position: absolute;
+  transform: rotate(0deg);
+  transform-origin: bottom;
+   animation: none;
+}
+.box
+{
+position: absolute;
+top: 220px;
+left: 120px;
+animation: none;
+}
+.text
+{
+font-size: 25px;
+font-family: 'VT323', monospace;
+color: antiquewhite;
+position: absolute;
+top: 240px;
+left: 150px;
+max-width: 400px;
+visibility: visible;
+
+
+}
+/*Throwing Ball and Pokemon In*/
+@keyframes catchAttempt {
+  0% {
+    top: 100px;
+    left: 0;
+  }
+
+  20% {
+    top: 45px;
+    left: 295px;
+    
+  }
+  30% {
+    top:150px;
+    transform: rotate(0deg);
+  }
+  40% {
+    transform: rotate(-45deg);
+  }
+  50% {
+    transform: rotate(45deg);
+  }
+  60% {
+    transform: rotate(-15deg);
+  }
+  70% {
+    transform: rotate(15deg);
+  }
+  80% {
+    
+    left: 295px;
+    transform: rotate(00deg);
+  }
+  100% {
+  
+   top:150px;
+    left: 295px;
+  }
+}
+@keyframes pokemonInBall {
+  0% {
+    width: 160px;
+    height: 160px;
+    filter: brightness(1);
+  }
+  10% {
+    width: 25px;
+    height: 25px;
+    filter: brightness(100);
+   visibility: hidden;
+  }
+  100% {
+    top:145px;
+    width: 20px;
+    height: 20px;
+    filter: brightness(100);
+    visibility: hidden;
+  }
+ 
+}
+
+/* Escape animation*/
+
+@keyframes pokemonBreakFree {
+  0% {
+    width: 25px;
+    height: 25px;
+    filter: brightness(100);
+  }
+ 
+  100% {
+    top: 50px;
+    width: 160px;
+    height: 160px;
+    filter: brightness(1);
+    visibility: visible;
+  }
+ 
+}
+@keyframes ballFade {
+  0%{
+    opacity: 100%;
+  }
+  100%{
+    opacity: 0%;
+  }
+  
+}
+
+
+/*Show and Hide*/
+
+
+@keyframes pokemonHide {
+
+  0% {
+    left: 300px;
+
+  }
+  100%{
+    left: 600px;
+  }
+  
+}
+
+@keyframes pokemonShow {
+
+  0% {
+    left: 600px;
+
+  }
+  100%{
+    left: 300px;
+  }
+  
+}
+
+@keyframes pokeBoxShow {
+  0% {
+    top: 320px;
+
+  }
+  10%{
+    top: 220px;
+  }
+  100%{
+    top: 220px;
+  }
+  
+}
+@keyframes pokeBoxHide {
+  0% {
+    top: 220px;
+
+  }
+  90% {
+    top: 220px;
+
+  }
+  100%{
+    top: 320px;
+  }
+  
+}

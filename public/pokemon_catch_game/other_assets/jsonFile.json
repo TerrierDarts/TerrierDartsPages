@@ -1,0 +1,1932 @@
+[
+  {
+    "id": 1,
+    "name": "Bulbasaur",
+    "catchRate": 22
+  },
+  {
+    "id": 2,
+    "name": "Ivysaur",
+    "catchRate": 22
+  },
+  {
+    "id": 3,
+    "name": "Venusaur",
+    "catchRate": 22
+  },
+  {
+    "id": 4,
+    "name": "Charmander",
+    "catchRate": 22
+  },
+  {
+    "id": 5,
+    "name": "Charmeleon",
+    "catchRate": 22
+  },
+  {
+    "id": 6,
+    "name": "Charizard",
+    "catchRate": 22
+  },
+  {
+    "id": 7,
+    "name": "Squirtle",
+    "catchRate": 22
+  },
+  {
+    "id": 8,
+    "name": "Wartortle",
+    "catchRate": 22
+  },
+  {
+    "id": 9,
+    "name": "Blastoise",
+    "catchRate": 22
+  },
+  {
+    "id": 10,
+    "name": "Caterpie",
+    "catchRate": 92
+  },
+  {
+    "id": 11,
+    "name": "Metapod",
+    "catchRate": 47
+  },
+  {
+    "id": 12,
+    "name": "Butterfree",
+    "catchRate": 22
+  },
+  {
+    "id": 13,
+    "name": "Weedle",
+    "catchRate": 92
+  },
+  {
+    "id": 14,
+    "name": "Kakuna",
+    "catchRate": 47
+  },
+  {
+    "id": 15,
+    "name": "Beedrill",
+    "catchRate": 22
+  },
+  {
+    "id": 16,
+    "name": "Pidgey",
+    "catchRate": 92
+  },
+  {
+    "id": 17,
+    "name": "Pidgeotto",
+    "catchRate": 47
+  },
+  {
+    "id": 18,
+    "name": "Pidgeot",
+    "catchRate": 22
+  },
+  {
+    "id": 19,
+    "name": "Rattata",
+    "catchRate": 92
+  },
+  {
+    "id": 20,
+    "name": "Raticate",
+    "catchRate": 50
+  },
+  {
+    "id": 21,
+    "name": "Spearow",
+    "catchRate": 92
+  },
+  {
+    "id": 22,
+    "name": "Fearow",
+    "catchRate": 37
+  },
+  {
+    "id": 23,
+    "name": "Ekans",
+    "catchRate": 92
+  },
+  {
+    "id": 24,
+    "name": "Arbok",
+    "catchRate": 37
+  },
+  {
+    "id": 25,
+    "name": "Pikachu",
+    "catchRate": 92
+  },
+  {
+    "id": 26,
+    "name": "Raichu",
+    "catchRate": 32
+  },
+  {
+    "id": 27,
+    "name": "Sandshrew",
+    "catchRate": 92
+  },
+  {
+    "id": 28,
+    "name": "Sandslash",
+    "catchRate": 37
+  },
+  {
+    "id": 29,
+    "name": "Nidoran",
+    "catchRate": 86
+  },
+  {
+    "id": 30,
+    "name": "Nidorina",
+    "catchRate": 47
+  },
+  {
+    "id": 31,
+    "name": "Nidoqueen",
+    "catchRate": 22
+  },
+  {
+    "id": 32,
+    "name": "Nidoran",
+    "catchRate": 86
+  },
+  {
+    "id": 33,
+    "name": "Nidorino",
+    "catchRate": 47
+  },
+  {
+    "id": 34,
+    "name": "Nidoking",
+    "catchRate": 22
+  },
+  {
+    "id": 35,
+    "name": "Clefairy",
+    "catchRate": 57
+  },
+  {
+    "id": 36,
+    "name": "Clefable",
+    "catchRate": 16
+  },
+  {
+    "id": 37,
+    "name": "Vulpix",
+    "catchRate": 71
+  },
+  {
+    "id": 38,
+    "name": "Ninetales",
+    "catchRate": 32
+  },
+  {
+    "id": 39,
+    "name": "Jigglypuff",
+    "catchRate": 64
+  },
+  {
+    "id": 40,
+    "name": "Wigglytuff",
+    "catchRate": 24
+  },
+  {
+    "id": 41,
+    "name": "Zubat",
+    "catchRate": 92
+  },
+  {
+    "id": 42,
+    "name": "Golbat",
+    "catchRate": 37
+  },
+  {
+    "id": 43,
+    "name": "Oddish",
+    "catchRate": 92
+  },
+  {
+    "id": 44,
+    "name": "Gloom",
+    "catchRate": 47
+  },
+  {
+    "id": 45,
+    "name": "Vileplume",
+    "catchRate": 22
+  },
+  {
+    "id": 46,
+    "name": "Paras",
+    "catchRate": 71
+  },
+  {
+    "id": 47,
+    "name": "Parasect",
+    "catchRate": 32
+  },
+  {
+    "id": 48,
+    "name": "Venonat",
+    "catchRate": 71
+  },
+  {
+    "id": 49,
+    "name": "Venomoth",
+    "catchRate": 32
+  },
+  {
+    "id": 50,
+    "name": "Diglett",
+    "catchRate": 92
+  },
+  {
+    "id": 51,
+    "name": "Dugtrio",
+    "catchRate": 24
+  },
+  {
+    "id": 52,
+    "name": "Meowth",
+    "catchRate": 92
+  },
+  {
+    "id": 53,
+    "name": "Persian",
+    "catchRate": 37
+  },
+  {
+    "id": 54,
+    "name": "Psyduck",
+    "catchRate": 71
+  },
+  {
+    "id": 55,
+    "name": "Golduck",
+    "catchRate": 32
+  },
+  {
+    "id": 56,
+    "name": "Mankey",
+    "catchRate": 71
+  },
+  {
+    "id": 57,
+    "name": "Primeape",
+    "catchRate": 32
+  },
+  {
+    "id": 58,
+    "name": "Growlithe",
+    "catchRate": 71
+  },
+  {
+    "id": 59,
+    "name": "Arcanine",
+    "catchRate": 32
+  },
+  {
+    "id": 60,
+    "name": "Poliwag",
+    "catchRate": 92
+  },
+  {
+    "id": 61,
+    "name": "Poliwhirl",
+    "catchRate": 47
+  },
+  {
+    "id": 62,
+    "name": "Poliwrath",
+    "catchRate": 22
+  },
+  {
+    "id": 63,
+    "name": "Abra",
+    "catchRate": 74
+  },
+  {
+    "id": 64,
+    "name": "Kadabra",
+    "catchRate": 41
+  },
+  {
+    "id": 65,
+    "name": "Alakazam",
+    "catchRate": 24
+  },
+  {
+    "id": 66,
+    "name": "Machop",
+    "catchRate": 67
+  },
+  {
+    "id": 67,
+    "name": "Machoke",
+    "catchRate": 37
+  },
+  {
+    "id": 68,
+    "name": "Machamp",
+    "catchRate": 22
+  },
+  {
+    "id": 69,
+    "name": "Bellsprout",
+    "catchRate": 92
+  },
+  {
+    "id": 70,
+    "name": "Weepinbell",
+    "catchRate": 47
+  },
+  {
+    "id": 71,
+    "name": "Victreebel",
+    "catchRate": 22
+  },
+  {
+    "id": 72,
+    "name": "Tentacool",
+    "catchRate": 71
+  },
+  {
+    "id": 73,
+    "name": "Tentacruel",
+    "catchRate": 27
+  },
+  {
+    "id": 74,
+    "name": "Geodude",
+    "catchRate": 92
+  },
+  {
+    "id": 75,
+    "name": "Graveler",
+    "catchRate": 47
+  },
+  {
+    "id": 76,
+    "name": "Golem",
+    "catchRate": 22
+  },
+  {
+    "id": 77,
+    "name": "Ponyta",
+    "catchRate": 71
+  },
+  {
+    "id": 78,
+    "name": "Rapidash",
+    "catchRate": 27
+  },
+  {
+    "id": 79,
+    "name": "Slowpoke",
+    "catchRate": 71
+  },
+  {
+    "id": 80,
+    "name": "Slowbro",
+    "catchRate": 32
+  },
+  {
+    "id": 81,
+    "name": "Magnemite",
+    "catchRate": 71
+  },
+  {
+    "id": 82,
+    "name": "Magneton",
+    "catchRate": 27
+  },
+  {
+    "id": 83,
+    "name": "Farfetch'd",
+    "catchRate": 22
+  },
+  {
+    "id": 84,
+    "name": "Doduo",
+    "catchRate": 71
+  },
+  {
+    "id": 85,
+    "name": "Dodrio",
+    "catchRate": 22
+  },
+  {
+    "id": 86,
+    "name": "Seel",
+    "catchRate": 71
+  },
+  {
+    "id": 87,
+    "name": "Dewgong",
+    "catchRate": 32
+  },
+  {
+    "id": 88,
+    "name": "Grimer",
+    "catchRate": 71
+  },
+  {
+    "id": 89,
+    "name": "Muk",
+    "catchRate": 32
+  },
+  {
+    "id": 90,
+    "name": "Shellder",
+    "catchRate": 71
+  },
+  {
+    "id": 91,
+    "name": "Cloyster",
+    "catchRate": 27
+  },
+  {
+    "id": 92,
+    "name": "Gastly",
+    "catchRate": 71
+  },
+  {
+    "id": 93,
+    "name": "Haunter",
+    "catchRate": 15
+  },
+  {
+    "id": 94,
+    "name": "Gengar",
+    "catchRate": 22
+  },
+  {
+    "id": 95,
+    "name": "Onix",
+    "catchRate": 22
+  },
+  {
+    "id": 96,
+    "name": "Drowzee",
+    "catchRate": 71
+  },
+  {
+    "id": 97,
+    "name": "Hypno",
+    "catchRate": 32
+  },
+  {
+    "id": 98,
+    "name": "Krabby",
+    "catchRate": 82
+  },
+  {
+    "id": 99,
+    "name": "Kingler",
+    "catchRate": 27
+  },
+  {
+    "id": 100,
+    "name": "Voltorb",
+    "catchRate": 71
+  },
+  {
+    "id": 101,
+    "name": "Electrode",
+    "catchRate": 27
+  },
+  {
+    "id": 102,
+    "name": "Exeggcute",
+    "catchRate": 37
+  },
+  {
+    "id": 103,
+    "name": "Exeggutor",
+    "catchRate": 22
+  },
+  {
+    "id": 104,
+    "name": "Cubone",
+    "catchRate": 71
+  },
+  {
+    "id": 105,
+    "name": "Marowak",
+    "catchRate": 32
+  },
+  {
+    "id": 106,
+    "name": "Hitmonlee",
+    "catchRate": 22
+  },
+  {
+    "id": 107,
+    "name": "Hitmonchan",
+    "catchRate": 22
+  },
+  {
+    "id": 108,
+    "name": "Lickitung",
+    "catchRate": 22
+  },
+  {
+    "id": 109,
+    "name": "Koffing",
+    "catchRate": 71
+  },
+  {
+    "id": 110,
+    "name": "Weezing",
+    "catchRate": 27
+  },
+  {
+    "id": 111,
+    "name": "Rhyhorn",
+    "catchRate": 47
+  },
+  {
+    "id": 112,
+    "name": "Rhydon",
+    "catchRate": 27
+  },
+  {
+    "id": 113,
+    "name": "Chansey",
+    "catchRate": 17
+  },
+  {
+    "id": 114,
+    "name": "Tangela",
+    "catchRate": 22
+  },
+  {
+    "id": 115,
+    "name": "Kangaskhan",
+    "catchRate": 15
+  },
+  {
+    "id": 116,
+    "name": "Horsea",
+    "catchRate": 82
+  },
+  {
+    "id": 117,
+    "name": "Seadra",
+    "catchRate": 32
+  },
+  {
+    "id": 118,
+    "name": "Goldeen",
+    "catchRate": 82
+  },
+  {
+    "id": 119,
+    "name": "Seaking",
+    "catchRate": 27
+  },
+  {
+    "id": 120,
+    "name": "Staryu",
+    "catchRate": 82
+  },
+  {
+    "id": 121,
+    "name": "Starmie",
+    "catchRate": 27
+  },
+  {
+    "id": 122,
+    "name": "Mr. Mime",
+    "catchRate": 22
+  },
+  {
+    "id": 123,
+    "name": "Scyther",
+    "catchRate": 22
+  },
+  {
+    "id": 124,
+    "name": "Jynx",
+    "catchRate": 22
+  },
+  {
+    "id": 125,
+    "name": "Electabuzz",
+    "catchRate": 22
+  },
+  {
+    "id": 126,
+    "name": "Magmar",
+    "catchRate": 22
+  },
+  {
+    "id": 127,
+    "name": "Pinsir",
+    "catchRate": 22
+  },
+  {
+    "id": 128,
+    "name": "Tauros",
+    "catchRate": 22
+  },
+  {
+    "id": 129,
+    "name": "Magikarp",
+    "catchRate": 92
+  },
+  {
+    "id": 130,
+    "name": "Gyarados",
+    "catchRate": 18
+  },
+  {
+    "id": 131,
+    "name": "Lapras",
+    "catchRate": 22
+  },
+  {
+    "id": 132,
+    "name": "Ditto",
+    "catchRate": 19
+  },
+  {
+    "id": 133,
+    "name": "Eevee",
+    "catchRate": 92
+  },
+  {
+    "id": 134,
+    "name": "Vaporeon",
+    "catchRate": 22
+  },
+  {
+    "id": 135,
+    "name": "Jolteon",
+    "catchRate": 22
+  },
+  {
+    "id": 136,
+    "name": "Flareon",
+    "catchRate": 22
+  },
+  {
+    "id": 137,
+    "name": "Porygon",
+    "catchRate": 22
+  },
+  {
+    "id": 138,
+    "name": "Omanyte",
+    "catchRate": 22
+  },
+  {
+    "id": 139,
+    "name": "Omastar",
+    "catchRate": 22
+  },
+  {
+    "id": 140,
+    "name": "Kabuto",
+    "catchRate": 22
+  },
+  {
+    "id": 141,
+    "name": "Kabutops",
+    "catchRate": 22
+  },
+  {
+    "id": 142,
+    "name": "Aerodactyl",
+    "catchRate": 22
+  },
+  {
+    "id": 143,
+    "name": "Snorlax",
+    "catchRate": 16
+  },
+  {
+    "id": 144,
+    "name": "Articuno",
+    "catchRate": 2
+  },
+  {
+    "id": 145,
+    "name": "Zapdos",
+    "catchRate": 2
+  },
+  {
+    "id": 146,
+    "name": "Moltres",
+    "catchRate": 2
+  },
+  {
+    "id": 147,
+    "name": "Dratini",
+    "catchRate": 22
+  },
+  {
+    "id": 148,
+    "name": "Dragonair",
+    "catchRate": 22
+  },
+  {
+    "id": 149,
+    "name": "Dragonite",
+    "catchRate": 22
+  },
+  {
+    "id": 150,
+    "name": "Mewtwo",
+    "catchRate": 1
+  },
+  {
+    "id": 151,
+    "name": "Mew",
+    "catchRate": 1
+  },
+  {
+    "id": 152,
+    "name": "Chikorita",
+    "catchRate": 22
+  },
+  {
+    "id": 153,
+    "name": "Bayleef",
+    "catchRate": 22
+  },
+  {
+    "id": 154,
+    "name": "Meganium",
+    "catchRate": 22
+  },
+  {
+    "id": 155,
+    "name": "Cyndaquil",
+    "catchRate": 22
+  },
+  {
+    "id": 156,
+    "name": "Quilava",
+    "catchRate": 22
+  },
+  {
+    "id": 157,
+    "name": "Typhlosion",
+    "catchRate": 22
+  },
+  {
+    "id": 158,
+    "name": "Totodile",
+    "catchRate": 22
+  },
+  {
+    "id": 159,
+    "name": "Croconaw",
+    "catchRate": 22
+  },
+  {
+    "id": 160,
+    "name": "Feraligatr",
+    "catchRate": 22
+  },
+  {
+    "id": 161,
+    "name": "Sentret",
+    "catchRate": 92
+  },
+  {
+    "id": 162,
+    "name": "Furret",
+    "catchRate": 37
+  },
+  {
+    "id": 163,
+    "name": "Hoothoot",
+    "catchRate": 92
+  },
+  {
+    "id": 164,
+    "name": "Noctowl",
+    "catchRate": 37
+  },
+  {
+    "id": 165,
+    "name": "Ledyba",
+    "catchRate": 92
+  },
+  {
+    "id": 166,
+    "name": "Ledian",
+    "catchRate": 37
+  },
+  {
+    "id": 167,
+    "name": "Spinarak",
+    "catchRate": 92
+  },
+  {
+    "id": 168,
+    "name": "Ariados",
+    "catchRate": 37
+  },
+  {
+    "id": 169,
+    "name": "Crobat",
+    "catchRate": 37
+  },
+  {
+    "id": 170,
+    "name": "Chinchou",
+    "catchRate": 71
+  },
+  {
+    "id": 171,
+    "name": "Lanturn",
+    "catchRate": 32
+  },
+  {
+    "id": 172,
+    "name": "Pichu",
+    "catchRate": 71
+  },
+  {
+    "id": 173,
+    "name": "Cleffa",
+    "catchRate": 57
+  },
+  {
+    "id": 174,
+    "name": "Igglybuff",
+    "catchRate": 64
+  },
+  {
+    "id": 175,
+    "name": "Togepi",
+    "catchRate": 71
+  },
+  {
+    "id": 176,
+    "name": "Togetic",
+    "catchRate": 32
+  },
+  {
+    "id": 177,
+    "name": "Natu",
+    "catchRate": 71
+  },
+  {
+    "id": 178,
+    "name": "Xatu",
+    "catchRate": 32
+  },
+  {
+    "id": 179,
+    "name": "Mareep",
+    "catchRate": 86
+  },
+  {
+    "id": 180,
+    "name": "Flaaffy",
+    "catchRate": 47
+  },
+  {
+    "id": 181,
+    "name": "Ampharos",
+    "catchRate": 22
+  },
+  {
+    "id": 182,
+    "name": "Bellossom",
+    "catchRate": 22
+  },
+  {
+    "id": 183,
+    "name": "Marill",
+    "catchRate": 71
+  },
+  {
+    "id": 184,
+    "name": "Azumarill",
+    "catchRate": 22
+  },
+  {
+    "id": 185,
+    "name": "Sudowoodo",
+    "catchRate": 29
+  },
+  {
+    "id": 186,
+    "name": "Politoed",
+    "catchRate": 22
+  },
+  {
+    "id": 187,
+    "name": "Hoppip",
+    "catchRate": 92
+  },
+  {
+    "id": 188,
+    "name": "Skiploom",
+    "catchRate": 47
+  },
+  {
+    "id": 189,
+    "name": "Jumpluff",
+    "catchRate": 22
+  },
+  {
+    "id": 190,
+    "name": "Aipom",
+    "catchRate": 22
+  },
+  {
+    "id": 191,
+    "name": "Sunkern",
+    "catchRate": 86
+  },
+  {
+    "id": 192,
+    "name": "Sunflora",
+    "catchRate": 47
+  },
+  {
+    "id": 193,
+    "name": "Yanma",
+    "catchRate": 32
+  },
+  {
+    "id": 194,
+    "name": "Wooper",
+    "catchRate": 92
+  },
+  {
+    "id": 195,
+    "name": "Quagsire",
+    "catchRate": 37
+  },
+  {
+    "id": 196,
+    "name": "Espeon",
+    "catchRate": 22
+  },
+  {
+    "id": 197,
+    "name": "Umbreon",
+    "catchRate": 22
+  },
+  {
+    "id": 198,
+    "name": "Murkrow",
+    "catchRate": 17
+  },
+  {
+    "id": 199,
+    "name": "Slowking",
+    "catchRate": 31
+  },
+  {
+    "id": 200,
+    "name": "Misdreavus",
+    "catchRate": 22
+  },
+  {
+    "id": 201,
+    "name": "Unown",
+    "catchRate": 82
+  },
+  {
+    "id": 202,
+    "name": "Wobbuffet",
+    "catchRate": 22
+  },
+  {
+    "id": 203,
+    "name": "Girafarig",
+    "catchRate": 27
+  },
+  {
+    "id": 204,
+    "name": "Pineco",
+    "catchRate": 71
+  },
+  {
+    "id": 205,
+    "name": "Forretress",
+    "catchRate": 32
+  },
+  {
+    "id": 206,
+    "name": "Dunsparce",
+    "catchRate": 71
+  },
+  {
+    "id": 207,
+    "name": "Gligar",
+    "catchRate": 27
+  },
+  {
+    "id": 208,
+    "name": "Steelix",
+    "catchRate": 16
+  },
+  {
+    "id": 209,
+    "name": "Snubbull",
+    "catchRate": 71
+  },
+  {
+    "id": 210,
+    "name": "Granbull",
+    "catchRate": 32
+  },
+  {
+    "id": 211,
+    "name": "Qwilfish",
+    "catchRate": 22
+  },
+  {
+    "id": 212,
+    "name": "Scizor",
+    "catchRate": 16
+  },
+  {
+    "id": 213,
+    "name": "Shuckle",
+    "catchRate": 71
+  },
+  {
+    "id": 214,
+    "name": "Heracross",
+    "catchRate": 22
+  },
+  {
+    "id": 215,
+    "name": "Sneasel",
+    "catchRate": 27
+  },
+  {
+    "id": 216,
+    "name": "Teddiursa",
+    "catchRate": 47
+  },
+  {
+    "id": 217,
+    "name": "Ursaring",
+    "catchRate": 27
+  },
+  {
+    "id": 218,
+    "name": "Slugma",
+    "catchRate": 71
+  },
+  {
+    "id": 219,
+    "name": "Magcargo",
+    "catchRate": 32
+  },
+  {
+    "id": 220,
+    "name": "Swinub",
+    "catchRate": 82
+  },
+  {
+    "id": 221,
+    "name": "Piloswine",
+    "catchRate": 32
+  },
+  {
+    "id": 222,
+    "name": "Corsola",
+    "catchRate": 27
+  },
+  {
+    "id": 223,
+    "name": "Remoraid",
+    "catchRate": 71
+  },
+  {
+    "id": 224,
+    "name": "Octillery",
+    "catchRate": 32
+  },
+  {
+    "id": 225,
+    "name": "Delibird",
+    "catchRate": 22
+  },
+  {
+    "id": 226,
+    "name": "Mantine",
+    "catchRate": 16
+  },
+  {
+    "id": 227,
+    "name": "Skarmory",
+    "catchRate": 16
+  },
+  {
+    "id": 228,
+    "name": "Houndour",
+    "catchRate": 47
+  },
+  {
+    "id": 229,
+    "name": "Houndoom",
+    "catchRate": 22
+  },
+  {
+    "id": 230,
+    "name": "Kingdra",
+    "catchRate": 22
+  },
+  {
+    "id": 231,
+    "name": "Phanpy",
+    "catchRate": 47
+  },
+  {
+    "id": 232,
+    "name": "Donphan",
+    "catchRate": 27
+  },
+  {
+    "id": 233,
+    "name": "Porygon2",
+    "catchRate": 22
+  },
+  {
+    "id": 234,
+    "name": "Stantler",
+    "catchRate": 22
+  },
+  {
+    "id": 235,
+    "name": "Smeargle",
+    "catchRate": 22
+  },
+  {
+    "id": 236,
+    "name": "Tyrogue",
+    "catchRate": 32
+  },
+  {
+    "id": 237,
+    "name": "Hitmontop",
+    "catchRate": 22
+  },
+  {
+    "id": 238,
+    "name": "Smoochum",
+    "catchRate": 22
+  },
+  {
+    "id": 239,
+    "name": "Elekid",
+    "catchRate": 22
+  },
+  {
+    "id": 240,
+    "name": "Magby",
+    "catchRate": 22
+  },
+  {
+    "id": 241,
+    "name": "Miltank",
+    "catchRate": 22
+  },
+  {
+    "id": 242,
+    "name": "Blissey",
+    "catchRate": 17
+  },
+  {
+    "id": 243,
+    "name": "Raikou",
+    "catchRate": 2
+  },
+  {
+    "id": 244,
+    "name": "Entei",
+    "catchRate": 2
+  },
+  {
+    "id": 245,
+    "name": "Suicune",
+    "catchRate": 2
+  },
+  {
+    "id": 246,
+    "name": "Larvitar",
+    "catchRate": 22
+  },
+  {
+    "id": 247,
+    "name": "Pupitar",
+    "catchRate": 22
+  },
+  {
+    "id": 248,
+    "name": "Tyranitar",
+    "catchRate": 22
+  },
+  {
+    "id": 249,
+    "name": "Lugia",
+    "catchRate": 1
+  },
+  {
+    "id": 250,
+    "name": "Ho-Oh",
+    "catchRate": 1
+  },
+  {
+    "id": 251,
+    "name": "Celebi",
+    "catchRate": 1
+  },
+  {
+    "id": 252,
+    "name": "Treecko",
+    "catchRate": 22
+  },
+  {
+    "id": 253,
+    "name": "Grovyle",
+    "catchRate": 22
+  },
+  {
+    "id": 254,
+    "name": "Sceptile",
+    "catchRate": 22
+  },
+  {
+    "id": 255,
+    "name": "Torchic",
+    "catchRate": 22
+  },
+  {
+    "id": 256,
+    "name": "Combusken",
+    "catchRate": 22
+  },
+  {
+    "id": 257,
+    "name": "Blaziken",
+    "catchRate": 22
+  },
+  {
+    "id": 258,
+    "name": "Mudkip",
+    "catchRate": 22
+  },
+  {
+    "id": 259,
+    "name": "Marshtomp",
+    "catchRate": 22
+  },
+  {
+    "id": 260,
+    "name": "Swampert",
+    "catchRate": 22
+  },
+  {
+    "id": 261,
+    "name": "Poochyena",
+    "catchRate": 92
+  },
+  {
+    "id": 262,
+    "name": "Mightyena",
+    "catchRate": 50
+  },
+  {
+    "id": 263,
+    "name": "Zigzagoon",
+    "catchRate": 92
+  },
+  {
+    "id": 264,
+    "name": "Linoone",
+    "catchRate": 37
+  },
+  {
+    "id": 265,
+    "name": "Wurmple",
+    "catchRate": 92
+  },
+  {
+    "id": 266,
+    "name": "Silcoon",
+    "catchRate": 47
+  },
+  {
+    "id": 267,
+    "name": "Beautifly",
+    "catchRate": 22
+  },
+  {
+    "id": 268,
+    "name": "Cascoon",
+    "catchRate": 47
+  },
+  {
+    "id": 269,
+    "name": "Dustox",
+    "catchRate": 22
+  },
+  {
+    "id": 270,
+    "name": "Lotad",
+    "catchRate": 92
+  },
+  {
+    "id": 271,
+    "name": "Lombre",
+    "catchRate": 47
+  },
+  {
+    "id": 272,
+    "name": "Ludicolo",
+    "catchRate": 22
+  },
+  {
+    "id": 273,
+    "name": "Seedot",
+    "catchRate": 92
+  },
+  {
+    "id": 274,
+    "name": "Nuzleaf",
+    "catchRate": 47
+  },
+  {
+    "id": 275,
+    "name": "Shiftry",
+    "catchRate": 22
+  },
+  {
+    "id": 276,
+    "name": "Taillow",
+    "catchRate": 74
+  },
+  {
+    "id": 277,
+    "name": "Swellow",
+    "catchRate": 22
+  },
+  {
+    "id": 278,
+    "name": "Wingull",
+    "catchRate": 71
+  },
+  {
+    "id": 279,
+    "name": "Pelipper",
+    "catchRate": 22
+  },
+  {
+    "id": 280,
+    "name": "Ralts",
+    "catchRate": 86
+  },
+  {
+    "id": 281,
+    "name": "Kirlia",
+    "catchRate": 47
+  },
+  {
+    "id": 282,
+    "name": "Gardevoir",
+    "catchRate": 22
+  },
+  {
+    "id": 283,
+    "name": "Surskit",
+    "catchRate": 74
+  },
+  {
+    "id": 284,
+    "name": "Masquerain",
+    "catchRate": 32
+  },
+  {
+    "id": 285,
+    "name": "Shroomish",
+    "catchRate": 92
+  },
+  {
+    "id": 286,
+    "name": "Breloom",
+    "catchRate": 37
+  },
+  {
+    "id": 287,
+    "name": "Slakoth",
+    "catchRate": 92
+  },
+  {
+    "id": 288,
+    "name": "Vigoroth",
+    "catchRate": 47
+  },
+  {
+    "id": 289,
+    "name": "Slaking",
+    "catchRate": 22
+  },
+  {
+    "id": 290,
+    "name": "Nincada",
+    "catchRate": 92
+  },
+  {
+    "id": 291,
+    "name": "Ninjask",
+    "catchRate": 47
+  },
+  {
+    "id": 292,
+    "name": "Shedinja",
+    "catchRate": 22
+  },
+  {
+    "id": 293,
+    "name": "Whismur",
+    "catchRate": 71
+  },
+  {
+    "id": 294,
+    "name": "Loudred",
+    "catchRate": 47
+  },
+  {
+    "id": 295,
+    "name": "Exploud",
+    "catchRate": 22
+  },
+  {
+    "id": 296,
+    "name": "Makuhita",
+    "catchRate": 67
+  },
+  {
+    "id": 297,
+    "name": "Hariyama",
+    "catchRate": 74
+  },
+  {
+    "id": 298,
+    "name": "Azurill",
+    "catchRate": 57
+  },
+  {
+    "id": 299,
+    "name": "Nosepass",
+    "catchRate": 92
+  },
+  {
+    "id": 300,
+    "name": "Skitty",
+    "catchRate": 92
+  },
+  {
+    "id": 301,
+    "name": "Delcatty",
+    "catchRate": 27
+  },
+  {
+    "id": 302,
+    "name": "Sableye",
+    "catchRate": 22
+  },
+  {
+    "id": 303,
+    "name": "Mawile",
+    "catchRate": 22
+  },
+  {
+    "id": 304,
+    "name": "Aron",
+    "catchRate": 67
+  },
+  {
+    "id": 305,
+    "name": "Lairon",
+    "catchRate": 37
+  },
+  {
+    "id": 306,
+    "name": "Aggron",
+    "catchRate": 22
+  },
+  {
+    "id": 307,
+    "name": "Meditite",
+    "catchRate": 67
+  },
+  {
+    "id": 308,
+    "name": "Medicham",
+    "catchRate": 37
+  },
+  {
+    "id": 309,
+    "name": "Electrike",
+    "catchRate": 47
+  },
+  {
+    "id": 310,
+    "name": "Manectric",
+    "catchRate": 22
+  },
+  {
+    "id": 311,
+    "name": "Plusle",
+    "catchRate": 74
+  },
+  {
+    "id": 312,
+    "name": "Minun",
+    "catchRate": 74
+  },
+  {
+    "id": 313,
+    "name": "Volbeat",
+    "catchRate": 57
+  },
+  {
+    "id": 314,
+    "name": "Illumise",
+    "catchRate": 57
+  },
+  {
+    "id": 315,
+    "name": "Roselia",
+    "catchRate": 57
+  },
+  {
+    "id": 316,
+    "name": "Gulpin",
+    "catchRate": 82
+  },
+  {
+    "id": 317,
+    "name": "Swalot",
+    "catchRate": 32
+  },
+  {
+    "id": 318,
+    "name": "Carvanha",
+    "catchRate": 82
+  },
+  {
+    "id": 319,
+    "name": "Sharpedo",
+    "catchRate": 27
+  },
+  {
+    "id": 320,
+    "name": "Wailmer",
+    "catchRate": 49
+  },
+  {
+    "id": 321,
+    "name": "Wailord",
+    "catchRate": 27
+  },
+  {
+    "id": 322,
+    "name": "Numel",
+    "catchRate": 92
+  },
+  {
+    "id": 323,
+    "name": "Camerupt",
+    "catchRate": 57
+  },
+  {
+    "id": 324,
+    "name": "Torkoal",
+    "catchRate": 37
+  },
+  {
+    "id": 325,
+    "name": "Spoink",
+    "catchRate": 92
+  },
+  {
+    "id": 326,
+    "name": "Grumpig",
+    "catchRate": 27
+  },
+  {
+    "id": 327,
+    "name": "Spinda",
+    "catchRate": 92
+  },
+  {
+    "id": 328,
+    "name": "Trapinch",
+    "catchRate": 92
+  },
+  {
+    "id": 329,
+    "name": "Vibrava",
+    "catchRate": 47
+  },
+  {
+    "id": 330,
+    "name": "Flygon",
+    "catchRate": 22
+  },
+  {
+    "id": 331,
+    "name": "Cacnea",
+    "catchRate": 71
+  },
+  {
+    "id": 332,
+    "name": "Cacturne",
+    "catchRate": 27
+  },
+  {
+    "id": 333,
+    "name": "Swablu",
+    "catchRate": 92
+  },
+  {
+    "id": 334,
+    "name": "Altaria",
+    "catchRate": 22
+  },
+  {
+    "id": 335,
+    "name": "Zangoose",
+    "catchRate": 37
+  },
+  {
+    "id": 336,
+    "name": "Seviper",
+    "catchRate": 37
+  },
+  {
+    "id": 337,
+    "name": "Lunatone",
+    "catchRate": 22
+  },
+  {
+    "id": 338,
+    "name": "Solrock",
+    "catchRate": 22
+  },
+  {
+    "id": 339,
+    "name": "Barboach",
+    "catchRate": 71
+  },
+  {
+    "id": 340,
+    "name": "Whiscash",
+    "catchRate": 32
+  },
+  {
+    "id": 341,
+    "name": "Corphish",
+    "catchRate": 76
+  },
+  {
+    "id": 342,
+    "name": "Crawdaunt",
+    "catchRate": 59
+  },
+  {
+    "id": 343,
+    "name": "Baltoy",
+    "catchRate": 92
+  },
+  {
+    "id": 344,
+    "name": "Claydol",
+    "catchRate": 37
+  },
+  {
+    "id": 345,
+    "name": "Lileep",
+    "catchRate": 22
+  },
+  {
+    "id": 346,
+    "name": "Cradily",
+    "catchRate": 22
+  },
+  {
+    "id": 347,
+    "name": "Anorith",
+    "catchRate": 22
+  },
+  {
+    "id": 348,
+    "name": "Armaldo",
+    "catchRate": 22
+  },
+  {
+    "id": 349,
+    "name": "Feebas",
+    "catchRate": 92
+  },
+  {
+    "id": 350,
+    "name": "Milotic",
+    "catchRate": 27
+  },
+  {
+    "id": 351,
+    "name": "Castform",
+    "catchRate": 22
+  },
+  {
+    "id": 352,
+    "name": "Kecleon",
+    "catchRate": 74
+  },
+  {
+    "id": 353,
+    "name": "Shuppet",
+    "catchRate": 82
+  },
+  {
+    "id": 354,
+    "name": "Banette",
+    "catchRate": 22
+  },
+  {
+    "id": 355,
+    "name": "Duskull",
+    "catchRate": 71
+  },
+  {
+    "id": 356,
+    "name": "Dusclops",
+    "catchRate": 37
+  },
+  {
+    "id": 357,
+    "name": "Tropius",
+    "catchRate": 74
+  },
+  {
+    "id": 358,
+    "name": "Chimecho",
+    "catchRate": 22
+  },
+  {
+    "id": 359,
+    "name": "Absol",
+    "catchRate": 17
+  },
+  {
+    "id": 360,
+    "name": "Wynaut",
+    "catchRate": 49
+  },
+  {
+    "id": 361,
+    "name": "Snorunt",
+    "catchRate": 71
+  },
+  {
+    "id": 362,
+    "name": "Glalie",
+    "catchRate": 32
+  },
+  {
+    "id": 363,
+    "name": "Spheal",
+    "catchRate": 92
+  },
+  {
+    "id": 364,
+    "name": "Sealeo",
+    "catchRate": 47
+  },
+  {
+    "id": 365,
+    "name": "Walrein",
+    "catchRate": 22
+  },
+  {
+    "id": 366,
+    "name": "Clamperl",
+    "catchRate": 92
+  },
+  {
+    "id": 367,
+    "name": "Huntail",
+    "catchRate": 27
+  },
+  {
+    "id": 368,
+    "name": "Gorebyss",
+    "catchRate": 27
+  },
+  {
+    "id": 369,
+    "name": "Relicanth",
+    "catchRate": 16
+  },
+  {
+    "id": 370,
+    "name": "Luvdisc",
+    "catchRate": 82
+  },
+  {
+    "id": 371,
+    "name": "Bagon",
+    "catchRate": 22
+  },
+  {
+    "id": 372,
+    "name": "Shelgon",
+    "catchRate": 22
+  },
+  {
+    "id": 373,
+    "name": "Salamence",
+    "catchRate": 22
+  },
+  {
+    "id": 374,
+    "name": "Beldum",
+    "catchRate": 8
+  },
+  {
+    "id": 375,
+    "name": "Metang",
+    "catchRate": 8
+  },
+  {
+    "id": 376,
+    "name": "Metagross",
+    "catchRate": 8
+  },
+  {
+    "id": 377,
+    "name": "Regirock",
+    "catchRate": 3
+  },
+  {
+    "id": 378,
+    "name": "Regice",
+    "catchRate": 3
+  },
+  {
+    "id": 379,
+    "name": "Registeel",
+    "catchRate": 3
+  },
+  {
+    "id": 380,
+    "name": "Latias",
+    "catchRate": 1
+  },
+  {
+    "id": 381,
+    "name": "Latios",
+    "catchRate": 1
+  },
+  {
+    "id": 382,
+    "name": "Kyogre",
+    "catchRate": 1
+  },
+  {
+    "id": 383,
+    "name": "Groudon",
+    "catchRate": 1
+  },
+  {
+    "id": 384,
+    "name": "Rayquaza",
+    "catchRate": 1
+  },
+  {
+    "id": 385,
+    "name": "Jirachi",
+    "catchRate": 1
+  },
+  {
+    "id": 386,
+    "name": "Deoxys",
+    "catchRate": 1
+  }
+]

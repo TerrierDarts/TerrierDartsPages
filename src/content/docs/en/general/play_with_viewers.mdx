@@ -1,0 +1,139 @@
+---
+title: "Play With Viewers"
+description: "This will allow you to run a Play With Viewers Queue System"
+pubDate: "Oct 04 2023"
+code: "0.2.1"
+setUpDifficulty: "3/5"
+heroImage: "/heroImages/default_image.png"
+---
+import CopyButton from '../CopyButton.astro'
+import importCode from '/sb_codes/general/play_with_viewers.txt?raw';
+import { Icon } from 'astro-icon'
+import { Notification } from "accessible-astro-components";
+
+## Streamer.bot Set-Up
+
+<CopyButton>{importCode}</CopyButton>
+
+Once imported you will notice it contains 12 `Actions` and 17 `Commands`, these `commands` will need to be enabled in order to work. The next thing you will need to do is either restart Streamer.bot or trigger the `Test` on the `[Queue Admin] Set Triggers`.
+
+It is advised to not edit either of the 3 `[Queue Admin]` actions and  doing do you do at your own risk. This code uses custom Triggers so if you dont see this in the triggers part of Streamer.bot its likely you haven't done it correctly, and my suggestion here would be to restart Streamer.bot again. If you've restarted Streamer.bot and you still can't see these triggers reach out in discord. (Link for my Personal one is at the bottom of the page, but either the Official Streamerbot one or the Extentions one )
+
+![triggers](/buildImages/queue_system/queue_custom_triggers.png)
+
+Also everytime Streamer.bot loads up it will notify you that these queue triggers have added, you can stop this by disabling the 'Show Toast Notification' Sub-Action in the `[Queue Admin] Set Triggers` Action, the notification will look like this.
+
+![toast](/buildImages/queue_system/queue_toast.png)
+
+This code will also create a `.txt` file, I've included a stand alone action called `[Queue Admin] Open Queue File` which will open the file in your default `.txt` program. For referance the file will be kept inside `%STREAMER_BOT_FOLDER%/data/json/playWithViwers.txt`
+
+You will also need to double check the permissons on the commands. I've added a `(M)` and a `(B)` on some of the commands to prompt a suggestion for a Mod or Broadcaster Command. Please dont delete and re-add commands if you wish to edit them you can do so in the current commands edit dailog box.  
+
+
+## Configuration
+
+This code should work on both Twitch and YouTube. However its currently set to work on with Twitch.
+
+Every command is set to trigger the `[Queue Admin] Code` Action and depending on what command is triggered and if its triggered correctly the code will broadcast one of the following 29 Custom Triggers.
+
+```
+Start
+Close
+Open 
+Clear
+Join - Success or Failed
+Pull  - Success or Failed
+Random Pull - Success or Failed
+Peak  - Success or Failed
+Shuffle - Success or Failed
+Mod Remove  - Success or Failed
+Leave  - Success or Failed
+Position - Target, Self or Failed
+Skip Peak  - Success or Failed
+Skip Pull  - Success or Failed
+Jump  - Success or Failed
+Full Queue  - Success or Failed
+```
+
+7 of imported actions are triggered by the above Custom Triggers, they will return different arguments for you to use when trying to build your actions you wish to have. Doing it this way not only allows for cross platform but also allow a greater freedom in what happens when people are pulled or join for example. Please note Certain commands may not work as well as expected on YouTube this is due to issues/limitions with YouTube. 
+
+<Notification type="info">
+ <Icon pack="ion" name="information-circle-outline" />
+Until I can get a full testing and feedback on YouTube I'm not sure what needs changing.
+</Notification>
+
+Included is are 2 examples, 1 is how you can trigger this with a channel point and 1 how you can use your currency system if you have one. Hopefully the examples are clear enough but few things to remember: 
+1) Remove the Command Trigger from `[Queue Admin] Code`
+2) Make sure you choose the Method you want to use not and not just `Execute`
+
+Again Actions can be built however you want you can add SFX or onscreen assets.
+
+
+### Arguments
+
+The Arguments that are returned are as follows.
+|Trigger Name| Populated Arguments|
+|---|---|
+|**Start, Open, Close, Clear** | `queueState`|
+|**Clear** | `totalUsersCleared`|
+|**Pull** | `usersPulled` `totalUsersBefore` `totalUsersAfter` `allUsers` `queueUserName[i]` `queueAction`|
+|**Peak** | `usersPulled`  `totalUsers` `allUsers` `queueUserName[i]` `queueAction`| 
+|**Random Pull** | `usersPulled` `totalUsersBefore` `totalUsersAfter` `allUsers` `queueAction`|
+|**Get Position** |`totalUsers` `requestedUser` `selfCheck` `position[i]` `allPositions`|
+|**Leave**, **Mod Remove**|`removedUser` `totalUsersBefore` `totalUsersAfter` `removals`|
+|**Skip Peak**|`queueAction` `totalUsers` `requestedPosition` `userInPosistion`|
+|**Skip Pull**| `totalUsersBefore` `totalUsersAfter`|
+|**Full Queue**| `allQueueUsers` `queueUser[i]`|
+|**Join Queue**|`queueCount` `userEntries`|
+|**Shuffle**|`oldFirst` `newFirst` `totalUsers`|
+|**Jump**|`oldFirst` `newFirst` `totalUsersBefore` `totalUsersAfter`|
+
+### Fail Codes
+
+Failed actions will return a `failCode` and a `failReason`. These are as follows:
+|Code|Reason|
+|---|---|
+|1| `Queue is Empty`|
+|2| `Requested Amount is higher than Queue Size`|
+|3| `User Not in Queue`|`
+|4| `No User in that position`|
+|5| `No Number Given`|
+|6| `Queue is not currently active`|
+|7| `Duplicates not allowed`|
+|8| `User alreadly has max entries`|
+|9| `Queue can not be shuffled as only 1 user in the Queue`|
+|10| `User is already First`|
+
+## Commands and How to use them.
+
+Here are the current List of Commands and there purpose. Its highly reccomended you do not edit the commands, however you can also long as you dont actually delete the command as the `commandId` is important. 
+
+|**Command**| Purpose| Reccomended Permission|
+|---|---|---|
+|`!startQueue`|This will start a brand new queue and wipe out the current queue clean.|Broadcaster|
+|`!closeQueue`|This will remove the ability for people to join.|Moderator|
+|`!openQueue`|This will add the ability for people to join.|Moderator|
+|`!clearQueue`|This will clear the current queue.|Broadcaster|
+|`!pullQueue`| This will pull the next name.|Moderator|
+|`!pullQueue (amount)`|If you specify a number it wil pulll that many people, if youve pulled too many the code will throw an error and trigger the `Failed` Event.|Moderator|
+|`!peakQueue`|This will let you have a look at the person at the front of the queue but not remove them.|Moderator|
+|`!peakQueue (amount)`|This also when specified with a number will take at the look at the next X amount of people, again it will throw a `Failed` Event.|Moderator|
+|`!pullRandom`|This will pull a random person from the queue.|Moderator|
+|`!leave`|This will allow your viewers to leave the queue, this will remove all there entries if they are in there multiple times.|Viewers|
+|`!leave next`| If your viewer adds `next` it will only remove the next instance of there name.|Viewers|
+|`!position`|This will get the users position in the queue, if in mulitple times all will be returned.|Viewers|
+|`!position (target)`|This will allow you to check the position of someone else in the queue.|Viewers|
+|`!skipPeak (index)`|This will allow your mods to see who is in X position. Peak will not remove them.|Moderator|
+|`!skipPull (index)`|This will allow your mods to pull the person who is in X position and remove them from the queue.|Moderator|
+|`!fullQueue`|This will return all the names in the queue.|Broadcaster|
+|`!queue`|This will allow your viewers to join the queue.|Viewers|
+|`!shuffleQueue`|This will allow your viewers to shuffle the queue|Viewers|
+|`!schofield`|This will allow you viewers to jump to the top of the queue. *If you know you know!*|Viewers|
+|`!queueMod (index)`|This will allow you to remove the user in that position.|Moderator|
+|`!queueMod (target)`|This will allow your mods to remove all a certian user from the queue, all instances will be removed.|Moderator|
+|`!modJump (target)`| This will allow your mods to move a user to the top of the queue.|Moderator|
+
+
+
+
+

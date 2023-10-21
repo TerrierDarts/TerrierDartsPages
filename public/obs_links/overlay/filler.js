@@ -230,17 +230,18 @@ function addMultipleBalls(imageUrl, count) {
   }
 }
 
-
-window.streamerbot.subscribeTo({
-  Twitch: [ "ChatMessage" ]
+import "https://cdn.skypack.dev/@streamerbot/client";
+const client = new StreamerbotClient({
+  host: window.config.host || '127.0.0.1',
+  port: window.config.port || 8080,
+  endpoint: window.config.endpoint || '/',
 });
 
 
-  window.streamerbot.onMessage(data => {
-    if(data.event.type != "ChatMessage")
-    {
-      return;
-    }
+
+
+client.on('Twitch.ChatMessage' , data => {
+ 
   var message = data.data.message.message;
   var user = data.data.message.username;
  

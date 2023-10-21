@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Pokemon Catch</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+
+<body>
+  <!-- partial:index.partial.html -->
+  <div class="container">
+    <img id="pokemon" class="pokemon" src="/pokemon_catch_game/normal_sprites/1.png">
+    <img id="ball" class="ball" src="/pokemon_catch_game/other_assets/1.png">
+    <img class="box" src="/pokemon_catch_game/other_assets/pokemon_dialogue.png">
+    <text id="message" class="text"> A wild BULBASAUR appeared. Use !catch and !catch2 to try catch it.</text>
+    <audio id="soundFiles">
+      <source src="audio.ogg" type="audio/ogg">
+    </audio>
+
+  </div>
+  <button id="pokemonCatchAttempt">Throw Ball</button>
+  <button id="pokemonCatchFail">Catch Fail</button>
+  <button id="pokemonCatchSuccess">Catch Win</button>
+  <button id="pokemonShow">Show</button>
+  <button id="pokemonHide">Hide</button>
+  <!-- partial -->
+
+  <script src="https://unpkg.com/@streamerbot/client/dist/streamerbot-client.js"></script>
+  <script src="./catch_game.js"></script>
+</body>
+
+</html>

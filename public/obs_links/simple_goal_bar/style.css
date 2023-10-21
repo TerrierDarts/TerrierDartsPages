@@ -1,0 +1,46 @@
+#background {
+  width: 400px;
+  position: absolute;
+  height: 50px;
+  background: linear-gradient(to bottom, black, grey);
+  opacity: 80%;
+  border-radius: 20px 20px 20px 20px;
+}
+#name {
+  position: absolute;
+  top: 10px;
+  left: 35px;
+  color: White;
+  font-size: 20px;
+  font-family: copperplate, fantasy;
+}
+#points {
+  position: absolute;
+  top: 10px;
+  left: 220px;
+  color: silver;
+  font-size: 25px;
+  font-family: arial;
+}
+
+#front {
+  position: absolute;
+  top: 35px;
+  left: 25px;
+  width: 20px;
+  max-width: 350px; 
+  height: 20px; 
+  background-color: skyblue; 
+  border-radius: 10px;
+}
+
+#back {
+  position: absolute;
+  top: 35px;
+  left: 25px;
+  max-width: 350px;
+  width: 350px;
+  height: 20px; 
+  background-color: grey; 
+  border-radius: 10px; 
+}

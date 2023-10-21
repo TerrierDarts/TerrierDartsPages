@@ -8,7 +8,7 @@ actionName: url.searchParams.get('actionName') || "[HTML] Blinder",
 imageUrl: url.searchParams.get('imageUrl') || "https://terrierdarts.co.uk/obs_links/overlay/white.png", 
 
 // this is the number of seconds to display the image (defaults to 5)
-seconds: Number(url.searchParams.get('seconds')) || 10
+seconds: Number(url.searchParams.get('seconds')) || 2
 }
 console.log(config.actionName);
 console.log(config.imageUrl);
@@ -16,15 +16,15 @@ console.log(config.seconds);
 // Will subscribe to these events, mapped directly to the websocket subscription request.
 ;
 
-window.streamerbot.subscribeTo({
-  Raw: [ "Action" ]
+// Streamer.bot WebSocket Client configuration
+import "https://cdn.skypack.dev/@streamerbot/client";
+const client = new StreamerbotClient({
+  host: window.config.host || '127.0.0.1',
+  port: window.config.port || 8080,
+  endpoint: window.config.endpoint || '/',
 });
+client.on('Raw.Action' , message => {
 
-// Called when any event is received from Streamerbot, including those subscribed to by other scripts.
-window.streamerbot.onMessage(message => {
-   //console.log("Action Redeemed");
-  //const data = JSON.stringify(message);
-  //console.log(data);
   var action = message.data.name;
   //console.log("Name: " + action);
     if (action === config.actionName)
