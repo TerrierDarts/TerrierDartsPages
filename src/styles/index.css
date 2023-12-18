@@ -467,7 +467,12 @@ h2.heading {
   }
   
   .notification.type-error {
-	color: var(--error-900, #000000);
-	background-color: var(--error-100, #d04a4ab6);
-	border-color: var(--error-500, #df2a39);
+	color: #ff0000;
+	background-color:rgba(141, 36, 36, 0.975);
+	border-color: #ff0000;
   }
+
+  img[src*="#image"] {
+   border-radius: 15px;
+   margin:auto;
+ }

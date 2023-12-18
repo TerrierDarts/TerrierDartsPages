@@ -1,0 +1,65 @@
+---
+import Testimonial from "./Testimonial.astro";
+---
+
+<script>
+  let currentIndex = 0;
+  let totalTestimonials = 6; // Set the initial number of testimonials
+
+  function updateCarousel() {
+    currentIndex = (currentIndex + 1) % totalTestimonials;
+  }
+
+  const delay = 3000; // Change testimonial every 3 seconds
+
+  function startCarousel() {
+    setInterval(() => {
+      updateCarousel();
+    }, delay);
+  }
+
+  // Call the startCarousel function when the component is initialized.
+  startCarousel();
+</script>
+
+<style>
+  .carousel {
+    display: flex;
+    overflow: hidden;
+    width: 600px;
+    height: 400px;
+  }
+  .carousel testimonial {
+    flex: 1; /* Distribute available space evenly among testimonials */
+    display: none;
+  }
+</style>
+
+<div class="carousel">
+   <Testimonial
+    img="https://static-cdn.jtvnw.net/jtv_user_pictures/dd70b1ec-b906-416a-8a56-d067bda64514-profile_image-300x300.png"
+    quote="TerrierDarts is a massive asshole and should be avoided at all costs. Please if you want your shit to work do not ask TD for advice he knows fuck all!"
+    author="GoWMan"/>
+  <Testimonial
+    img="https://static-cdn.jtvnw.net/jtv_user_pictures/1b29b92d-098e-4b34-91d0-c5eba5e1361a-profile_image-300x300.png"
+    quote="TD can't even finish a simple minesweeper game even though I did 99.9% of the work, he can not be trusted. Finding code here that actually works is like finding a needle in a haystack"
+    author="Sylvie964"/>
+  <Testimonial
+    img="https://static-cdn.jtvnw.net/jtv_user_pictures/e293c3b9-e8b7-43f2-b4c3-1f0ecc19b68a-profile_image-300x300.png"
+    quote="TerrierDarts? Nah never heard of him who is that? "
+    author="Web_Mage"
+   />
+   <Testimonial
+   img="https://static-cdn.jtvnw.net/jtv_user_pictures/dd70b1ec-b906-416a-8a56-d067bda64514-profile_image-300x300.png"
+   quote="TerrierDarts is a massive asshole and should be avoided at all costs. Please if you want your shit to work do not ask TD for advice he knows fuck all!"
+   author="GoWMan"/>
+ <Testimonial
+   img="https://static-cdn.jtvnw.net/jtv_user_pictures/1b29b92d-098e-4b34-91d0-c5eba5e1361a-profile_image-300x300.png"
+   quote="TD can't even finish a simple minesweeper game even though I did 99.9% of the work, he can not be trusted. Finding code here that actually works is like finding a needle in a haystack"
+   author="Sylvie964"/>
+ <Testimonial
+   img="https://static-cdn.jtvnw.net/jtv_user_pictures/e293c3b9-e8b7-43f2-b4c3-1f0ecc19b68a-profile_image-300x300.png"
+   quote="TerrierDarts? Nah never heard of him who is that? "
+   author="Web_Mage"
+  />
+</div>

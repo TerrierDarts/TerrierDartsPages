@@ -43,10 +43,13 @@ export default defineConfig({
     rollup({
       exclude: [
         "filler.js",
-        "bluewaffle.js",
+        "blue_waffle.js",
         "blinder.js",
         "mario_clicker.js",
-        "catch_game.js"
+        "catch_game.js",
+        "obs_chat.js",
+        "screen_grabber.js",
+        "script.js"
 
       ]
     }), 

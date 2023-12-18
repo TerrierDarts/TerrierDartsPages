@@ -1,0 +1,139 @@
+body {
+  background-color: #18181B;
+
+}
+
+#container {
+  height: 85vh;
+  width: 90vw;
+  font-size: 12px;
+  padding: 10px;
+  overflow-y: scroll;
+  overflow: hidden;
+}
+
+#message {
+  color: rgb(202, 202, 202);
+  font-family: Helvetica;
+
+
+}
+#chat:hover{
+  background-color: #707070;
+  border-radius: 10px;
+
+}
+
+#user {
+  font-weight: bold;
+  font-family: Courier;
+  text-decoration: underline;
+}
+
+#badge {
+  height: 12px;
+  width: 12px;
+  margin-right: 3px;
+  margin-top: 5px;
+}
+
+#emote {
+  height: 12px;
+  width: 12px;
+}
+
+#icon {
+  font-size: 12px;
+  margin-left: 3px;
+}
+
+
+#redeem {
+  padding-left: 25px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-bottom: 5px;
+  margin-left: 5px;
+  margin-right: 5px;
+  color: rgb(20, 20, 20);
+  font-family: Helvetica;
+  font-weight: bold;
+  background-color: grey;
+
+  border-color: white;
+  border-top-style: solid;
+  border-bottom-style: solid;
+  border-radius: 10px;
+}
+
+#event {
+  padding-left: 25px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-bottom: 5px;
+  margin-left: 5px;
+  margin-right: 5px;
+  color: rgb(33, 189, 203);
+  font-family: Helvetica;
+  font-weight: bold;
+  background-color: rgb(144, 0, 173);
+
+  border-color: rgb(99, 0, 164);
+  border-top-style: solid;
+  border-bottom-style: solid;
+  border-radius: 10px;
+}
+
+#chat {
+
+  padding-bottom: 5px;
+}
+
+#textbox {
+  width:85vw;
+  min-width: 40vw;
+  padding: 4px;
+  font-size: 16px;
+  border-width: 1px;
+  border-color: #ffffff;
+  background-color: #4e4d4d;
+  color: #e8e6e6;
+  border-style: solid;
+  border-radius: 8px;
+}
+
+.button {
+	background:linear-gradient(to bottom, #707070 5%, #171717 100%);
+	background-color:#707070;
+	border-radius:9px;
+	border:1px solid #ffffff;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:16px;
+	padding:5px 10px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #2f6627;
+}
+.button:hover {
+	background:linear-gradient(to bottom, #171717 5%, #707070 100%);
+	background-color:#171717;
+}
+.button:active {
+	position:relative;
+	top:1px;
+}
+
+.input-container {
+  white-space: nowrap; /* Prevent wrapping */
+}
+
+.input-container input,
+.input-container button {
+  display: inline-block;
+  vertical-align: top; /* Align elements vertically */
+}
+
+
+       

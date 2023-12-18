@@ -1,44 +1,80 @@
 ---
 title: "Casino Roulette"
-description: "A Casio Roulette Style Game using VRFlad's Point System"
-pubDate: "Jun 23 2023"
-code: "1.3"
-setUpDifficulty: "1/5"
+description: "A Casio Roulette Style Game for a Points System"
+pubDate: "Dec 18 2023"
+code: "3"
+sbRequiredV : "0.2.0+"
 heroImage: "/heroImages/ps_casino_roulette.png"
 ---
 
 import CopyButton from '../CopyButton.astro'
 import importCode from '/sb_codes/points_system/casino_roulette.txt?raw';
 
-### Grab the Import Code (SB 0.2.0)
-
 <CopyButton>
 {importCode}
 </CopyButton>
 
-### In Streamer.bot
+### In Streamer.bot 
 
-Once imported you will need to make sure that the command `!casino` is enabled.
+Once imported, you will notice like all of my chat games it includes an ***Action*** called `[Currency] - [Set Triggers]`. This ***Action*** will create a `.json` file in your data folder. It will only update when there is an update to be pulled from the site, also note it could create triggers for games or extensions you do not have, this is nothing to worry about.
 
-Then in order to correctly use this you can do  `<{trigger} (Amount To Gamble) (What your betting on)>`
+If you already have this **Action** I would reccommend you choose to replace it as it might change, but I am taking every effort it doesn't change. 
 
-Users can bet on Direct Numbers paying x35, Red or Black paying x2 and Odd or Even Also paying x2
+You should then restart Streamer.bot so it can create the ***Triggers*** you need as the ***Triggers*** will create themselves every time you start Streamer.bot. If done correctly you should receieve a ***Toast Notification*** confirming this. 
 
-![Commands](/buildImages/point_systems/casino_commands.png)
+This import will contain 4 Actions, 1 Command and a Queue.
 
+#### Actions
+
+This game has 1 Admin action `[Currency Admin] - [CasinoRoulette] - Spin` this action handles all the logic for the spin, working out what is span, if the user has won and adjusting points accordingly. To use this action the best way I found was to use a command called `!spin` then you can use `!spin <betAmount> <betRequest>` for example `!spin 500 black`. You can also use `k` for 1000s, `m` for millions, all and a `%`. 
+
+#### Triggers Avaliable
+
+**7** New Triggers can be found under `Custom >> Currency >> Casino Roulette`
+
+|Trigger Name|When Triggered|
+|---:|:---| 
+|`All In Win`| Triggered when a user goes all-in and wins.|
+|`All In Loss`| Triggered when a user goes all-in and loses.|
+|`Any Win`|Triggered on any win.|
+|`Any Loss`|Triggered on any Loss.|
+|`Win`|Triggered when a user wins but not an all-in win.|
+|`Loss`|Triggered when a user loses but not an all-in loss.|
+|`Bet Fail`|Triggered when your bet fails|
+
+#### Arguments Populated
+
+Each Trigger will populate it's own arguments.
+
+|Argument|Purpose|
+|---:|:---| 
+|`%gameName%`|This is the name of the current game.|
+|`%betSize%`|This is how many points have been bet.| 
+|`%betOn%`|This is what has been bet on.|
+|`%color%`|This is the colour the of the outcome (Red/Black)|
+|`%number%`|This is the number of the outcome (0-36)|
+|`%parity%`|This is the parity of the number (Odd/Even)|
+|`%newPoints%`|This is how many points the user now has after the bet|
+|`%winnings%`|This is how much the user has won (*Does not populate on the Loss Triggers*)|
+|`%result%`|This is if the result was a Win or a Loss.|
+
+#### Fail Codes
+|Code|Reason|
+|---:|:---| 
+|`1`|User Has No Points|
 
 ### Configuration
 
-There are 2 setting you can change here, 
+This game will work on Twitch and YouTube so you will need to make sure the commands are sourced to both, (the import should do this by default but its wise to double check)! 
 
-|Argument|Description|
-|---|---|
-|`bot`| This is if you wish for the bot to post the messages to chat|
-|`trigger`| This is how the user will play the game|
+Most of the configuration comes from how you want the send messages to look, but because of the Triggers you can add sounds and other things for the different types of things.
 
-If you wish to edit the Output messages this will require you to edit the C#
-The output message is down at the bottom.
+If an invalid bet request is given one will be chosen at random.
 
-This is the default.
+The 2 main setting however are in the `[Currency Admin] - [CasinoRoulette] - Spin` Action.
 
-`CPH.SendMessage($"{user},Wheel Spin was {colour} {parity} {winningNum} You {outcome} {gains} ", bot);`
+|Setting|Purpose|
+|---:|:---|
+|`defaultBet`|This is the bet that will be used if none is given|
+|`defaultPoints`|This is the amount of Points a user will have if they have none|
+

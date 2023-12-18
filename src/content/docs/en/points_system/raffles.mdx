@@ -11,91 +11,75 @@ import CopyButton from '../CopyButton.astro';
 import importCode from '/sb_codes/points_system/raffle.txt?raw';
 
 
-WORK IN PROGRESS
+<CopyButton>
+{importCode}
+</CopyButton>
 
-### In Streamer.bot
-
-This extension will work better if you already have VRFlad's '***Point System***' installed.
-
-#### Trigger Action
+### In Streamer.bot 
 
 Once imported, you will notice like all of my chat games it includes an ***Action*** called `[Currency] - [Set Triggers]`. This ***Action*** will create a `.json` file in your data folder. It will only update when there is an update to be pulled from the site, also note it could create triggers for games or extensions you do not have, this is nothing to worry about.
 
-If you already have this **Action** I would reccommend you choose to replace it as it might change, but I am taking every effort and hope that it doesn't need to change. 
+If you already have this **Action** I would reccommend you choose to replace it as it might change, but I am taking every effort it doesn't change. 
 
-You should then restart Streamer.bot so it can create the ***Triggers*** you need as the ***Triggers*** will create themselves every time you start Streamer.bot. If done correctly you should receieve a ***Toast Notification*** confirming this.
+You should then restart Streamer.bot so it can create the ***Triggers*** you need as the ***Triggers*** will create themselves every time you start Streamer.bot. If done correctly you should receieve a ***Toast Notification*** confirming this. 
+
+This import will contain 7 Actions, 2 Command and a Queue.
 
 
-#### Main Action
+#### Actions
 
-The import will contain 3 `Actions`. 1 to Start (`[Currency]-[Raffle]- Start`), this will be triggered by commands  but beware you will want your start command to be Mod+ as permissions do not import. You will also have an End `Action` (`[Currency]-[Raffle]- End`), this action will be triggered automattically after the time specified in the Start `Action` by default this will be 60 seconds.
+This game has 3 Admin Actions, These 3 actions will handle all the logic. `[Currency Admin] - [Raffle] - Start` this action is how you will start the raffles, In the import its tied to `!raffle` and the way to use it is to do `!raffle <amount>` if you don't provide an amount it will use the default prize, you can also use `k` and `m` for 1000 and 1,000,000. `[Currency Admin] - [Raffle] - Join` is how users will join from the import it is set from `!ticket`. `[Currency Admin] - [Raffle] - End` this action will trigger automattically when the raffle time is up.
 
-The thrid action is an `Action` is the action that will let your users join the raffle.
 
-Commands by default are disabled on import so you will need to make sure that the commands are enabled when you want to use them.
+#### Triggers Avaliable
 
-You have 5 new ***Triggers*** that have been created they are as follows
+**5** New Triggers can be found under `Custom >> Currency >> Raffle`
 
-```
-Currency >> Reaffle >> Start
-Currency >> Raffle >> End
-Currency >> Raffle >> Join
-Currency >> Raffle >> Winners (Single)
-Currency >> Raffle >> Wiiners (All)
-```
+|Trigger Name|When Triggered|
+|---:|:---| 
+|`Start`| Triggered when a stream|
+|`Join`| Triggered when a user goes all-in and loses.|
+|`End (Single Winner)`|Triggered on any win.|
+|`End (All Winners)`|Triggered on any Loss.|
+|`Failed`|Triggered when a user wins but not an all-in win.|
 
-Each Event will populate some new arguments for you to use in your `Actions` you create.
+#### Arguments Populated
 
-Firstly something goes wrong it will throw a fail, 'failCode' and 'failReason' are used to allow you to determine why what you tried to do failed.
-
-|failCode| failReason|
+Each Trigger will populate the following Arguments.
+|Argument | Description|
 |---|---|
-|1| `Raffle already active`|
-|2| `Raffle not active`|
-|3| `User maximum allowed tickets`|
-|4| `User can not afford`|
-|5| `Nobody entered the raffle`| 
+|`%gameName%`|This is the name of the current game.|
+|`%oldTicketCount%`|This is the number of raffle tickets a user had before they current purchase.|
+|`%newTicketCount%`|This is the number of tickets the user has after the purchase.|
+|`%oldEntriesRemaining%`|This is how many the user has remaining.|
+|`%maxTicketCost%`| This is the cost of the maximum number of  tickets the User can buy.|	
+|`%maxToBuy%`| This is the number of tickets the User can buy.|
+|`%ticketsBought%`| This is the number of tickets the user has bought.|
+|`%totalTickets%`|This is the total number of tickets that have been bought.|
+|`%ticketTag%`|This will return 'ticket' or 'tickets' depending |
+|`%oldPoints%`|This is the old number of points the user had before the purchase.|
+|`%newPoints%`|This is the new number of points the user has after the purchase.|
+|`%winningUser%`|This is the user who won(**This is trigger on the End Single Winner**)|
+|`%raffleWinnerCount%`|This is the number of winners we have.|
+|`%raffleWinners%`|This is a list of all the winners.|
+|`%winner[i]%`|This is an index of each winner.|
+|`%prizeWon%`|This is the amount that has been won.|
 
-When starting  the raffle these arguments are populated.
-|Argument|Value|
-|---|---|
-|`gameName`| This will return the name of the game, in this case `raffle`|
-|`length`|This is a number in seconds of the length of the raffle|
-|`raffleCost`|This is how much you wish the raffle will cost, you can use 0 if you wish the raffle to be free.|
-|`maxEntry`|This is how many entries a user is allowed, note if cost is set to 0 this will lock at 1|
-|`multiWinners`|This is if you want to the raffle to give more winners, if this is set to false only 1 winner will be selected|
-|`entriesPerWinner`|This is how many entries you want before you have another winner. If multiWinner is set to false this will be locked at 1|
-|`trigger`|This is how your viewers will join.|
-|`sharePrize`|This is if you want the prize to be shared or not, setting this to false will mean each winner will win an instance of the prize rather than an equal percentage|
-|`rafflePrize`|This is the default prize of a raffle that will be given if one isnt specified|
+#### Fail Codes
 
-**Join**
+Fail Codes are a way to explain why something went wrong if something did go wrong, they will be populated from the Fail Trigger, and will be `failCode` and `failReason`. Using these you can create a single currency game fail action if you wish! 
 
-gameName
-oldTicketCount
-newTicketCount
-oldEntriesRemaining
-maxTicketCost
-maxToBuy
-ticketsBought
-totalTickets
-ticketTag
-
-
-oldPoints
-newPoints
-winningUser
-
-raffleWinnerCount
-raffleWinners
-winner[i] 
-
-prizeWon
-
+|Code|Reason|
+|---:|:---| 
+|`1`| `Raffle already active`|
+|`2`| `Raffle not active`|
+|`3`| `User maximum allowed tickets`|
+|`4`| `User can not afford`|
+|`5`| `Nobody entered the raffle`| 
 
 ### Configuration
 
-Here are a List of the arguments that are accross the 3 Actions
+Across the 3 actions there are the following settings. 
 
 |Argument|Description|
 |---|---|
@@ -103,10 +87,10 @@ Here are a List of the arguments that are accross the 3 Actions
 |`length`| This is how long the raffle will last for|
 |`trigger`| This is how users can joing the raffle|
 |`raffleCost`| This is a cost for a raffle Ticket, this can be 0|
-|`bot`| This is if you wish for the bot to post the messages to chat|
 |`maxEntry`| This is how many entries a person can have, if cost is 0 this will default to 1|
 |`multiWinners`| This is if you want more than 1 winner if enough people join|
 |`entriesPerWinner`| This controls how many entries we need to get an extra winner|
 |`sharePrize`| This is if they will share the prize or will they each get the prize value|
+|`defaultPoints`|This is the amount of points a User will be given if they have no points|
 
-defaultPoints
+Using the arguments listed above the Send Message Sub Actions can be edited to suit your needs. Its also wise to rememeber that `End (Single Winner)` Will Trigger for each winner if you have more than one, and `End (All Winners)` will trigger once listing all the winners.

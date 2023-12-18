@@ -9,6 +9,7 @@ const multiSubs = urlParams.get("subonly") || "false";
 const explodeLevel = urlParams.get('explode') || 1;
 const canvasHeight = urlParams.get('height') || 1080;
 const canvasWidth = urlParams.get('width') || 1920;
+const multiballMax = urlParams.get('multimax') || 250;
 
 const Engine = Matter.Engine;
 const Render = Matter.Render;
@@ -246,11 +247,10 @@ client.on("YouTube.Message", (data) => {
           count = parseInt(num, 10); // Parse the third word as an integer
         }
 
-        if(count>250)
-        {
-          count = 250;
+        var max = multiballMax;
+        if (count > max) {
+          count = max;
         }
-
 
         console.log(count);
         addMultipleBalls(imageUrl, count);

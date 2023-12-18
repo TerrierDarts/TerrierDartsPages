@@ -1,5 +1,5 @@
 {
-	"version": 5.0,
+	"version": 5.1,
 	"triggers": [
 		{
 			"game": "Additional Commands",
@@ -311,6 +311,19 @@
 				"Currency",
 				"Lotto"
 			]
+		},
+		{
+
+			"game": "Lotto",
+			"name": "Winner (None)",
+			"triggerCode": "lottoWinnerNone",
+			"categories": [
+				"Currency",
+				"Lotto"
+			]
+
+
+
 		},
 		{
 			"game": "Raffle",

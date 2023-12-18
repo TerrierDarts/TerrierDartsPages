@@ -198,6 +198,13 @@ declare module 'astro:content' {
 
 	type ContentEntryMap = {
 		"docs": {
+"en/chat_commands.mdx": {
+	id: "en/chat_commands.mdx";
+  slug: "en/chat_commands";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".mdx"] };
 "en/chat_games/cludeo.mdx": {
 	id: "en/chat_games/cludeo.mdx";
   slug: "en/chat_games/cludeo";
@@ -222,6 +229,20 @@ declare module 'astro:content' {
 "en/chat_games/word_wheel.mdx": {
 	id: "en/chat_games/word_wheel.mdx";
   slug: "en/chat_games/word_wheel";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".mdx"] };
+"en/codepens.mdx": {
+	id: "en/codepens.mdx";
+  slug: "en/codepens";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".mdx"] };
+"en/credits.mdx": {
+	id: "en/credits.mdx";
+  slug: "en/credits";
   body: string;
   collection: "docs";
   data: InferEntrySchema<"docs">

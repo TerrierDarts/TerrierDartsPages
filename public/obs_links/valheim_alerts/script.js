@@ -1,3 +1,8 @@
+const queryString = window.location.search;
+const urlParams = new URLSearchParams(queryString);
+const anonFollows = urlParams.get('anonymousFollows') || "false";
+
+
 // Initialize an empty queue
 var queue = [];
 
@@ -101,9 +106,11 @@ ws.addEventListener("message", (event) => {
         
     }
     if (data.event.type == "Follow") {
-       var user = data.data.user_name;
+     
+      
+      var user = anonFollows ? "Anonymous" : data.data.user_name;
       var topText = "NEW FOLLOWER";
-        var bottomText = user;
+      var bottomText = user;
       addToQueue(topText,bottomText);
         
     }

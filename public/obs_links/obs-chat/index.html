@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title> Basic Streamer Twitch Chat Streamerbot</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="scroller"  id="container"></div>
+<div class="input-container">
+  <input id="textbox" type="text" onkeydown="handleKeyPress(event)"/>
+  <button class="button" type="button" onclick="sendMessage()">Send</button>
+</div>
+
+<!-- partial -->
+  <script src='https://unpkg.com/@streamerbot/client/dist/streamerbot-client.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js'></script>
+<script src='https://kit.fontawesome.com/6283d63176.js'></script><script  src="./obs_chat.js"></script>
+
+</body>
+</html>
+
+

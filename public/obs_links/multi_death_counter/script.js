@@ -1,27 +1,15 @@
-const WEBSOCKET_URI = "ws://127.0.0.1:8080/";
 
-
-const ws = new WebSocket(WEBSOCKET_URI);
-ws.addEventListener("open", (event) => {
-  console.log("Connected to Streamer.bot");
-
-  ws.send(
-    JSON.stringify({
-      request: "Subscribe",
-      id: "123",
-      events: {
-         Raw: ["SubAction"]
-      }
-          
-    })
-  );
+const client = new StreamerbotClient({
+  host: '127.0.0.1',
+  port: 8080
 });
+
 
 function updateData(t,c,g)
 {
  
-   document.getElementById("currentGame").innerHTML = c;
-   document.getElementById("total").innerHTML = "Total Deaths: "+t;
+  document.getElementById("currentGame").innerHTML = c;
+  document.getElementById("total").innerHTML = "Total Deaths: "+t;
   document.getElementById("gameboxArt").src = g; 
 }
 
@@ -29,10 +17,12 @@ function updateData(t,c,g)
 
 
 
-ws.addEventListener("message", (event) => {
+client.on('Raw.SubAction' ,(event) => {
+  console.log(event);
   if (!event.data) return;
 
-  const data = JSON.parse(event.data);
+  const data = JSON.parse(event);
+  console.log(data);
   if (!data.event || !data.event.type) return;
   if (data.data.name == "** SHOW DEATHS **") {
   console.log(data.data.arguments.deathTotal);

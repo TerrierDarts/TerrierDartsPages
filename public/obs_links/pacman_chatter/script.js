@@ -36,7 +36,7 @@ client.on("Twitch.ChatMessage", async (data) => {
 
 });
 
-client.on("YouTube.ChatMessage", async (data) => {
+client.on("YouTube.Message", async (data) => {
   console.log(data);
   var profileImage =  data.data.user.profileImageUrl;
   const addUser = document.createElement('div');

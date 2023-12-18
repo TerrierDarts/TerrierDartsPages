@@ -2,8 +2,9 @@
 title: "Heat - Core WS5"
 description: "Connect to Heat with Streamer.bot and OBS. This Version only works with Websocket 5"
 code: "1.4"
-pubDate: "Feb 10 2023"
+pubDate: "Nov 27 2023"
 setUpDifficulty: "4/5"
+sbRequiredV: "0.2.2"
 heroImage: "/heroImages/heat_ws5.png"
 ---
 import CopyButton from '../CopyButton.astro'
@@ -18,6 +19,13 @@ import { Notification } from "accessible-astro-components";
 </CopyButton>
 
 ### In Streamer.bot
+When importing it will ask you if you want to allow '[Heat] Your Id' to run an on import, this is fine to just press yes.
+
+Then it will pop up with your ID. Please copy this ID as we need it.
+
+You should of also imported a Websocket Client, you can find this at `Servers and Clients >> Websocket Clients` you will see the following address `wss://heat-api.j38.net/channel/<YOUR ID>` and just paste the id you've just copied.
+
+This action triggers when a message is recieved and it will trigger the `[Heat] Message` action.
 
 After Importing the code you will have to make sure all the `Execute Code` sub-actions Compile they should but below are a list of refernces you may need if they do not.
 
@@ -27,24 +35,26 @@ System.dll
 System.Net.dll
 ```
 
-Next you need to set up the OBS Lock Event, which will update source positions if 'realTime' is set to false. (I will explain that a bit later). To find the OBS event you can go `Stream Apps >> OBS` and when you select your obs you can then right click on the events and add the following. `SceneItemLockStateChanged` and that is tied to the `[Heat] OBS Lock Event`.
 
-![OBS LOCK EVENT](/buildImages/heat_core/LockEvent.png)
+`[Heat] OBS Lock Event` should have a OBS Event trigger tied to it, this event will be the `SceneItemLockStateChanged`. The one thing you might need to do is ensure this is correctly pointed to your version of OBS, remembering this only works with Websocket 5
 
-The next set is going to connect to the heat server. So you need to add a new connection, you can find this at `Servers and Clients >> Websocket Clients` you will need to add the following address `wss://heat-api.j38.net/channel/<YOUR ID>` and just swap in your channel ID. Finally you will need to add `[Heat] Message` Action to the Message Event. When set up correctly it will look like this.
 
-![Heat Websocket Server](/buildImages/heat_core/heatWsClient.png)
 
-Final Step is to add you actions, You will find these in `[Heat] Sources` you will notice from the import that there is a group. You just need to edit and duplicate for all the sources you wish to use. Then you will need to create actions of the **SAME NAME** which will be triggered on clicks. Meaning if you have a source called `Blue` then the action must be called `Blue` like seen below.
+Now the core system of Heat should be installed
+
+### Configuration
+
+Now to get things working, you will need to tell SB the actions/sources you want to be clickable. You will find these in `[Heat] Sources` you will notice from the import that there is a group. You just need to edit and duplicate for all the sources you wish to use. Then you will need to create actions of the **SAME NAME** which will be triggered on clicks. Meaning if you have a source called `Blue` then the action must be called `Blue` like seen below.
 
 ![Sources](/buildImages/heat_core/sources.png)
 
-If you have done all that heat should be functional now.
+Now heat should have its actions that are triggered.
+
 <Notification type="error">
  <Icon pack="ion" name="information-circle-outline" />
 One thing to note is in OBS Source Alignment needs to be "Top Left" other wise the source will be ignored.
 </Notification>
-### Configuration
+
 
 In `[Heat] Message` they are a few settings. These will change how heat behaves for you. 
 

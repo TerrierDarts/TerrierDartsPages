@@ -1,0 +1,68 @@
+---
+title: "Using Codepens"
+description: "A Guide into how to use Codepens"
+heroImage: "../../heroImages/default_image.png"
+---
+
+Here I will show you how to import a codepen into OBS, I'm sure the theory will be the same for Streamlabs but I'm not 100% sure.
+
+It's also important to note, you will need a Codepen Account to Export. 
+
+## Step 1 - Export the Pen
+
+On the Codepen you are wanting to use, in the bottom right there would be a `Export` button.
+![Export](/buildImages/codepen_guide/export.png#image)
+
+
+Once you click on that it will pop up a menu and you will need to press on `Export .zip`
+![Export](/buildImages/codepen_guide/export_zip.png#image)
+
+This will then start downloading the zip folder.
+
+![Export](/buildImages/codepen_guide/download.png#image)
+
+## Step 2 - Extract Files
+
+When downloaded it will look like this in your download folder.
+![Export](/buildImages/codepen_guide/downloaded_file.png#image)
+
+If you go inside that folder you will see this folder.
+![Export](/buildImages/codepen_guide/downloaded_folder.png#image)
+
+What you need to do is to Drag and Drop this file to somewhere safe.
+![Export](/buildImages/codepen_guide/extracted_folder.png#image)
+
+## Step 3 - Get the Url
+
+Once Somewhere safe, you will need to go into the folder and find the `dist` folder.
+![Export](/buildImages/codepen_guide/select_dist.png#image)
+
+Inside the `dist` folder there will be `index.html` file open that.
+![Export](/buildImages/codepen_guide/open_index_html.png#image)
+
+Once open we need to get the URL which will start with `file:///`
+
+![Export](/buildImages/codepen_guide/copy_url.png#image)
+
+## Step 4 - Put in OBS
+
+In OBS we need to create a browser source.
+
+![Export](/buildImages/codepen_guide/create_browser.png#image)
+
+The we need to paste in our Url.
+
+![Export](/buildImages/codepen_guide/paste_url.png#image)
+
+Then set all the other settings you need such as Height and Width and then press okay and you codepen will be imported to OBS
+
+![Export](/buildImages/codepen_guide/codepen_complete.png#image)
+
+## Things to note.
+
+If your pen requires URL Parameters you can not use Local File (meaning the Checkbox in OBS must be unticked).
+
+If your pen doesnt have any addition settings or uses websocket then it can be ticked but I tend to leave it unticked as a Catch-all.
+
+After adding the codepen to OBS if you make any changes you need to then refresh the browser source in OBS.
+

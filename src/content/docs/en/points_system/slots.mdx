@@ -1,70 +1,79 @@
 ---
 title: "Slots"
 description: "A Slots Game using VRFlad's Point System"
-pubDate: "Jul 05 2023"
+pubDate: "Dec 18 2023"
 code: "3"
-setUpDifficulty: "1/5"
 sbRequiredV : "0.2.0+"
 heroImage: "/heroImages/ps_slots.png"
 ---
 import CopyButton from '../CopyButton.astro'
 import importCode from '/sb_codes/points_system/slots.txt?raw';
 
-WORK IN PROGRESS
-
-### Grab the Import Code 
-
 <CopyButton>
 {importCode}
 </CopyButton>
 
-### In Streamer.bot
-
-This extension will work better if you already have VRFlad's '***Point System***' installed.
-
-#### Trigger Action
+### In Streamer.bot 
 
 Once imported, you will notice like all of my chat games it includes an ***Action*** called `[Currency] - [Set Triggers]`. This ***Action*** will create a `.json` file in your data folder. It will only update when there is an update to be pulled from the site, also note it could create triggers for games or extensions you do not have, this is nothing to worry about.
 
-If you already have this **Action** I would reccommend you choose to replace it as it might change, but I am taking every effort and hope that it doesn't need to change. 
+If you already have this **Action** I would reccomend you choose to replace it as it might change, but I am taking every effort it doesn't change. 
 
-You should then restart Streamer.bot so it can create the ***Triggers*** you need as the ***Triggers*** will create themselves every time you start Streamer.bot. If done correctly you should receieve a ***Toast Notification*** confirming this.
+You should then restart Streamer.bot so it can create the ***Triggers*** you need as the ***Triggers*** will create themselves every time you start Streamer.bot. If done correctly you should receieve a ***Toast Notification*** confirming this. 
+
+This import will contain 4 Actions, 1 Command and a Queue.
 
 
-#### Main Action
+#### Actions
 
-You will import 1 ***Command***, `!slot, !slots` this is how your viewers will play the game. No other commands are needed for this to work. 
+This game has 1 main action `[Currency Admin] - [Slots] - Spin` this action handles all the logic for the spin, working out what is span, if the user has won and adjusting points acccordingly. To use this action the best way I found was to use a command called `!spin` then you can use `!slot <betAmount>` for example `!slots 500`. You can also use `k` for 1000s, `m` for millions, all and a `%`. 
 
-You have 6 new ***Triggers*** that have been created they are as follows
 
-```
-Currency >> Slots >> Win
-Currency >> Slots >> Loss
-Currency >> Slots >> All In Win
-Currency >> Slots >> All In Loss
-Currency >> Slots >> Any Win
-Currency >> Slots >> Any Loss
-```
-If you don't want to specify a different ***Action*** based on the user going all in or not then use the `Any Win/Loss` ***Triggers***. If you want a different ***Action*** based on going all in the use the `Win/Loss` and `All In Win/Loss` ***Triggers***.
+#### Triggers Avaliable
+
+**7** New Triggers can be found under `Custom >> Currency >> Slots`
+
+|Trigger Name|When Triggered|
+|---:|:---| 
+|`All In Win`| Triggered when a user goes all-in and wins.|
+|`All In Loss`| Triggered when a user goes all-in and loses.|
+|`Any Win`|Triggered on any win.|
+|`Any Loss`|Triggered on any Loss.|
+|`Win`|Triggered when a user wins but not an all-in win.|
+|`Loss`|Triggered when a user loses but not an all-in loss.|
+|`Slots Fail`|Triggered when your bet fails|
+
+
+#### Arguments Populated
 
 Each Trigger will populate the following Arguments.
 |Argument | Description|
 |---|---|
-|`rolledEmote1`|This is the value of the 1st emote.|
-|`rolledEmote2`|This is the value of the 2nd emote.|
-|`rolledEmote3`|This is the value of the 3rd emote.|
-|`slotResult `| This will populate the slots result like `\|\|Slot1\|\|Slot2\|\|Slot3\|\|`. |	
-|`betAmount`| This is the amount that was bet, it will populate the actual value so if you did `All`, `10%` or `5k` it will be the number.|
-|`allIn`| This is a bool based on if bet was all in or not.|
-|`oldPoints`| This is the points the user had prior to the spin.|
-|`newPoints`| This is the points the user now has following the spin.|
+|`%gameName%`|This is the name of the current game.|
+|`%rolledEmote1%`|This is the value of the 1st rolled emote.|
+|`%rolledEmote2%`|This is the value of the 2nd rolled emote.|
+|`%rolledEmote3%`|This is the value of the 3rd rolled emote.|
+|`%slotResult%`| This will populate the slots result like `\|\|Slot1\|\|Slot2\|\|Slot3\|\|`. |	
+|`%betAmount%`| This is the amount that was bet, it will populate the actual value so if you did `All`, `10%` or `5k` it will be the number.|
+|`%allIn%`| This is a bool based on if bet was all in or not.|
+|`%winnings%`|This is how much the user has won\ (*Does not populate on the Loss Triggers*)|
+|`%multiplier%`| This is how much your bet has been multiplied in your win.|
+|`%result%`|This is if the result was a Win or a Loss.|
+|`%oldPoints%`| This is the points the user had prior to the spin.|
+|`%newPoints%`| This is the points the user now has following the spin.|
+
+#### Fail Codes
+
+Fail Codes are a way to explain why something went wrong if something did go wrong, they will be populated from the Fail Trigger, and will be `failCode` and `failReason`. Using these you can create a single currency game fail action if you wish! 
+
+|Code|Reason|
+|---:|:---| 
+|`1`|User Has No Points|
+
+### Configuration
 
 
-
-### How To Configure
-
-
-In `[Currency]-[Slot] - Spin` you have several ***Arguments*** this will have an impact on how your game runs.
+In `[Currency Admin]-[Slot] - Spin` you have several ***Arguments*** this will have an impact on how your game runs.
 
 You will see there are Currently 6 ***Folders*** called `Emote Slot X` with X been numbers 1 to 6. It is possible to add more numbers and I will explain that later.
 In each ***Folder*** there are 3 ***Arguments*** `emoteX`, `percentX` and `payoutX`. There is also an `Additional Settings` ***Folder***. 
@@ -89,11 +98,3 @@ In Order to add more emotes if you wish you need to just follow these steps.
 3. Inside the ***Folder*** change the 3 ***Set Arguments*** so the number matches the ***Folder***.
 4. You can change the values as you see fit.
 5. If you do add an emote ensure that all the `Percent` ***Variables*** when added up do equal to the `percentTotal`.
-
-
-
-
-
-
-
-

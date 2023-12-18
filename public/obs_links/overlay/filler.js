@@ -9,7 +9,8 @@ const config = {
   multiSubs: url.searchParams.get('subonly') || 'false',
   explodeLevel: Number(url.searchParams.get('explode')) || 1,
   canvasHeight: Number(url.searchParams.get('height')) || 1080,
-  canvasWidth: Number(url.searchParams.get('width')) || 1920
+  canvasWidth: Number(url.searchParams.get('width')) || 1920,
+  multiballMax: Number(url.searchParams.get('multimax')) || 250
 }
 
 
@@ -272,11 +273,11 @@ client.on('Twitch.ChatMessage' , data => {
         if (!num || isNaN(num)) {
           count = config.multiDefault; // Assign the default value of 25
         } else {
-          count = parseInt(num, 10); // Parse the third word as an integer
+          count = parseInt(num, 10); 
         }
-
-        if (count > 250) {
-          count = 250;
+          var max = config.multiballMax;
+        if (count > max) {
+          count = max;
         }
 
 

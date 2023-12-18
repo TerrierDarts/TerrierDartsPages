@@ -4,11 +4,13 @@ description: "Play a nice game of hangman"
 pubDate: "Feb 09 2023"
 code: "1.0"
 setUpDifficulty: "2/5"
-heroImage: "/heroImages/default_image.png"
+heroImage: "/heroImages/hangman.png"
 ---
 import CopyButton from '../CopyButton.astro'
 import importCode from '/sb_codes/chat_games/hangman.txt?raw';
 
+*If you have any issues join my discord https://discord.gg/C9Q97YzT and I'll gladly help you* 
+Tutorial To Come 
 
 <CopyButton>
 {importCode}
@@ -29,11 +31,11 @@ If you are happy with the Font but what to change the colour you can just add a 
 
 Once you've imported the code you will have imported `13 Actions`, `6 Commands` and `1 Queue`. The commands will need enabling to work, just note that the `!hangman`, `!endHangman`, `!resetHangmanScores` commmand will need to be mod+ only.
 
-First thing you will need to do is in `[Hangman Admin 0] Start New Game`, you will need to edit the OBS Source Visability `Sub-Action` to the one youve created, if youve chosen to not use the overlay you can disable this action, if you are using SLOBS you will need to replace it with the StreamLabs equivalent, then you need to edit the word list to match the file path of your word lists. I've provided a few word lists below if you dont have one.
+First thing you will need to do is in `[Hangman Admin 0] Start New Game`, you will need to edit the OBS Source Visability `Sub-Action` to the one youve created, if youve chosen to not use the overlay you can disable this action, if you are using SLOBS you will need to replace it with the StreamLabs equivalent, then you need to edit the word list to match the file path of your word lists, this subaction will be in a group, you can duplicate that subaction if you want to have different text files to help randomise it. I've provided a few word lists below if you dont have one.
 
 Likewise in `[Hangman] End Game`, `[Hangman] Game Over` and `[Hangman] Game Solved` you need to edit the OBS `Sub-Action` to match your overlay.
 
-Action Names can be changed but I would advise against it, however if you delete any actions by mistake you will need to reimport the ac
+Action Names can be changed but I would advise against it, however if you delete any actions by mistake you will need to reimport the actions again as they use Action ID's to work.
 
 ## How to Configure
 
@@ -70,8 +72,4 @@ You also have some fail codes for if things go wrong, these can be edited in the
 
 [Pokemon](/files/hangman/hangman_pokemon.txt")
 
-
-
-
-
-
+More Lists are to be Added!

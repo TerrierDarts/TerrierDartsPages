@@ -1,12 +1,15 @@
 ---
-import { Icon } from 'astro-icon'
+import { Icon } from "astro-icon";
 ---
 
-
-
-<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"
+></script>
 <html>
-<button id="copyBtn" class="copyButton" onclick="navigator.clipboard.writeText(document.getElementById('textToCopy').textContent.trim())">
+  <button
+    id="copyBtn"
+    class="copyButton"
+    onclick="navigator.clipboard.writeText(document.getElementById('textToCopy').textContent.trim())"
+  >
     <div class="contents">
       <Icon class="icon" name="mdi:clipboard-file-outline" />
       <div>
@@ -15,71 +18,111 @@ import { Icon } from 'astro-icon'
       </div>
     </div>
   </button>
-</html>
-  
-<div id="textToCopy" class="slotText"> <slot/> </div>
 
-<style>
-.copyButton {
-  
-  border-radius: 50px 20px;
-  border: 2px solid rgb(1, 17, 68);
-  background: linear-gradient(90deg, rgba(1, 17, 68, 0.5), rgba(0, 17, 255, 0.5));
-  width: 400px;
-  
-  transition-property: color, border-color, background-color;
-  transition-duration: 0.15s;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  
-  
-}
-.copyButton:hover {
-  box-shadow: 0px 0px 25px -10px rgb(0, 204, 255);
-}
-.copyButton:active {
-  background: rgb(8, 1, 75);
-}
-.contents {
-  color: #fff !important;
-  text-decoration: none;
-  font-weight: 600;
-  font: inherit;
-  display: flex;
-    flex-direction: row-reverse;
-    flex-wrap: nowrap;
-  
-}
-.icon {
-  display: block;
-  height: 75px;
- 
-  margin-left: 3rem;
-  margin-right: 3rem;
-  color: rgb(238, 255, 0);
-}
 
-.topText {
-  font-weight: 600 !important;
-  
-  color: rgb(238, 255, 0);
-  padding: 10px;
-  font-size: 30px;
+  <div id="textToCopy" class="slotText"><slot /></div>
 
-}
+  <style>
+    .copyButton {
+      /* add the animation, but pause it by default */
+      animation: spin 5s infinite linear paused;
 
-.bottomText {
-  font-style: normal;
-  font-weight: 400;
-  color: rgb(238, 255, 0);
-  font-size: 15px;
+      /**
+   * Using `background-origin` we can create a “border” using two gradients. And to
+   * make the gradients better-looking, we use OKLCH.
+   *
+   * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-origin
+   * @see https://evilmartians.com/chronicles/oklch-in-css-why-quit-rgb-hsl
+   */
+   background:
+  linear-gradient(
+    to bottom,
+    rgba(8, 1, 75),
+    rgba(14, 0, 138)
    
-   padding: 10px;
- 
-}
-.slotText{
+  )
+  padding-box,
+  conic-gradient(
+    from var(--bg-angle) at 50%,
+    rgba(255, 0, 0, 0.95),
+    rgba(255, 255, 0, 0.95),
+    rgba(0, 255, 0, 0.95),
+    rgba(0, 255, 255, 0.95),
+    rgba(0, 0, 255, 0.95),
+    rgba(255, 0, 255, 0.95)
+  )
+  border-box;
 
-  visibility: hidden;
-}
+      /* a clear border lets the background gradient shine through */
+      border: 6px solid transparent;
+      
+      width: 400px;
+      margin-left: 20%;
+    }
+    .copyButton:hover {
+      animation-play-state: running;
+    }
+    .copyButton:active {
+      background: rgb(8, 1, 75);
+    }
+    .contents {
+      color: #ffffff !important;
+      text-decoration: none;
+      font-weight: 600;
+      font: inherit;
+      display: flex;
+      flex-direction: row-reverse;
+      flex-wrap: nowrap;
+    }
+    .icon {
+      display: block;
+      height: 75px;
+      margin-left: 3rem;
+      margin-right: 3rem;
+      color: rgb(238, 255, 0);
+    }
 
+    .topText {
+      font-weight: 600 !important;
 
-</style>
+      color: rgb(238, 255, 0);
+      padding: 10px;
+      font-size: 30px;
+    }
+
+    .bottomText {
+      font-style: normal;
+      font-weight: 400;
+      color: rgb(238, 255, 0);
+      font-size: 15px;
+
+      padding: 10px;
+    }
+    .slotText {
+      visibility: hidden;
+      overflow: hidden;
+    }
+
+    /**
+ * `@property` is required for the animation to work.
+ * Without it, the angle values won’t interpolate properly.
+ *
+ * @see https://dev.to/afif/we-can-finally-animate-css-gradient-kdk
+ */
+    @property --bg-angle {
+      inherits: false;
+      initial-value: 0deg;
+      syntax: "<angle>";
+    }
+
+    /**
+ * To animate the gradient, we set the custom property to 1 full
+ * rotation. The animation starts at the default value of `0deg`.
+ */
+    @keyframes spin {
+      to {
+        --bg-angle: 360deg;
+      }
+    }
+  </style>
+</html>

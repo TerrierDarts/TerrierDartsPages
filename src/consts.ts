@@ -69,7 +69,9 @@ export const SIDEBAR: Sidebar = {
               { text: 'Podcasts', link: '/en/podcasts' },
               { text: 'Streamer.bot', link: 'https://streamer.bot' },
               { text: 'Extensions', link: 'https://extensions.streamer.bot' },
-              { text: 'My Dart Scorer', link: ' /en/darts_scorer'}
+              { text: 'My Dart Scorer', link: ' /en/darts_scorer'},
+              {text: 'Commands', link:'/en/chat_commands'},
+              {text: "Acknowledgements", link: ' /en/credits'}
             ],
           },
           {
@@ -97,9 +99,9 @@ export const SIDEBAR: Sidebar = {
               {
                 text: 'Overlays',
                 children: [
-                  { text : 'Additional Overlays', link:'/en/overlays/additional_overlays'}, 
-                  { text: 'Chat Dots', link: '/en/overlays/chat_dots' },
-                //  { text: 'Per Game Death Counter', link: '/en/overlays/death_counter_multi_game' },
+                { text : 'Additional Overlays', link:'/en/overlays/additional_overlays'}, 
+                { text: 'Chat Dots', link: '/en/overlays/chat_dots' },
+                { text: 'Per Game Death Counter', link: '/en/overlays/death_counter_multi_game' },
                 { text: 'Gameboy Game Changer', link: '/en/overlays/gameboy_game_change' },
                 { text: "Screen Fillers",  link: '/en/overlays/screen_filler'},
                 { text: 'Windows Live First Words', link: '/en/overlays/windows_live' },
@@ -137,14 +139,14 @@ export const SIDEBAR: Sidebar = {
                   
                 //  { text: 'Additional Commands', link: '' },
                 //  { text: 'Boss Battles', link: '' },
-                // { text: 'Casino Roulette', link: '/en/points_system/casino_roulette' },
+                { text: 'Casino Roulette', link: '/en/points_system/casino_roulette' },
                 //  { text: 'Dice Game', link: '' },
                 //  { text: 'Free-For-Alls', link: '/en/free_for_all' },
-               // { text: 'Gamble', link: '/en/points_system/gamble' },
+                { text: 'Gamble', link: '/en/points_system/gamble' },
                 //  { text: 'Heists', link: '/en/heists' },
                 //  { text: 'Leaderboard', link: '' },
-                //{ text: 'Lotto', link: '/en/points_system/lotto' },
-                //{ text: 'Raffles', link: '/en/points_system/raffles' },
+                { text: 'Lotto', link: '/en/points_system/lotto' },
+                { text: 'Raffles', link: '/en/points_system/raffles' },
                 { text: 'Slots', link: '/en/points_system/slots' }               
                 ],
               },
@@ -158,7 +160,7 @@ export const SIDEBAR: Sidebar = {
                 //  { text: 'Lotto', link: '/en/points_system/lotto' },
                 //  { text: 'Heists', link: '/en/points_system/heists' },
                 //  { text: 'Boss Battles', link: 'en/points_system/boss_battles' },
-                //  { text: 'Raffles', link: '/en/points_system/raffles' },
+                 // { text: 'Raffles', link: '/en/points_system/raffles' },
                 //  { text: 'Free-For-Alls', link: '/en/points_system/free_for_all' },
                 //  { text: 'Dice Game', link: 'en/points_system/dice_game' },
                 ],
