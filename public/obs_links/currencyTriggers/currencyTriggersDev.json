@@ -1,0 +1,463 @@
+{
+	"version": 5.2,
+	"triggers": [
+		{
+			"game": "Additional Commands",
+			"name": "User Can't Afford",
+			"triggerCode": "stealFailCost",
+			"categories": [
+				"Currency",
+				"Additional Commands",
+				"Steal"
+			]
+		},
+		{
+			"game": "Additional Commands",
+			"name": "User Self Stealing",
+			"triggerCode": "stealFailSelf",
+			"categories": [
+				"Currency",
+				"Additional Commands",
+				"Steal"
+			]
+		},
+		{
+			"game": "Additional Commands",
+			"name": "Target Banked",
+			"triggerCode": "stealTargetBanked",
+			"categories": [
+				"Currency",
+				"Additional Commands",
+				"Steal"
+			]
+		},
+		{
+			"game": "Additional Commands",
+			"name": "Steal Failed",
+			"triggerCode": "stealFailed",
+			"categories": [
+				"Currency",
+				"Additional Commands",
+				"Steal"
+			]
+		},
+		{
+			"game": "Additional Commands",
+			"name": "Steal Success",
+			"triggerCode": "stealSuccess",
+			"categories": [
+				"Currency",
+				"Additional Commands",
+				"Steal"
+			]
+		},
+		{
+			"game": "Casino Roulette",
+			"name": "All In Loss",
+			"triggerCode": "casinoAllInLoss",
+			"categories": [
+				"Currency",
+				"Casino Roulette"
+			]
+		},
+		{
+			"game": "Casino Roulette",
+			"name": "All In Win",
+			"triggerCode": "casinoAllInWin",
+			"categories": [
+				"Currency",
+				"Casino Roulette"
+			]
+		},
+		{
+			"game": "Casino Roulette",
+			"name": "Any Loss",
+			"triggerCode": "casinoAnyLoss",
+			"categories": [
+				"Currency",
+				"Casino Roulette"
+			]
+		},
+		{
+			"game": "Casino Roulette",
+			"name": "Any Win",
+			"triggerCode": "casinoAnyWin",
+			"categories": [
+				"Currency",
+				"Casino Roulette"
+			]
+		},
+		{
+			"game": "Casino Roulette",
+			"name": "Bet Fail",
+			"triggerCode": "casinoBetFail",
+			"categories": [
+				"Currency",
+				"Casino Roulette"
+			]
+		},
+		{
+			"game": "Casino Roulette",
+			"name": "Loss",
+			"triggerCode": "casinoLoss",
+			"categories": [
+				"Currency",
+				"Casino Roulette"
+			]
+		},
+		{
+			"game": "Casino Roulette",
+			"name": "Win",
+			"triggerCode": "casinoWin",
+			"categories": [
+				"Currency",
+				"Casino Roulette"
+			]
+		},
+		{
+			"game": "Gamble",
+			"name": "All In Loss",
+			"triggerCode": "gambleAllInLoss",
+			"categories": [
+				"Currency",
+				"Gamble"
+			]
+		},
+		{
+			"game": "Gamble",
+			"name": "All In Push",
+			"triggerCode": "gambleAllInPush",
+			"categories": [
+				"Currency",
+				"Gamble"
+			]
+		},
+		{
+			"game": "Gamble",
+			"name": "All In Win",
+			"triggerCode": "gambleAllInWin",
+			"categories": [
+				"Currency",
+				"Gamble"
+			]
+		},
+		{
+			"game": "Gamble",
+			"name": "Any Loss",
+			"triggerCode": "gambleAnyLoss",
+			"categories": [
+				"Currency",
+				"Gamble"
+			]
+		},
+		{
+			"game": "Gamble",
+			"name": "Any Push",
+			"triggerCode": "gambleAnyPush",
+			"categories": [
+				"Currency",
+				"Gamble"
+			]
+		},
+		{
+			"game": "Gamble",
+			"name": "Any Win",
+			"triggerCode": "gambleAnyWin",
+			"categories": [
+				"Currency",
+				"Gamble"
+			]
+		},
+		{
+			"game": "Gamble",
+			"name": "Bet Failed",
+			"triggerCode": "gambleBetFail",
+			"categories": [
+				"Currency",
+				"Gamble"
+			]
+		},
+		{
+			"game": "Gamble",
+			"name": "Loss",
+			"triggerCode": "gambleLoss",
+			"categories": [
+				"Currency",
+				"Gamble"
+			]
+		},
+		{
+			"game": "Gamble",
+			"name": "Push",
+			"triggerCode": "gamblePush",
+			"categories": [
+				"Currency",
+				"Gamble"
+			]
+		},
+
+
+
+		{
+			"game": "Heist",
+			"name": "Start",
+			"triggerCode": "heistStart",
+			"categories": [
+				"Currency",
+				"Heist"
+			]
+		},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		{
+			"game": "Gamble",
+			"name": "Win",
+			"triggerCode": "gambleWin",
+			"categories": [
+				"Currency",
+				"Gamble"
+			]
+		},
+		{
+			"game": "Lotto",
+			"name": "Buy Tickets Fail",
+			"triggerCode": "lottoBuyTicketsFail",
+			"categories": [
+				"Currency",
+				"Lotto"
+			]
+		},
+		{
+			"game": "Lotto",
+			"name": "Buy Tickets Success",
+			"triggerCode": "lottoBuyTicketsSuccess",
+			"categories": [
+				"Currency",
+				"Lotto"
+			]
+		},
+		{
+			"game": "Lotto",
+			"name": "Draw",
+			"triggerCode": "lottoDraw",
+			"categories": [
+				"Currency",
+				"Lotto"
+			]
+		},
+		{
+			"game": "Lotto",
+			"name": "Match 3 (All)",
+			"triggerCode": "lottoMatch3All",
+			"categories": [
+				"Currency",
+				"Lotto"
+			]
+		},
+		{
+			"game": "Lotto",
+			"name": "Match 3 (Single)",
+			"triggerCode": "lottoMatch3Single",
+			"categories": [
+				"Currency",
+				"Lotto"
+			]
+		},
+		{
+			"game": "Lotto",
+			"name": "Match 4 (All)",
+			"triggerCode": "lottoMatch4All",
+			"categories": [
+				"Currency",
+				"Lotto"
+			]
+		},
+		{
+			"game": "Lotto",
+			"name": "Match 4 (Single)",
+			"triggerCode": "lottoMatch4Single",
+			"categories": [
+				"Currency",
+				"Lotto"
+			]
+		},
+		{
+			"game": "Lotto",
+			"name": "Match 5 (All)",
+			"triggerCode": "lottoMatch5All",
+			"categories": [
+				"Currency",
+				"Lotto"
+			]
+		},
+		{
+			"game": "Lotto",
+			"name": "Match 5 (Single)",
+			"triggerCode": "lottoMatch5Single",
+			"categories": [
+				"Currency",
+				"Lotto"
+			]
+		},
+		{
+			"game": "Lotto",
+			"name": "Tickets Cleared",
+			"triggerCode": "lottoTicketsCleared",
+			"categories": [
+				"Currency",
+				"Lotto"
+			]
+		},
+		{
+			"game": "Lotto",
+			"name": "Winners (All)",
+			"triggerCode": "lottoWinnersAll",
+			"categories": [
+				"Currency",
+				"Lotto"
+			]
+		},
+		{
+			"game": "Lotto",
+			"name": "Winner (Single)",
+			"triggerCode": "lottoWinnerSingle",
+			"categories": [
+				"Currency",
+				"Lotto"
+			]
+		},
+		{
+
+			"game": "Lotto",
+			"name": "Winner (None)",
+			"triggerCode": "lottoWinnerNone",
+			"categories": [
+				"Currency",
+				"Lotto"
+			]
+
+
+
+		},
+		{
+			"game": "Raffle",
+			"name": "End (All Winners)",
+			"triggerCode": "raffleEndAllWinners",
+			"categories": [
+				"Currency",
+				"Raffle"
+			]
+		},
+		{
+			"game": "Raffle",
+			"name": "End (Single Winner)",
+			"triggerCode": "raffleEndSingleWinner",
+			"categories": [
+				"Currency",
+				"Raffle"
+			]
+		},
+		{
+			"game": "Raffle",
+			"name": "Failed",
+			"triggerCode": "raffleFailed",
+			"categories": [
+				"Currency",
+				"Raffle"
+			]
+		},
+		{
+			"game": "Raffle",
+			"name": "Join",
+			"triggerCode": "raffleJoinSuccess",
+			"categories": [
+				"Currency",
+				"Raffle"
+			]
+		},
+		{
+			"game": "Raffle",
+			"name": "Start",
+			"triggerCode": "raffleStart",
+			"categories": [
+				"Currency",
+				"Raffle"
+			]
+		},
+		{
+			"game": "Slots",
+			"name": "All In Loss",
+			"triggerCode": "slotsAllInLoss",
+			"categories": [
+				"Currency",
+				"Slots"
+			]
+		},
+		{
+			"game": "Slots",
+			"name": "All In Win",
+			"triggerCode": "slotsAllInWin",
+			"categories": [
+				"Currency",
+				"Slots"
+			]
+		},
+		{
+			"game": "Slots",
+			"name": "Any Loss",
+			"triggerCode": "slotsAnyLoss",
+			"categories": [
+				"Currency",
+				"Slots"
+			]
+		},
+		{
+			"game": "Slots",
+			"name": "Any Win",
+			"triggerCode": "slotsAnyWin",
+			"categories": [
+				"Currency",
+				"Slots"
+			]
+		},
+		{
+			"game": "Slots",
+			"name": "Loss",
+			"triggerCode": "slotsLoss",
+			"categories": [
+				"Currency",
+				"Slots"
+			]
+		},
+		{
+			"game": "Slots",
+			"name": "Slots Fail",
+			"triggerCode": "slotsFail",
+			"categories": [
+				"Currency",
+				"Slots"
+			]
+		},
+		{
+			"game": "Slots",
+			"name": "Win",
+			"triggerCode": "slotsWin",
+			"categories": [
+				"Currency",
+				"Slots"
+			]
+		}
+	]
+}

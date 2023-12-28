@@ -1,20 +1,18 @@
 // Get config from import params
 const url = new URL(import.meta.url);
 const config = {
-// this must match the title of the Channel Points reward we want to trigger for
-actionName: url.searchParams.get('actionName') || "[HTML] Blinder",
+  // this must match the title of the Channel Points reward we want to trigger for
+  actionName: url.searchParams.get('actionName') || "[HTML] Blinder",
 
-// this is the URL of the image we want to display
-imageUrl: url.searchParams.get('imageUrl') || "https://terrierdarts.co.uk/obs_links/overlay/white.png", 
+  // this is the URL of the image we want to display
+  imageUrl: url.searchParams.get('imageUrl') || "https://terrierdarts.co.uk/obs_links/overlay/white.png",
 
-// this is the number of seconds to display the image (defaults to 5)
-seconds: Number(url.searchParams.get('seconds')) || 2
+  // this is the number of seconds to display the image (defaults to 5)
+  seconds: Number(url.searchParams.get('seconds')) || 2
 }
 console.log(config.actionName);
 console.log(config.imageUrl);
 console.log(config.seconds);
-// Will subscribe to these events, mapped directly to the websocket subscription request.
-;
 
 // Streamer.bot WebSocket Client configuration
 import "https://cdn.skypack.dev/@streamerbot/client";
@@ -23,13 +21,12 @@ const client = new StreamerbotClient({
   port: window.config.port || 8080,
   endpoint: window.config.endpoint || '/',
 });
-client.on('Raw.Action' , message => {
+client.on('Raw.Action', message => {
 
   var action = message.data.name;
   //console.log("Name: " + action);
-    if (action === config.actionName)
-    { 
-  
+  if (action === config.actionName) {
+
     showImage();
   }
 });
@@ -51,7 +48,7 @@ function showImage() {
 
   // Append the image element to the HTML document
   document.body.appendChild(imgElement);
-        console.log("SHOWING IMAGE");
+  console.log("SHOWING IMAGE");
   // Set a timeout to remove the image after the configured amount of time
   setTimeout(() => {
     imgElement.remove();

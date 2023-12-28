@@ -1,7 +1,8 @@
 
 const client = new StreamerbotClient({
   host: '127.0.0.1',
-  port: 8080
+  port: 8080,
+  endpoint: '/'
 });
 
 
@@ -17,14 +18,12 @@ function updateData(t,c,g)
 
 
 
-client.on('Raw.SubAction' ,(event) => {
-  console.log(event);
-  if (!event.data) return;
-
-  const data = JSON.parse(event);
+client.on('Raw.Action' , data => {
+  //console.log(event);
+  
   console.log(data);
   if (!data.event || !data.event.type) return;
-  if (data.data.name == "** SHOW DEATHS **") {
+  if (data.data.actionId == "1ecc8301-e652-4313-89f7-4d901cb6de00") {
   console.log(data.data.arguments.deathTotal);
   console.log(data.data.arguments.deathCount);
   console.log(data.data.arguments.game);

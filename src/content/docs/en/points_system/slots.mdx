@@ -1,10 +1,12 @@
 ---
-title: "Slots"
-description: "A Slots Game using VRFlad's Point System"
+title: "Currency - Slots"
+description: "A Slots Game using a Point System like the one from VRFlad"
 pubDate: "Dec 18 2023"
 code: "3"
 sbRequiredV : "0.2.0+"
 heroImage: "/heroImages/ps_slots.png"
+twitch: true
+youtube: true
 ---
 import CopyButton from '../CopyButton.astro'
 import importCode from '/sb_codes/points_system/slots.txt?raw';
@@ -26,7 +28,9 @@ This import will contain 4 Actions, 1 Command and a Queue.
 
 #### Actions
 
-This game has 1 main action `[Currency Admin] - [Slots] - Spin` this action handles all the logic for the spin, working out what is span, if the user has won and adjusting points acccordingly. To use this action the best way I found was to use a command called `!spin` then you can use `!slot <betAmount>` for example `!slots 500`. You can also use `k` for 1000s, `m` for millions, all and a `%`. 
+This game has 1 main action. This should not be edited and you do so at your own risk!
+
+`[Currency Admin] - [Slots] - Spin` this action handles all the logic for the spin, working out what is span, if the user has won and adjusting points acccordingly. To use this action the best way I found was to use a command called `!spin` then you can use `!slot <betAmount>` for example `!slots 500`. You can also use `k` for 1000s, `m` for millions, all and a `%`. 
 
 
 #### Triggers Avaliable
@@ -47,7 +51,7 @@ This game has 1 main action `[Currency Admin] - [Slots] - Spin` this action hand
 #### Arguments Populated
 
 Each Trigger will populate the following Arguments.
-|Argument | Description|
+|Argument|Description|
 |---|---|
 |`%gameName%`|This is the name of the current game.|
 |`%rolledEmote1%`|This is the value of the 1st rolled emote.|

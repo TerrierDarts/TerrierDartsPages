@@ -1,0 +1,45 @@
+---
+title: "Tipping Converter"
+description: "This action will convert your tip/donations to your currency, this will be a best guess approximation"
+pubDate: "Dec 22 2023"
+code: "2"
+sbRequiredV: "0.2.0+"
+setUpDifficulty: "1/5"
+heroImage: "/heroImages/default_image.png"
+---
+
+import CopyButton from '../CopyButton.astro'
+import importCode from '/sb_codes/general/tipConvert.txt?raw';
+
+<CopyButton>{importCode}</CopyButton>
+
+### In Streamer.bot
+
+This action will create a folder and file inside the data folder of streamerbot, aslong as your streamerbot isnt in the program folder where it might run into 
+ 
+#### Actions 
+
+The action `[Tip Converter] Save File` will run each time you start streamer.bot, my recommendation here is to set the `%myCurrencyCode%` to your currency code `usd`, `gbp`, `eur` to name some of the more popular ones. Once that is set restart streamerbot. If you dont wish to restart you can just run a test on the Trigger this will create the initial folders and files it needs to.
+
+#### Arguments Populated
+
+|Argument | Description|
+|---|---|
+|`%fromUser%`|This is the name of the user who donated|
+|`%oldAmount%`|This was the amount the User gave in there currency|
+|`%oldCurrency%`|This is the currency code the user gave in.|
+|`%exRate%`|This is the current exchange rate.|
+|`%exAmount%`|This is the converted amount.|
+
+
+### Configuration
+
+The only setting is the currency code as seen below. 
+
+|Argument|Description|
+|---|---|
+|`myCurrencyCode`|This is your currency code you wish to convert to|
+
+You can edit the send message to meet your requirements and use the arugments mentioned above to set the message.
+
+Or if you wish this to be part of another action you can use the subaction to run an action, make sure run immediately is ticked and then you can use the above variable on the overlays and other cool stuff you might have set up.

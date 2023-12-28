@@ -2,11 +2,11 @@
 const url = new URL(import.meta.url);
 const config = {
 // this must match the title of the Channel Points reward we want to trigger for
-rewardTitle: url.searchParams.get('rewardTitle') || "Lower The Brightness",
+actionName: url.searchParams.get('actionName') || "[HTML] Lower The Brightness",
 // this is the number of seconds to display the image (defaults to 30)
 seconds: Number(url.searchParams.get('seconds')) || 30
 }
-console.log(config.rewardTitle);
+console.log(config.actionName);
 console.log(config.imageUrl);
 console.log(config.seconds);
 
@@ -21,12 +21,14 @@ const client = new StreamerbotClient({
 
 // Called when any event is received from Streamerbot, including those subscribed to by other scripts.
 
-client.on('Twitch.RewardRedemption' , message => {
-    var name = message.data.reward.title;
-    console.log("B" + name);
-      if (name === config.rewardTitle)
-      {
-        simulateSequence();
+client.on('Raw.Action' , message => {
+
+  var action = message.data.name;
+  //console.log("Name: " + action);
+    if (action === config.actionName)
+    { 
+  
+         simulateSequence();
     }
   });
 
@@ -207,8 +209,8 @@ function simulateSequence() {
   setTimeout(overlayShow, 0);
   setTimeout(overlayDown, 0); // 10 seconds
   setTimeout(brightnessDown,0); // 15 seconds
-  setTimeout(brightnessUp, (config.seconds * 1000)); // 25 seconds
   setTimeout(overlayUp, (config.seconds * 1000)); // 26 seconds
+  setTimeout(brightnessUp, (config.seconds * 1000)); // 25 seconds
   setTimeout(overlayHide, ((config.seconds +5) * 1000)); // 30 seconds
 }
 

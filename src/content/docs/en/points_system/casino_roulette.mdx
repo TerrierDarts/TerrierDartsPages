@@ -1,10 +1,12 @@
 ---
-title: "Casino Roulette"
-description: "A Casio Roulette Style Game for a Points System"
+title: "Currency - Casino Roulette"
+description: "A Casino Roulette Style Game using a Point System like the one from VRFlad"
 pubDate: "Dec 18 2023"
 code: "3"
 sbRequiredV : "0.2.0+"
 heroImage: "/heroImages/ps_casino_roulette.png"
+twitch: true
+youtube: true
 ---
 
 import CopyButton from '../CopyButton.astro'
@@ -26,7 +28,9 @@ This import will contain 4 Actions, 1 Command and a Queue.
 
 #### Actions
 
-This game has 1 Admin action `[Currency Admin] - [CasinoRoulette] - Spin` this action handles all the logic for the spin, working out what is span, if the user has won and adjusting points accordingly. To use this action the best way I found was to use a command called `!spin` then you can use `!spin <betAmount> <betRequest>` for example `!spin 500 black`. You can also use `k` for 1000s, `m` for millions, all and a `%`. 
+This game has 1 Admin action. This should not be edited and you do so at your own risk! 
+
+`[Currency Admin] - [CasinoRoulette] - Spin` this action handles all the logic for the spin, working out what is span, if the user has won and adjusting points accordingly. To use this action the best way I found was to use a command called `!spin` then you can use `!spin <betAmount> <betRequest>` for example `!spin 500 black`. You can also use `k` for 1000s, `m` for millions, all and a `%`. 
 
 #### Triggers Avaliable
 
@@ -46,7 +50,7 @@ This game has 1 Admin action `[Currency Admin] - [CasinoRoulette] - Spin` this a
 
 Each Trigger will populate it's own arguments.
 
-|Argument|Purpose|
+|Argument|Description|
 |---:|:---| 
 |`%gameName%`|This is the name of the current game.|
 |`%betSize%`|This is how many points have been bet.| 
@@ -59,6 +63,9 @@ Each Trigger will populate it's own arguments.
 |`%result%`|This is if the result was a Win or a Loss.|
 
 #### Fail Codes
+
+Fail Codes are a way to explain why something went wrong if something did go wrong, they will be populated from the Fail Trigger, and will be `failCode` and `failReason`. Using these you can create a single currency game fail action if you wish! 
+
 |Code|Reason|
 |---:|:---| 
 |`1`|User Has No Points|

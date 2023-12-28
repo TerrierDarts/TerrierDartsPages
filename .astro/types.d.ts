@@ -324,6 +324,13 @@ declare module 'astro:content' {
   collection: "docs";
   data: InferEntrySchema<"docs">
 } & { render(): Render[".mdx"] };
+"en/general/tipping_convert.mdx": {
+	id: "en/general/tipping_convert.mdx";
+  slug: "en/general/tipping_convert";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".mdx"] };
 "en/general/watch_streaks.mdx": {
 	id: "en/general/watch_streaks.mdx";
   slug: "en/general/watch_streaks";

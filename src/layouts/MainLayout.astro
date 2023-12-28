@@ -129,12 +129,12 @@ const githubEditUrl = `${GITHUB_EDIT_URL}/${currentFile}`;
 				<LeftSidebar currentPage={currentPage} />
 			</aside>
 			<div id="grid-main">
-				<PageContent title={data.title} description={data.description} headings={headings} code={data.code}  pubDate={data.pubDate} setUpDifficulty={data.setUpDifficulty} sbRequiredV={data.sbRequiredV} heroImage={data.heroImage} githubEditUrl={githubEditUrl}  youTubeLink={data.youTubeLink}>				
+				<PageContent title={data.title} description={data.description} headings={headings} code={data.code}  pubDate={data.pubDate} setUpDifficulty={data.setUpDifficulty} sbRequiredV={data.sbRequiredV} heroImage={data.heroImage} youTubeLink={data.youTubeLink} twitch={data.twitch}  youtube={data.youtube}>				
 					<slot />
 				</PageContent>
 			</div>
 			<aside id="grid-right" class="grid-sidebar" title="Table of Contents">
-				<RightSidebar headings={headings} githubEditUrl={githubEditUrl} />
+				<RightSidebar headings={headings}/>
 			</aside>
 		</main>
 		<Footer path={currentFile} />
@@ -142,3 +142,4 @@ const githubEditUrl = `${GITHUB_EDIT_URL}/${currentFile}`;
 		
 	</body>
 </html>
+ddd

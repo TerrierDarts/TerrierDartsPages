@@ -476,3 +476,7 @@ h2.heading {
    border-radius: 15px;
    margin:auto;
  }
+
+tr.sub_heading{
+	background-color: #ff0000;
+ }

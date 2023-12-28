@@ -1,44 +1,23 @@
 ---
-title: "Lotto"
-description: "A Lotto Game using VRFlad's Point System"
-pubDate: "Feb 13 2023"
-code: "2.1"
-setUpDifficulty: "1/5"
+title: "Currency - Lotto"
+description: "A Lotto Game using a Point System like the one from VRFlad"
+pubDate: "Dec 18 2023"
+code: "3"
+setUpDifficulty: "2/5"
+sbRequiredV : "0.2.0+"
 heroImage: "/heroImages/ps_lotto.png"
+twitch: true
+youtube: true
 ---
 
 import CopyButton from '../CopyButton.astro';
 import importCode from '/sb_codes/points_system/lotto.txt?raw';
 
-### Grab the Import Code
-
-<CopyButton>
-{importCode}
-</CopyButton>
-
-### In Streamer.bot
-Once the code is imported you will need the following References in order to make the codes compile, if they aren't auto added.
-
-```csharp
-mscorlib.dll
-System.Linq.dll
-System.Net.dll
-```
-You will need to set up the following commands. If not imported. Just note that imported actions are disabled by default.
-
-|Command|Action tied to|
-|---|---|
-|!buyticket|[Currency] - [Lotto] - Buy Tickets|
-|!draw|[Currency] - [Lotto] - Draw|    
-|!tickets|[Currency] - [Lotto] - Check Num of Tickets|
-|!cleardraw|[Currency] - [Lotto] - Clear The Draw|
-|!giveticket|[Currency] - [Lotto] - Give Ticket|
-
-
-You can set **Lotto Draw** as a Channel Point Redeem if you wish if you want the viewers to decide when a draw is  done!
-
+Work in Progress
 
 ### In OBS
+
+This step is optional if you don't want the overlay or if you wish to build your own overlay
 
 You can add the following Browser source (Width :600 Height: 200)
 ```
@@ -46,19 +25,107 @@ https://terrierdarts.pages.dev/obs_links/ranking_system/lotto/index.html
 ```
 [The Codepen *Follow this link to get access to the codepen I used for the Visuals if you wish to make any edits*](https://codepen.io/terrierdarts/pen/JjMRRKv)
 
+<a href="https://codepen.io/terrierdarts/pen/JjMRRKv" target="_blank">The Codepen *Follow this link to get access to the codepen I used for the Visuals if you wish to make any edits*</a>
 In order to install this codepen, you will need to follow the link then press `Export` from the bottom right, then press `Export .Zip`
 
 Then you will need to extract the files to somewhere safe. Inside the folder you will have a `dist` folder inside that they will be a `index` file. Open that and it should open in a web browser. Copy and paste the url and create a browser source with that url.
 
 This pen works over SB Websocket, if you dont use the standard `ws://127.0.0.1:8080` you will need to edit it in the codepen/script.js file
 
+### In Streamer.bot
+
+Once imported, you will notice like all of my chat games it includes an ***Action*** called `[Currency] - [Set Triggers]`. This ***Action*** will create a `.json` file in your data folder. It will only update when there is an update to be pulled from the site, also note it could create triggers for games or extensions you do not have, this is nothing to worry about.
+
+If you already have this **Action** I would reccommend you choose to replace it as it might change, but I am taking every effort it doesn't change. 
+
+You should then restart Streamer.bot so it can create the ***Triggers*** you need as the ***Triggers*** will create themselves every time you start Streamer.bot. If done correctly you should receieve a ***Toast Notification*** confirming this. 
+
+This import will contain 8 Actions, 4 Command and a Queue.
+
+#### Actions
+
+This game has 4 Admin Actions, These 4 actions will handle all the logic. These should not be edited unless noted and you do so at your own risk!
+
+Any imported commands will be disabled by default.
+
+`[Currency Admin] - [Lotto] - Buy Tickets` triggered with the command `!buyticket` is how your viewers will buy tickets they can also follow it with a number to choose how many tickets they want to buy, they can also follow it with `max` this will let the user buy all the tickets that they are able to buy either from the ticket limit or the amount of points this user has.
+
+
+`[Currency Admin - [Lotto] - Draw` triggered with the command `!draw` will perform a draw of the lotto balls.
+
+`[Currency Admin] - [Lotto] - Check Num of Tickets`  triggered with the command  `!tickets` will allow the users to check how many tickets they have. This action may be edited but not the Execute Code, only the send messages.
+
+`[Currency Admin] - [Lotto] - Clear The Draw`  triggered with the command  `!cleardraw` will clear the current tickets you have, this command should be Mod+
+
+#### Triggers
+
+**12** New Triggers can be found under `Custom >> Currency >> Lotto`
+
+|Trigger Name|When Triggered|
+|---:|:---| 
+|`Buy Tickets success`|This is triggered when the buying of tickets was successful.|
+|`Buy Tickets Fail`|This is triggered when the buying of tickets wasn't successful.|
+|`Draw`|This is triggered when a draw takes place.|
+|`Match 3 (All)`|This will trigger for once returning all the winners who matched 3 numbers.|
+|`Match 3 (Single)`|This will return for each winner who matches 3 numbers.|
+|`Match 4 (All)`|This will trigger for once returning all the winners who matched 4 numbers.|
+|`Match 4 (Single)`|This will return for each winner who matches 4 numbers.|
+|`Match 5 (All)`|This will trigger for once returning all the winners who matched 5 numbers.|
+|`Match 5 (Single)`|This will return for each winner who matches 5 numbers.|
+|`Tickets Cleared`| This is triggered when the tickets are cleared.|
+|`Winners (All)`|This will trigger for once returning all the winners.|
+|`Winners (Single)`|This will trigger for each winner.|
+|`Winners (None)`|This is trigger if no-one wins.|
+
+
+
+
+
+#### Arguments Populated
+
+Each Trigger will populate it's own arguments. These are the arugments that will be populated some may differ in the winning stages I have tried marking these best I can. The gist of it is that anthing that is more user specific is only populated on the Single events, while the broader ones will be on the all. Also note that `%prizeX%` where X is 3,4 and 5 will also be populated. 
+
+|Argument|Description|
+|---:|:---|
+|`%amountUserCanBuy%`|This is a number of the amount of tickets the user can buy, purely in relation to the users points.(Buy Tickets)|
+|`%amountUserHasAvaliable%`|This is the actual amount the user can buy in relation to points, tickets already bought and maximum tickets allowed.(Buy Tickets)|
+|`%amountBought%`|This is the amount of tickets the user has currently bought.(Buy Tickets)|
+|`%ticketsString%`|This is a long string of the tickets bought.(Buy Tickets)|
+|`%ticketsNewLine%`|This is a string of the tickets bought seperated by a `\n` so when posted to discord it pushes a new line.(Buy Tickets)|
+|`%ticketsList%`|This is the tickets bought in `List<string>` form.(Buy Tickets)|
+|`%newTicketCount%`|This is the new amount of tickets the user now has.(Buy Tickets)|
+|`%totalCost%`|This is the total cost of buying the current tickets.(Buy Tickets)|
+|`%remainingPoints%`|This is the amount of points the user has after buying the tickets.(Buy Tickets)|
+|`%ticketCount%`|This is the amount of tickets the user has.(Ticket Count)|
+|`%winningUser%`|This is the name of the winning user(Match X Single/Winner Single)|
+|`%prize%`|This is the prize that has been won (Match X/Winner Single)|
+|`%newPoints%`|This is the winning users new points(Match X Single/Winner Single)|
+|`%numbersMatched%`|This is the amount of numbers matched(Match X/Winner Single)|
+|`%winners%`|This is a `List<string>` of the winners (Match X All)|
+|`%allWinners%`|This returns a `List<Tuple<string, int>` of the user who won and the number of numbers matched.(Winners All)|
+
+#### Fail Codes
+
+Fail Codes are a way to explain why something went wrong if something did go wrong, they will be populated from the Fail Trigger, and will be `failCode` and `failReason`. Using these you can create a single currency game fail action if you wish! 
+
+|Code|Reason|
+|---:|:---| 
+|`1`| `User has max Tickets`|
+|`2`| `User cant afford any more tickets.`|
+|`3`| `User maximum allowed tickets`|
+|`4`| `User can not afford`|
+|`5`| `Nobody entered the raffle`| 
+
+
 
 ### Configuration
 
+You can set **Lotto Draw** as a Channel Point Redeem if you wish if you want the viewers to decide when a draw is  done!
+
 The Following Setting are spread accross the 5 actions, here is what they all do.
 
-|Argument|Purpose|
-|---|---|
+|Setting|Purpose|
+|---:|:---|
 |`bot` |This will control if messages are set from the bot account or not.|
 |`prize3` |This is the prize for matching 3 numbers.|
 |`prize4` |This is the prize for matching 4 numbers.|

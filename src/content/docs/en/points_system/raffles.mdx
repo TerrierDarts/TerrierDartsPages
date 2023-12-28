@@ -1,10 +1,13 @@
 ---
-title: "Raffles"
-description: "Run Raffles using VRFlad's Point System"
-pubDate: "Feb 13 2023"
-code: "2.1"
+title: "Currency - Raffles"
+description: "Run Raffles using a Point System like the one from VRFlad"
+pubDate: "Dec 18 2023"
+code: "3"
+sbRequiredV : "0.2.0+"
 setUpDifficulty: "1/5"
 heroImage: "/heroImages/ps_raffles.png"
+twitch: true
+youtube: true
 ---
 
 import CopyButton from '../CopyButton.astro';
@@ -28,7 +31,13 @@ This import will contain 7 Actions, 2 Command and a Queue.
 
 #### Actions
 
-This game has 3 Admin Actions, These 3 actions will handle all the logic. `[Currency Admin] - [Raffle] - Start` this action is how you will start the raffles, In the import its tied to `!raffle` and the way to use it is to do `!raffle <amount>` if you don't provide an amount it will use the default prize, you can also use `k` and `m` for 1000 and 1,000,000. `[Currency Admin] - [Raffle] - Join` is how users will join from the import it is set from `!ticket`. `[Currency Admin] - [Raffle] - End` this action will trigger automattically when the raffle time is up.
+This game has 3 Admin Actions, These 3 actions will handle all the logic. These should not be edited and you do so at your own risk!
+
+`[Currency Admin] - [Raffle] - Start` this action is how you will start the raffles, In the import its tied to `!raffle` and the way to use it is to do `!raffle <amount>` if you don't provide an amount it will use the default prize, you can also use `k` and `m` for 1000 and 1,000,000. 
+
+`[Currency Admin] - [Raffle] - Join` is how users will join from the import it is set from `!ticket`. 
+
+`[Currency Admin] - [Raffle] - End` this action will trigger automattically when the raffle time is up.
 
 
 #### Triggers Avaliable
@@ -46,8 +55,8 @@ This game has 3 Admin Actions, These 3 actions will handle all the logic. `[Curr
 #### Arguments Populated
 
 Each Trigger will populate the following Arguments.
-|Argument | Description|
-|---|---|
+|Argument|Description|
+|---:|:---|
 |`%gameName%`|This is the name of the current game.|
 |`%oldTicketCount%`|This is the number of raffle tickets a user had before they current purchase.|
 |`%newTicketCount%`|This is the number of tickets the user has after the purchase.|
@@ -81,8 +90,8 @@ Fail Codes are a way to explain why something went wrong if something did go wro
 
 Across the 3 actions there are the following settings. 
 
-|Argument|Description|
-|---|---|
+|Setting|Purpose|
+|---:|:---|
 |`defaultPrize`| This is the default prize if none is given.|
 |`length`| This is how long the raffle will last for|
 |`trigger`| This is how users can joing the raffle|

@@ -1,37 +1,94 @@
 ---
-title: "Gamble"
-description: "A Gamble Game using VRFlad's Point System"
-pubDate: "Feb 15 2023"
-code: "2.1"
+title: "Currency - Gamble"
+description: "A Gamble Game using a Point System like the one from VRFlad"
+pubDate: "Dec 18 2023"
+code: "3"
+twitch: true
+youtube: true
+sbRequiredV : "0.2.0+"
 setUpDifficulty: "1/5"
+heroImage: "/heroImages/ps_gambles.png"
 ---
 import CopyButton from '../CopyButton.astro';
 import {YouTube} from 'astro-embed';
 import importCode from '/sb_codes/points_system/gamble.txt?raw';
 
-### Grab the Import Code (SB 0.2.0)
 
 <CopyButton>
 {importCode}
 </CopyButton>
 
-### In Streamer.bot
+### In Streamer.bot 
 
-Once the code is imported you will need to firstly make sure that the code compiles. If it doesnt compile try adding `system.dll` and that should make it compile.
+Once imported, you will notice like all of my chat games it includes an ***Action*** called `[Currency] - [Set Triggers]`. This ***Action*** will create a `.json` file in your data folder. It will only update when there is an update to be pulled from the site, also note it could create triggers for games or extensions you do not have, this is nothing to worry about.
 
-Then you will need to make sure that the Command you have also imported is enabled and these are disbaled by default.
+If you already have this **Action** I would reccommend you choose to replace it as it might change, but I am taking every effort it doesn't change. 
 
-Once these are done the Gamble will be fully installed. 
+You should then restart Streamer.bot so it can create the ***Triggers*** you need as the ***Triggers*** will create themselves every time you start Streamer.bot. If done correctly you should receieve a ***Toast Notification*** confirming this. 
 
-### Configure
+This import will contain 5 Actions, 1 Command and a Queue.
 
-The Execute Code can be edited if you wish to change the output messages, but just be careful if making any edits to any code.
+#### Actions
 
-The Arguments are the way you can adjust it to suit your requirements.
+This game has 1 admin action. This should not be edited and you do so at your own risk!
 
-|Argument| Purpose|
-|---|---|
-|`defaultBet`| This is the amount that will be bet if a user bets an invaild amount or doesn't declare a bet|
-|`winPercentage`| This is the number that controls the frequecy of wins, if your random number is lower you will win. So higher the more wins|
-|`pushEnabled`| This will mean if the random number is equal to the winPercentage then the player will get there points back, if turned off equal will be a loss.|
+`[Currency Admin] - [Gamble] - Spin` this action handles all the logic for the spin, working out what is span, if the user has won and adjusting points acccordingly. To use this action the best way I found was to use a command called `!gamble` then you can use `!gamble <betAmount>` for example `!gamble 500`. You can also use `k` for 1000s, `m` for millions, `all` and a `%`. 
+
+`Push` is the neither win nor loss, it just returns the bet, like in blackjack when your hand matches the dealers hand. Push is part of the logic in which if the random roll is equal to the win percent then you are refunded. If this is this isnt enabled then a match will result in a loss.
+ 
+
+#### Triggers Avaliable
+
+**10** New Triggers can be found under `Custom >> Currency >> Gamble`
+
+|Trigger Name|When Triggered|
+|---:|:---| 
+|`All In Win`| Triggered when a user goes all-in and wins.|
+|`All In Loss`| Triggered when a user goes all-in and loses.|
+|`All In Push`| Triggered when a user goes all-in and pushes.|
+|`Any Win`|Triggered on any win.|
+|`Any Loss`|Triggered on any loss.|
+|`Any Push`| Triggered on any push.|
+|`Win`|Triggered when a user wins but not an all-in win.|
+|`Loss`|Triggered when a user loses but not an all-in loss.|
+|`Push`| Triggered when a user pushes but not an all-in push.|
+|`Bet Fail`|Triggered when your bet fails|
+
+#### Arguments Populated
+
+Each Trigger will populate it's own arguments.
+
+|Argument|Description|
+|---:|:---| 
+|`%gameName%`|This is the name of the current game.|
+|`%betSize%`|This is the amount that has been bet.|
+|`%allIn%`|This is tells us if the user has gone all in or not|
+|`%gambleResult%`|This tells us if its a win or loss.|
+|`%oldPoints%`|This is the users Old amount of Points before the bet.|
+|`%newPoints%`|This is the users New amount of Points after the bet.|
+|`%result%`|This returns the result of the game.|
+
+
+#### Fail Codes
+
+Fail Codes are a way to explain why something went wrong if something did go wrong, they will be populated from the Fail Trigger, and will be `failCode` and `failReason`. Using these you can create a single currency game fail action if you wish! 
+
+|Code|Reason|
+|---:|:---| 
+|`1`|User Has No Points|
+
+### Configuration
+
+The main admin action `[Currency Admin] - [Gamble] - Spin` has some setting that can be adjusted to make the game run differently these are explained below. With this game having different triggers it means that you can control what happens when certian events occur. 
+
+
+|Setting|Purpose|
+|---:|:---|
+|`defaultBet`|This is the bet amount if one hasn't been given.|
+|`defaultPoints`|This is the amount that a user will be given if they don't have any points.|
+|`winPercent`|This is a percentage of chance to win, the higher you set this the more likely users are to win.|
+|`pushEnabled`|This controls if Push is enabled. If set to false then a push will be handled as a loss. See more above about Push.|
+
+
+
 

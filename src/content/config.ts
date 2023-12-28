@@ -12,6 +12,8 @@ const docs = defineCollection({
 		sbRequiredV: z.string().optional(),
 		heroImage: z.string().optional(),
 		youTubeLink: z.string().optional(),
+		twitch: z.boolean().optional(),
+		youtube: z.boolean().optional(),
 		dir: z.union([z.literal('ltr'), z.literal('rtl')]).default('ltr'),
 		image: z
 			.object({

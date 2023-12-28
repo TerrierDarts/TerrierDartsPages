@@ -17,6 +17,8 @@ type Props = {
 	sbRequiredV?: string;
 	heroImage?: string;
 	youTubeLink?: string;
+	twitch?: boolean;
+	youtube?: boolean;
 };
 
 const {
@@ -24,11 +26,13 @@ const {
 	description,
 	headings,
 	setUpDifficulty = "",
-	sbRequiredV= "",
+	sbRequiredV = "",
 	pubDate = "",
 	code = "",
 	heroImage = "../../heroImages/default_image.png",
 	youTubeLink,
+	twitch,
+	youtube,
 } = Astro.props;
 ---
 
@@ -36,6 +40,26 @@ const {
 	<section class="main-section">
 		<span class="title">{title}</span>
 		<span class="description">{description}</span>
+		<span class="platforms">
+			{
+				twitch ? (
+					<>
+						{" "}
+						<Icon
+							class="twitchIcon"
+							name="mdi:twitch"
+						/> &nbsp<a class="twitchLink" href="https://twitch.tv/TerrierDarts" target="_blank">Twitch</a>  {" "}
+					</>
+				) : null
+			}
+			{
+				youtube ? (
+					<>
+					&nbsp&nbsp&nbsp<Icon class="youtubeIcon" name="mdi:youtube" />&nbsp<a class="youtubeLink" href="https://youtube.com/@TerrierDarts" target="_blank">YouTube</a>{" "}
+					</>
+				) : null
+			}
+		</span>
 		{
 			youTubeLink ? (
 				<YouTube class="video" id={youTubeLink} />
@@ -58,12 +82,11 @@ const {
 					</>
 				) : null
 			}
-			
+
 			{
 				sbRequiredV ? (
 					<>
-						SB Version:{" "}
-						<span class="vers">{sbRequiredV}</span>.
+						SB Version: <span class="vers">{sbRequiredV}</span>.
 					</>
 				) : null
 			}
@@ -155,8 +178,37 @@ const {
 		display: flex !important;
 		border-radius: 30px;
 		border: 5px solid rgb(0, 157, 255);
+	}
+
+	.youtubeIcon {
+		display: flex;
+		color: red;
+		height: 30px;
 		
 	}
+
+	.twitchIcon {
+		display: flex;
+		color: blueviolet;
+		height: 30px;
+		
+	}
+	.platforms{
+		margin-left: 8%;
+		justify-content: center;
+		display: flex !important;
+		font-size: 18px;
+	}
+
+	.youtubeLink { 
+  display: flex; 
+  color: red;
+}
+
+.twitchLink { 
+  display: flex; 
+  color: blueviolet;
+}
 
 	@media (min-width: 50em) {
 		.sm\:hidden {
