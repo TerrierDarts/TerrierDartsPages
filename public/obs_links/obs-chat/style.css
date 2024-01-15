@@ -9,7 +9,12 @@ body {
   font-size: 12px;
   padding: 10px;
   overflow-y: scroll;
-  overflow: hidden;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+#container::-webkit-scrollbar {
+  display: none;
 }
 
 #message {

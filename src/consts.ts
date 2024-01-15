@@ -70,7 +70,7 @@ export const SIDEBAR: Sidebar = {
               { text: 'Streamer.bot', link: 'https://streamer.bot' },
               { text: 'Extensions', link: 'https://extensions.streamer.bot' },
               { text: 'My Dart Scorer', link: ' /en/darts_scorer' },
-              { text: 'Commands', link: '/en/chat_commands' },
+              //{ text: 'Commands', link: '/en/chat_commands' },
               { text: "Acknowledgements", link: ' /en/credits' }
             ],
           },
@@ -82,7 +82,7 @@ export const SIDEBAR: Sidebar = {
                 text: 'General',
                 children: [
                   //  { text: 'A Selection of Smaller Codes', link: '' },
-                  { text: 'Custom Welcomes', link: '/en/general/welcome_users' },
+                  //{ text: 'Custom Welcomes', link: '/en/general/welcome_users' }, DEAD
                   { text: 'Follow Age Responses', link: '/en/general/follow_age_responses' },
                   //  {text: 'Football Chat Alerts', link: 'en/general/footbal_chat_alerts'}
                   { text: 'Log Viewer', link: '/en/general/log_viewer' },
@@ -136,6 +136,8 @@ export const SIDEBAR: Sidebar = {
 
               {
                 text: 'Point System Add-Ons',
+                link: '/en/points_system',
+                
                 children: [
 
                   //  { text: 'Additional Commands', link: '' },
@@ -150,6 +152,8 @@ export const SIDEBAR: Sidebar = {
                   { text: 'Raffles', link: '/en/points_system/raffles' },
                   { text: 'Slots', link: '/en/points_system/slots' }
                 ],
+                
+                
               },
               {
                 text: 'Ranking System',

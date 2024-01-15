@@ -4,7 +4,7 @@ description: "A Casino Roulette Style Game using a Point System like the one fro
 pubDate: "Dec 18 2023"
 code: "3"
 sbRequiredV : "0.2.0+"
-heroImage: "/heroImages/ps_casino_roulette.png"
+heroImage: "/heroImages/points_systems_roulette.png"
 twitch: true
 youtube: true
 ---
@@ -85,3 +85,10 @@ The 2 main setting however are in the `[Currency Admin] - [CasinoRoulette] - Spi
 |`defaultBet`|This is the bet that will be used if none is given|
 |`defaultPoints`|This is the amount of Points a user will have if they have none|
 
+
+### Changelog
+
+#### Version 3
+
+- Version Numbers Added
+- Logic now handles points as type `long` rather than `int` incase anyone goes over the '2,147,483,647' mark. Points can now go upto '9,223,372,036,854,775,807'

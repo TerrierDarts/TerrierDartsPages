@@ -1,42 +1,55 @@
-function updateTime()
-{
-var date = new Date();
-var days = [
-  "Sunday",
-  "Monday",
-  "Tuesday",
-  "Wednesday",
-  "Thursday",
-  "Friday",
-  "Saturday"
-];
-var months = [
-  "January",
-  "February",
-  "March",
-  "April",
-  "May",
-  "June",
-  "July",
-  "August",
-  "September",
-  "October",
-  "November",
-  "December"
-];
-var day = days[date.getDay()];
-var month = months[date.getMonth()];
-var dateNum = date.getDate();
-var hours = (date.getHours() < 10) ? "0" + date.getHours() : date.getHours();
-var minutes = (date.getMinutes() < 10) ? "0" + date.getMinutes() : date.getMinutes();
-var seconds = (date.getSeconds() < 10) ? "0" + date.getSeconds() : date.getSeconds();
-var dateString = ""+day + " " + month + " " + dateNum+" |";
-var timeString = "| "+hours + ":" + minutes + ":" + seconds+" ";
-document.getElementById("date").textContent = dateString;
-document.getElementById("time").textContent = timeString;
+const el = document.getElementById('date');
+function updateTime() {
+
+  let options = { //See Below for help on the options
+  //weekday: 'short',
+  //era: 'short',
+  //year:  '2-digit',
+  //month:  'short',
+  //day:  '2-digit',
+  //hour:  '2-digit',
+  //minute:  '2-digit',
+  //second:  '2-digit',
+  //timeZoneName:  'short',
+  //hour12: false,
+  //timeZone: 'Europe/London',
+  dateStyle: 'full',
+  timeStyle: 'medium', 
+};
+  
+  
+  
+  date.textContent = new Intl.DateTimeFormat('en-GB', 
+    options
+  ).format(new Date());
 };
 
 updateTime();
-setInterval(function() {
-  updateTime()
-}, 1000);
+setInterval(updateTime, 1000);
+
+/*
+{
+  weekday: 'narrow' | 'short' | 'long',
+  era: 'narrow' | 'short' | 'long',
+  year: 'numeric' | '2-digit',
+  month: 'numeric' | '2-digit' | 'narrow' | 'short' | 'long',
+  day: 'numeric' | '2-digit',
+  hour: 'numeric' | '2-digit',
+  minute: 'numeric' | '2-digit',
+  second: 'numeric' | '2-digit',
+  timeZoneName: 'short' | 'long',
+
+  // Time zone to express it in
+  timeZone: 'Asia/Shanghai',
+  // Force 12-hour or 24-hour
+  hour12: true | false,
+
+  // Rarely-used options
+  hourCycle: 'h11' | 'h12' | 'h23' | 'h24',
+  formatMatcher: 'basic' | 'best fit'
+  
+  //Styles
+  dateStyle: 'full'| 'long| 'medium'| 'short',
+  timeStyle: 'full'| 'long| 'medium'| 'short',
+}
+*/

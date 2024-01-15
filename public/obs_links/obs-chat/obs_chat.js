@@ -227,6 +227,7 @@ function sendMessage() {
 
 
 
+
 /*
 THIS IS THE SCROLLING STUFF
 */

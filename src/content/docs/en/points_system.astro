@@ -1,0 +1,85 @@
+---
+import { Card } from "accessible-astro-components";
+---
+
+<html>
+<div class ="row">
+<div class ="column">
+      <Card
+        url="/en/points_system/casino_roulette"
+        img="/heroImages/points_systems_roulette.png"
+        title="Casino Roulette"
+        footer="Version: 3"
+      >"A Casino Roulette Style Game using a Point System like the one from VRFlad"</Card> 
+</div>
+<div class ="column">
+  <Card
+        url="/en/points_system/gamble"
+        img="/heroImages/points_systems_gamble.png"
+        title="Gamble"
+        footer="Version: 3"
+    >
+    A Gamble Game using a Point System like the one from VRFlad
+       </Card>
+</div>
+</div>
+
+<div class ="row">
+  <div class ="column">
+        <Card
+          url="/en/points_system/lotto"
+          img="/heroImages/ps_lotto.png"
+          title="Lotto"
+          footer="Version: 3"
+        >"A Lotto Game using a Point System like the one from VRFlad"</Card> 
+  </div>
+  <div class ="column">
+    <Card
+          url="/en/points_system/raffles"
+          img="/heroImages/ps_raffles.png"
+          title="Raffles"
+          footer="Version: 3"
+      >
+      A Raffle Game using a Point System like the one from VRFlad
+         </Card>
+  </div>
+  </div>
+
+
+  <div class ="row">
+    <div class ="column">
+          <Card
+            url="/en/points_system/slots"
+            img="/heroImages/points_systems_slots.png"
+            title="Slots"
+            footer="Version: 3"
+          >"A Slots Style Game using a Point System like the one from VRFlad"</Card> 
+    </div>
+
+    </div>
+
+
+
+
+
+
+
+
+</html>
+
+<style is:global>
+/* Create two equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 49%;
+  padding: 10px;
+  height: auto; /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+ </style>

@@ -1,6 +1,12 @@
 {
-	"version": 5.1,
+	"version": 5.2,
 	"triggers": [
+		{
+			"game": "General",
+			"name": "Generic Fail",
+			"triggerCode": "currencyFail",
+			"categories":["Currency"]
+		},
 		{
 			"game": "Additional Commands",
 			"name": "User Can't Afford",

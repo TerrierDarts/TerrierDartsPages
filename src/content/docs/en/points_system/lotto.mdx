@@ -13,7 +13,9 @@ youtube: true
 import CopyButton from '../CopyButton.astro';
 import importCode from '/sb_codes/points_system/lotto.txt?raw';
 
-Work in Progress
+<CopyButton>
+{importCode}
+</CopyButton>
 
 ### In OBS
 
@@ -23,8 +25,6 @@ You can add the following Browser source (Width :600 Height: 200)
 ```
 https://terrierdarts.pages.dev/obs_links/ranking_system/lotto/index.html
 ```
-[The Codepen *Follow this link to get access to the codepen I used for the Visuals if you wish to make any edits*](https://codepen.io/terrierdarts/pen/JjMRRKv)
-
 <a href="https://codepen.io/terrierdarts/pen/JjMRRKv" target="_blank">The Codepen *Follow this link to get access to the codepen I used for the Visuals if you wish to make any edits*</a>
 In order to install this codepen, you will need to follow the link then press `Export` from the bottom right, then press `Export .Zip`
 
@@ -139,3 +139,10 @@ The Following Setting are spread accross the 5 actions, here is what they all do
 |`messageOnMax` |This will turn on the message to post if a user already has the max tickets.|
 |`messageOnCost` |This will turn on a message if the user can not afford|
 |`messageOnSuccess` |This will turn on the message if the user has successfully bought tickets|
+
+### Changelog
+
+#### Version 3
+
+- Version Numbers Added
+- Logic now handles points as type `long` rather than `int` incase anyone goes over the '2,147,483,647' mark. Points can now go upto '9,223,372,036,854,775,807'

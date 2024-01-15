@@ -1,0 +1,9 @@
+{
+    "builds": {
+        "gamble": 4,
+        "slots": 3,
+        "casino": 3,
+        "raffles": 3,
+        "lotto": 3
+    }
+}

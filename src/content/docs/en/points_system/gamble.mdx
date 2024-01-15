@@ -2,16 +2,18 @@
 title: "Currency - Gamble"
 description: "A Gamble Game using a Point System like the one from VRFlad"
 pubDate: "Dec 18 2023"
-code: "3"
+code: "4"
 twitch: true
 youtube: true
 sbRequiredV : "0.2.0+"
 setUpDifficulty: "1/5"
-heroImage: "/heroImages/ps_gambles.png"
+heroImage: "/heroImages/points_systems_gamble.png"
 ---
 import CopyButton from '../CopyButton.astro';
 import {YouTube} from 'astro-embed';
 import importCode from '/sb_codes/points_system/gamble.txt?raw';
+import { Icon } from 'astro-icon'
+import { Notification } from "accessible-astro-components";
 
 
 <CopyButton>
@@ -75,7 +77,7 @@ Fail Codes are a way to explain why something went wrong if something did go wro
 
 |Code|Reason|
 |---:|:---| 
-|`1`|User Has No Points|
+|`1`|User Can Not Afford to Make this Bet|
 
 ### Configuration
 
@@ -85,9 +87,32 @@ The main admin action `[Currency Admin] - [Gamble] - Spin` has some setting that
 |Setting|Purpose|
 |---:|:---|
 |`defaultBet`|This is the bet amount if one hasn't been given.|
-|`defaultPoints`|This is the amount that a user will be given if they don't have any points.|
+|`defaultPoints`|This controls the amount of points a user will have if they don't have enough to bet.|
 |`winPercent`|This is a percentage of chance to win, the higher you set this the more likely users are to win.|
 |`pushEnabled`|This controls if Push is enabled. If set to false then a push will be handled as a loss. See more above about Push.|
+|`maxBet`| This is the max allowed to bet, set this to `-1` to have no max|
+|`minBet`| This is the minBet allowed to bet, set this to 0 to have no min|
+
+<Notification type="error">
+ <Icon pack="ion" name="information-circle-outline" />
+Its important to note that `defaultBet` must be within the range of `minBet` and `maxBet`.
+Also `defaultPoints` must be either `0` or also within that range. Not setting this correctly could cause issues. 
+</Notification>
+
+
+
+### Changelog
+
+#### Version 4
+
+- Added Min and Max bet
+- Error code 1 reworded.
+- Generic Fail Event Added.
+
+#### Version 3
+
+- Version Numbers Added
+- Logic now handles points as type `long` rather than `int` incase anyone goes over the '2,147,483,647' mark. Points can now go upto '9,223,372,036,854,775,807'
 
 
 

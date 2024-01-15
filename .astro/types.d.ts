@@ -436,6 +436,13 @@ declare module 'astro:content' {
   collection: "docs";
   data: InferEntrySchema<"docs">
 } & { render(): Render[".mdx"] };
+"en/points_system.mdx": {
+	id: "en/points_system.mdx";
+  slug: "en/points_system";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".mdx"] };
 "en/points_system/casino_roulette.mdx": {
 	id: "en/points_system/casino_roulette.mdx";
   slug: "en/points_system/casino_roulette";

@@ -4,7 +4,7 @@ description: "A Slots Game using a Point System like the one from VRFlad"
 pubDate: "Dec 18 2023"
 code: "3"
 sbRequiredV : "0.2.0+"
-heroImage: "/heroImages/ps_slots.png"
+heroImage: "/heroImages/points_systems_slots.png"
 twitch: true
 youtube: true
 ---
@@ -102,3 +102,10 @@ In Order to add more emotes if you wish you need to just follow these steps.
 3. Inside the ***Folder*** change the 3 ***Set Arguments*** so the number matches the ***Folder***.
 4. You can change the values as you see fit.
 5. If you do add an emote ensure that all the `Percent` ***Variables*** when added up do equal to the `percentTotal`.
+
+### Changelog
+
+#### Version 3
+
+- Version Numbers Added
+- Logic now handles points as type `long` rather than `int` incase anyone goes over the '2,147,483,647' mark. Points can now go upto '9,223,372,036,854,775,807'

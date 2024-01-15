@@ -103,3 +103,11 @@ Across the 3 actions there are the following settings.
 |`defaultPoints`|This is the amount of points a User will be given if they have no points|
 
 Using the arguments listed above the Send Message Sub Actions can be edited to suit your needs. Its also wise to rememeber that `End (Single Winner)` Will Trigger for each winner if you have more than one, and `End (All Winners)` will trigger once listing all the winners.
+
+
+### Changelog
+
+#### Version 3
+
+- Version Numbers Added
+- Logic now handles points as type `long` rather than `int` incase anyone goes over the '2,147,483,647' mark. Points can now go upto '9,223,372,036,854,775,807'
