@@ -2,7 +2,7 @@
 title: "Currency - Raffles"
 description: "Run Raffles using a Point System like the one from VRFlad"
 pubDate: "Dec 18 2023"
-code: "3"
+code: "4"
 sbRequiredV : "0.2.0+"
 setUpDifficulty: "1/5"
 heroImage: "/heroImages/ps_raffles.png"
@@ -93,19 +93,28 @@ Across the 3 actions there are the following settings.
 |Setting|Purpose|
 |---:|:---|
 |`defaultPrize`| This is the default prize if none is given.|
-|`length`| This is how long the raffle will last for|
-|`trigger`| This is how users can joing the raffle|
-|`raffleCost`| This is a cost for a raffle Ticket, this can be 0|
-|`maxEntry`| This is how many entries a person can have, if cost is 0 this will default to 1|
-|`multiWinners`| This is if you want more than 1 winner if enough people join|
-|`entriesPerWinner`| This controls how many entries we need to get an extra winner|
-|`sharePrize`| This is if they will share the prize or will they each get the prize value|
-|`defaultPoints`|This is the amount of points a User will be given if they have no points|
+|`length`| This is how long the raffle will last for.|
+|`trigger`| This is how users can joing the raffle.|
+|`raffleCost`| This is a cost for a raffle Ticket, this can be 0.|
+|`maxEntry`| This is how many entries a person can have, if cost is 0 this will default to 1.|
+|`multiWinners`| This is if you want more than 1 winner if enough people join.|
+|`entriesPerWinner`| This controls how many entries we need to get an extra winner.|
+|`sharePrize`| This is if they will share the prize or will they each get the prize value.|
+|`minPrize`|This is the Min Prize, prize will set to this if the given amount is under.|
+|`maxPrize`|This is the Max Prize, prize will set to this if the given amount is over.|
+|`defaultPoints`|This is the amount of points a User will be given if they have no points.|
+
 
 Using the arguments listed above the Send Message Sub Actions can be edited to suit your needs. Its also wise to rememeber that `End (Single Winner)` Will Trigger for each winner if you have more than one, and `End (All Winners)` will trigger once listing all the winners.
 
 
 ### Changelog
+
+#### Version 4
+
+- Generic Fail Added
+- Fixed Timer Issue
+- Added Min and Max
 
 #### Version 3
 

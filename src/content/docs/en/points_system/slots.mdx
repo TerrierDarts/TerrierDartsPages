@@ -2,7 +2,7 @@
 title: "Currency - Slots"
 description: "A Slots Game using a Point System like the one from VRFlad"
 pubDate: "Dec 18 2023"
-code: "3"
+code: "4"
 sbRequiredV : "0.2.0+"
 heroImage: "/heroImages/points_systems_slots.png"
 twitch: true
@@ -72,7 +72,7 @@ Fail Codes are a way to explain why something went wrong if something did go wro
 
 |Code|Reason|
 |---:|:---| 
-|`1`|User Has No Points|
+|`1`|User Can Not Afford to Make this Bet|
 
 ### Configuration
 
@@ -94,6 +94,8 @@ All Settings are explained below in the table.
 |`match2Payout`|This is the payout value if you have `match2On` set to true|
 |`percentTotal`|This is the total of all the `percentX` you have, this been off could effect the game Ideally it will be set to 100|
 |`defaultPoints`|This is the amount of points a person will be given if they have never had any points before in the past|
+|`maxBet`| This is the max allowed to bet, set this to `-1` to have no max|
+|`minBet`| This is the minBet allowed to bet, set this to 0 to have no min|
 
 In Order to add more emotes if you wish you need to just follow these steps.
 
@@ -104,6 +106,12 @@ In Order to add more emotes if you wish you need to just follow these steps.
 5. If you do add an emote ensure that all the `Percent` ***Variables*** when added up do equal to the `percentTotal`.
 
 ### Changelog
+
+#### Version 4
+
+- Min and Max Bet Added
+- Generic Fail Added
+- Error 1 Reworded
 
 #### Version 3
 
